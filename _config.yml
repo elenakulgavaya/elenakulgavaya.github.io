@@ -1,7 +1,7 @@
 theme: jekyll-theme-chirpy
 
 title: ""
-tagline: "Elena Kulgavaya <br><span style='opacity:0.8'>Lead QA Engineer</span><br><span style='opacity:0.6'>Automation · CI/CD · Testing Strategy</span>"
+tagline: "Elena Kulgavaya <br><span style='opacity:0.8'>QA Tech Lead</span><br><span style='opacity:0.6'>Automation · CI/CD <br>· Testing Strategy</span>"
 description: Practical notes on test automation, CI/CD, and quality engineering
 url: https://elenakulgavaya.github.io
 baseurl: ""
