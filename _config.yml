@@ -73,3 +73,12 @@ pwa:
   enabled: true
 
 paginate: 10
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      comments: true
+      toc: true
