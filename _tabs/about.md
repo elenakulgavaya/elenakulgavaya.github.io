@@ -21,8 +21,15 @@ I’ve been working in test automation since 2010, building QA strategy from scr
 
 ### Connect with me
 
-- [GitHub](https://github.com/elenakulgavaya)
-- [LinkedIn](https://linkedin.com/in/ekulgavaya)
+
+<div class="social-links">
+  <a href="https://github.com/elenakulgavaya" target="_blank" title="GitHub">
+    <i class="fab fa-github fa-lg"></i>
+  </a>
+  <a href="https://linkedin.com/in/ekulgavaya" target="_blank" title="LinkedIn">
+    <i class="fab fa-linkedin fa-lg"></i>
+  </a>
+</div>
 
 ---
 
