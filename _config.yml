@@ -1,7 +1,9 @@
 theme: jekyll-theme-chirpy
 
 title: ""
-tagline: QA Automation & CI/CD
+tagline: >
+  QA Automation
+  & Testing Strategy
 description: Practical notes on test automation, CI/CD, and quality engineering
 url: https://elenakulgavaya.github.io
 baseurl: ""
