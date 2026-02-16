@@ -1,5 +1,4 @@
 ---
-layout: single
 author_profile: true
 title: "Testing in Production: You Fail Before You Start"
 excerpt: "Why discovering issues in production is already too late, and how proper environments, data strategy and branch-level testing prevent defects before users see them."
