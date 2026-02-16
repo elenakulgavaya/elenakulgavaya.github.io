@@ -1,4 +1,5 @@
 ---
+layout: post
 author_profile: true
 title: "Green or Gone: Why We Stop Trusting Tests"
 excerpt: "How slow and unstable tests destroy trust, red pipelines become noise, and what it really takes to keep automated testing reliable and valuable."

@@ -1,4 +1,5 @@
 ---
+layout: post
 author_profile: true
 title: "The Trap of Test Reports"
 excerpt: "Why dashboards, coverage charts and flaky statistics rarely improve product quality — and why a stable green pipeline matters more than sophisticated reporting."
