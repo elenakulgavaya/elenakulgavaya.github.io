@@ -10,6 +10,11 @@ lang: en
 github:
   username: elenakulgavaya
 
+sidebar:
+  avatar: "/assets/img/avatar.jpeg"
+  name: Elena Kulgavaya
+  bio: QA Tech Lead | Automation & CI/CD
+
 social:
   name: Elena Kulgavaya
   links:
