@@ -64,6 +64,10 @@ comments:
     category: "General"
     category_id: "DIC_kwDORNWvjM4C2gZs"
     mapping: pathname
+    strict: 0
+    input_position: bottom
+    lang: en
+    reactions_enabled: 1
 
 assets:
   self_host:
@@ -82,3 +86,7 @@ defaults:
       layout: post
       comments: true
       toc: true
+collections:
+  tabs:
+    output: true
+    sort_by: order
