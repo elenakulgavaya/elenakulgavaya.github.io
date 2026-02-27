@@ -8,18 +8,15 @@ toc: true
 
 ## Test Coverage – friend or foe?
 
-Is coverage a safety net — or just a vanity metric?
-
-Maybe it's not coverage that fails us. Maybe it's the way we use it.
-
+Is coverage a safety net — or just a vanity metric?  
+Maybe it's not coverage that fails us. Maybe it's the way we use it.  
 Let's crack the test metrics topic and see how coverage can improve — or quietly damage — the end user experience.
 
 ---
 
 ## What Coverage Actually Measures
 
-Coverage measures how much of _something_ was executed by tests.
-
+Coverage measures how much of _something_ was executed by tests.  
 The "something" depends on what we choose to measure:
 
 - **Line coverage** — lines of code executed
@@ -39,22 +36,18 @@ But low coverage almost guarantees blind spots.
 
 ## The Pesticide Effect of Coverage
 
-Focusing on just one type of coverage creates a pesticide effect.
-
+Focusing on just one type of coverage creates a pesticide effect.  
 We spray tests over visible areas. 
 Bugs move into the uncovered ones.
 
-For example:
-
+For example:  
 - Requirements coverage can be 100%, while unexpected code paths remain untested.
 - Line coverage can be high, while assertions are weak.
 - Branch coverage can look impressive, while integration behavior is never exercised.
 
-Coverage in one dimension shifts risk to another.
-
+Coverage in one dimension shifts risk to another. 
 We feel safe.
-The system is not.
-
+The system is not.  
 This is where coverage becomes an illusion.
 
 ---
@@ -62,7 +55,6 @@ This is where coverage becomes an illusion.
 ## Should We Aim for High Coverage Everywhere?
 
 In theory, achieving high coverage across multiple dimensions sounds perfect.
-
 In practice, combining two or three types — say line and branch coverage — is common and useful. But diminishing returns kick in fast:
 
 - Time constraints grow with each dimension
@@ -72,7 +64,7 @@ In practice, combining two or three types — say line and branch coverage — i
 
 The real issue is not whether to track multiple types. It's whether we treat any of them as **proof** rather than **signal**.
 
-So what should we do?
+So what should we do?  
 
 Ignore coverage?
 Chase 100%?
@@ -82,9 +74,8 @@ Or use it differently?
 
 ## Coverage Is Not a Target. It’s a Guardrail.
 
-The coverage metric is extremely powerful when used correctly.
-
-It highlights areas that were never executed.  
+The coverage metric is extremely powerful when used correctly.  
+It highlights areas that were never executed.
 It exposes silent zones of the codebase.
 
 But once we turn it into a trophy — “we must reach 100%” — it becomes harmful.
@@ -179,7 +170,7 @@ So how do we measure the quality of tests?
 
 ## First: Make Sure Tests Actually Work
 
-Both false negatives and false positives are dangerous.
+Both false negatives and false positives are dangerous.  
 
 False negatives create noise — the [same noise that kills trust in pipelines](/why-tests-are-skipped/).
 False positives create false confidence.
