@@ -27,9 +27,10 @@ If the team hasn’t aligned on what “done” really means, everyone creates t
 - QA → *UAT passed*
 - Business → *users are using it (and it brings money)*
 
-Same word. Five completely different meanings.  
-
-This misalignment isn’t just a formal issue – it directly affects how people prioritize work. Teams start mentally “closing” tasks that are not actually delivered yet. And real delivery keeps getting postponed.
+Same word with five completely different meanings. 
+This misalignment isn’t just a formal issue – it directly affects how people prioritize work. 
+Teams start mentally “closing” tasks that are not actually delivered yet. 
+And real delivery keeps getting postponed.
 
 ## So how do we fix it?
 
@@ -41,7 +42,6 @@ But there’s something else that dramatically simplifies and speeds up the proc
 Continuous Delivery starts with Continuous Integration, often continues with Continuous Deployment… and then, surprisingly, stops there for many teams.  
 
 Let’s clarify something.
-
 “Continuous” simply means:
 
 > the process runs automatically as a continuation of an engineer’s action.
@@ -72,10 +72,9 @@ Manual testing again
 Releasing to users
 ```
 
-These steps are repetitive.  
-They don’t require deep engineering thinking.  
-But they consume time, attention, and energy.  
-What’s even worse is that manual processes are fragile.   
+These steps are repetitive. 
+They don’t require deep engineering thinking, but they consume time, attention, and energy. 
+What’s even worse is that manual processes are fragile. 
 People forget steps, miss checks, get distracted, multitask...
 
 And suddenly production is broken because someone skipped one tiny action. 
@@ -84,7 +83,7 @@ So automating the whole process isn’t just about speed, it's about **safety, r
 
 ## What does it actually take to move to Continuous Delivery?
 
-First - define what “delivered” really means for your team.  
+First - define what “delivered” really means for your team. 
 Then automate everything step by step:
 
 ```text
@@ -115,36 +114,25 @@ If it’s red half of the time it can’t be trusted.
 If tests are flaky or slow, engineers are afraid to push the button.
 
 And this is exactly where many companies get stuck. 
-Teams automate deployment...    
-but still release manually.
-
+Teams automate deployment... but still release manually. 
 Which means they end up with:
 
 **Continuous Deployment without Continuous Delivery.**
 
-Technically automated.  
-But still slow.  
-Still risky.  
-Still not predictable.
-
+Technically automated, but still _slow_, still **risky**, still **_not predictable_**.
 And definitely not business-friendly.
 
 ## The real goal
 
-Once checks become stable and trustworthy, everything changes.  
+Once checks become stable and trustworthy, everything changes. 
 The team moves from:
 > “we deployed something” 
 
 to:
 > “users already have it” 
 
-And this is what the business actually cares about.
-
-Not builds.  
-Not pipelines.  
-Not green badges.
-
-**Value delivered to users.**
+And this is what the business actually cares about: neither builds, pipelines, nor green badges. 
+But **the value delivered to users.**
 
 ## What’s next?
 

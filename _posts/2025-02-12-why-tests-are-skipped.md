@@ -25,16 +25,14 @@ Why does this happen?
 ## The First Problem: Execution Time
 
 If we expect someone to wait for test results, the waiting time must be acceptable.  
-Imagine contacting customer support and being told someone will respond in 12 hours.  
-Or even in 2 hours.  
+Imagine contacting customer support and being told someone will respond in 12 hours, or even in 2 hours. 
 Would that be acceptable?
 
 Now ask yourself:
 **What is acceptable feedback time for developers?**
 
 Tests should return feedback within that same time frame.
-
-The key idea:
+The key idea is:
 > The person waiting for the result should stay in context.
 
 If the developer switches to another task or conversation, the cost of coming back increases.  
@@ -63,10 +61,8 @@ At that point further investigation is skipped.
 
 ## The Broken Window Effect
 
-A more disturbing situation happens when pipelines stay red because of “expected” failures.
-
-If some tests are known to fail, people stop checking which failures are new and which are old.
-
+A more disturbing situation happens when pipelines stay red because of “expected” failures.  
+If some tests are known to fail, people stop checking which failures are new and which are old.  
 This becomes a broken window situation:
 > As soon as one window is broken in an abandoned building, the rest follow quickly.
 
@@ -86,13 +82,12 @@ Let’s start with speed.
 
 #### 1. Profile Your Tests
 
-Identify the slowest tests and split them into steps.  
+Identify the slowest tests and split them into steps. 
 Often the bottleneck is not the assertion — but preparation.
 
 #### 2. Optimize Test Data Preparation
 
 State setup can take longer than verification.
-
 Ways to improve:
 - Use database insertion instead of UI setup
 - Use API instead of UI
@@ -100,7 +95,7 @@ Ways to improve:
 
 #### 3. Mock What Is Not the Objective
 
-If server response time is not what you're testing — mock it.  
+If server response time is not what you're testing — mock it. 
 Test components in isolation.
 
 #### 4. Control Data Volume
@@ -112,9 +107,7 @@ If API/UI is slow because of accumulated data:
 
 #### 5. Use Smart Synchronization
 
-Tests are often slow only when failing.
-
-Instead of implicit waits:
+Tests are often slow only when failing. Instead of implicit waits:
 - Use explicit waits
 - Reduce timeout if the system is fast
 - Retry small operations instead of blocking the entire test
@@ -141,16 +134,13 @@ If a test exposes a known bug:
 - Update test to expect current behavior temporarily
 - Revert test once the bug is fixed
 
-Pipeline stays green.
-Bug remains tracked.
+Thus the pipeline stays green and at the same time the bug remains tracked.
 
 #### 2. Test Data Issues
 
-Integration environments are unstable by nature.  
-Best solution:
-- Dedicated sterile test environment
-
-If not possible:
+Integration environments are unstable by nature. 
+The best solution is *dedicated sterile test environment.* 
+If that is not possible, then:
 - Prepare data before execution
 - Use DB dumps or APIs for setup
 
@@ -162,16 +152,16 @@ If components randomly fail:
 
 #### 4. Flaky UI
 
-Flaky UI deserves a separate post.  
-High-level guidance:
+Flaky UI deserves a separate post. 
+High-level guidance is to:
 - Synchronize properly
 - Reduce data noise
 - Avoid unnecessary UI flows
 
 #### 5. Code Changes Breaking Tests
 
-This is the most common issue.  
-The only sustainable solution:
+This is the most common issue. 
+The only sustainable solution is:
 > Tests must pass before merging code.
 
 Contract testing can significantly help here — I’ll cover that in a separate post.

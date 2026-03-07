@@ -10,8 +10,8 @@ read_time: true
 toc: true
 ---
 What can be more tempting than using production when we talk about test automation?  
-It is the most stable environment, always up and running and full of real-life data.  
-It also creates an illusion that this is the ultimate way to ensure users receive a working solution.  
+It is the most stable environment, always up and running and full of real-life data. 
+It also creates an illusion that this is the ultimate way to ensure users receive a working solution. 
 But behind this beautiful picture there is a sad truth:
 
 > It is already too late to discover issues.
@@ -20,25 +20,23 @@ But behind this beautiful picture there is a sad truth:
 
 Imagine we deploy new code to production.
 After deployment, automated tests start running to verify everything looks good and suddenly there is a **failure**.
-
 We already know two things:
 1. Tests are not immediate.
 2. The fix is not immediate either.
 
-During the time it takes for tests to detect the issue, users may already experience the problem.
-
+During the time it takes for tests to detect the issue, users may already experience the problem.  
 Then the investigation begins.  
-The person who deployed the change might be busy with a P0 issue.  
+The person who deployed the change might be busy with a P0 issue. 
 QA receives a notification and starts collecting logs, reproducing the issue, analyzing the changes.  
 This ends up with reporting the incident.
 
-All this time, the issue remains visible to users. And it will be up to the point where the fix is deployed and confirmed.  
-Here we are talking about tens of minutes at best.  
+All this time, the issue remains visible to users. And it will be up to the point where the fix is deployed and confirmed. 
+Here we are talking about tens of minutes at best. 
 Even with a successful fix from the first attempt, the defect may live in production for a significant period.
 
 “But what about rollbacks?”
 
-Yes, rollback shortens the lifetime of the defect — but only until reporting of the incident.  
+Yes, rollback shortens the lifetime of the defect — but only until reporting of the incident. 
 And rollbacks are not always possible:
 - Database changes may be incompatible.
 - Schema updates may block reverting.
@@ -71,12 +69,9 @@ The problem is simple:
 
 ## Environment: Why Staging Fails
 
-For manual testing, staging is often used.  
-All changes are deployed there.  
-Data is maintained.  
-End-to-end scenarios are reviewed.
-
-Naturally, automated tests start using the same environment. And then instability begins.  
+For manual testing, staging is often used. 
+All changes are deployed there, data is maintained, end-to-end scenarios are reviewed. 
+Naturally, automated tests start using the same environment. And then instability begins. 
 But why?
 
 - Test data is not enough.
@@ -96,24 +91,22 @@ From the above, we can define requirements. The environment must be:
 - Data-rich  
 - Disposable / on-demand  
 
-The ideal solution is a clean environment created per suite or per execution.
-
-Lightweight. Controlled. Predictable.
+The ideal solution is a clean environment created per suite or per execution:
+lightweight, controlled and predictable.
 
 ## Test Data: The Hidden Complexity
 
-Production data is rich and diverse.  
-But it cannot be freely modified, it contains sensitive information and cannot be safely reused for testing.
-
+Production data is rich and diverse. 
+But it cannot be freely modified, it contains sensitive information and cannot be safely reused for testing. 
 Copying production data into staging sounds logical — but it introduces:
 - Security concerns  
 - Data anonymization requirements  
 - Performance degradation  
 - Continuous maintenance overhead  
 
-Staging capacity is usually lower than production.   
+Staging capacity is usually lower than production. 
 Large datasets cause performance issues.
-Data needs to be trimmed.  
+Data needs to be trimmed.
 And the process must be repeated regularly.
 
 Eventually, the copy becomes outdated.
@@ -129,8 +122,8 @@ Test data must be:
 - Sufficient but not excessive  
 - Non-sensitive  
 
-The best approach is not copying production.  
-It is generating controlled, purpose-built test data per suite.  
+The best approach is not copying production. 
+It is generating controlled, purpose-built test data per suite. 
 And the source must be risk-free.
 
 
@@ -139,7 +132,7 @@ And the source must be risk-free.
 The final argument for production testing is confidence.
 > “If it works in production, it works.”
 
-But what exactly are we uncertain about?  
+But what exactly are we uncertain about? 
 Either:
 - We are not sure the functionality works.
 - Or we are not sure changes were deployed correctly.
@@ -150,12 +143,11 @@ For functionality:
 For deployment certainty:
 > Fully automated delivery pipelines are the solution.
 
-Confidence should be built **before** code reaches production.  
+Confidence should be built **before** code reaches production. 
 Production should confirm health — not discover defects.
 
 ---
 
-Production testing gives visibility.  
-Branch-level and pre-merge testing give protection.  
+Production testing gives visibility, while branch-level and pre-merge testing give protection.  
 
 If you’d like to explore how green pipelines and branch-level testing naturally evolve into a sustainable Continuous Delivery process, read more in my article on [Continuous Delivery: Why It Matters and How to Actually Make It Work](/continuous-delivery-why-and-how/).

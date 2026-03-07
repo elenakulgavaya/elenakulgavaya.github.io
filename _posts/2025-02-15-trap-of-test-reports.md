@@ -14,17 +14,15 @@ What if all the statistics, coverage reports and beautiful dashboards have littl
 Life could have been easier without all those reporting portals.
 
 I know what you’re thinking.  
-“It’s not QA asking for reports. It’s management. It’s stakeholders. It’s third parties.”  
+“It’s not QA asking for reports. It’s management. It’s stakeholders. It’s third parties.” 
 And that’s exactly how it starts.
 
 ## The First Failing Test
 
 When tests begin to fail, we want to investigate.
-We want more information, more logs, more history.  
-That is absolutely correct.  
-But that’s also where it should stop.
-
-Instead, something else happens.
+We want more information, more logs, more history. 
+That is absolutely correct, but that’s also where it should stop.
+And instead, something else happens.
 
 Coverage keeps growing.  
 The percentage of flaky tests may stay the same — but the absolute number increases.
@@ -55,17 +53,14 @@ That’s it.
 
 ## Stability vs Visualization
 
-When a test becomes unstable, we often invest time into creating tools to monitor instability.  
-What if instead we invested that same time into stabilizing the test?
-
+When a test becomes unstable, we often invest time into creating tools to monitor instability. 
+What if instead we invested that same time into stabilizing the test?  
 Instead of tracking flakiness — eliminate it.  
 Instead of measuring instability — remove its root cause.
 
 ## But What About Statistics?
 
-What about history?  
-What about charts?  
-What about coverage?
+What about history? Charts? Coverage?
 
 The short answer is:
 
@@ -78,7 +73,6 @@ Quality is not measured by:
 - coverage percentage
 
 Coverage has only a mediocre correlation with real product quality.
-
 Quality is measured by:
 - How many issues are found by users.
 - How many of those issues prevent revenue.
@@ -89,21 +83,16 @@ And none of those are answered by fancy dashboards.
 ## The Power of a Green Pipeline
 
 A stable pipeline builds trust. If tests fail primarily due to real code issues, then red becomes meaningful.  
-Red is not noise.
-Red is a call to action.
+Red is not noise, it is **a call to action**.  
+Green becomes habit. Green becomes confidence.
 
-Green becomes habit.
-Green becomes confidence.
-
-From a user perspective, new issues are frustrating. But recurring issues — issues reported before — destroy trust.  
+From a user perspective, new issues are frustrating. But recurring issues — issues reported before — destroy trust. 
 Covering known issues with automated tests and keeping the pipeline green protects against regressions in a way no report ever can.
 
 ## Does It Eliminate Reporting?
 
 If the pipeline is green consistently, statistics become trivial:  
-A straight green line.  
-System health: stable.
-
+A straight green line, saying "system health: stable".  
 The real challenge is not building tests. The real challenge is building a process that:
 - keeps the pipeline green
 - fixes issues before merging to main
