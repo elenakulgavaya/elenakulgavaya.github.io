@@ -188,7 +188,7 @@ To support this workflow, the **branching strategy must align with the testing s
 Tests should always be written in the **same branch as the application code**.
 Even if they live in a separate repository, it should still be a mapped branch.
 Once the change is merged, tests merge automatically as well.
-Keeping the main branch green is critical — more on this in [Green or Gone](/green-or-gone/).
+Keeping the main branch green is critical — more on this in [Green or Gone: Why We Stop Trusting Tests](/why-tests-are-skipped/).
 
 ### Contracts evolve within branches
 
