@@ -1,0 +1,30 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520">
+<style>
+.layer-unit{fill:#F1F5F9;stroke:#334155;stroke-width:2}
+.layer-component{fill:#E2E8F0;stroke:#334155;stroke-width:2}
+.layer-contract{fill:#E0F2FE;stroke:#0369A1;stroke-width:2}
+.layer-e2e{fill:#FEE2E2;stroke:#B91C1C;stroke-width:2}
+.text{font-family:Inter,Segoe UI,Arial;font-size:18px;fill:#0F172A;text-anchor:middle;dominant-baseline:middle}
+.title{font-family:Inter,Segoe UI,Arial;font-size:26px;fill:#0F172A;text-anchor:middle}
+</style>
+
+<text class="title" x="500" y="50">Testing Pyramid for Microservices</text>
+
+<!-- Unit -->
+<polygon class="layer-unit" points="200,430 800,430 720,350 280,350"/>
+<text class="text" x="500" y="390">Unit Tests</text>
+
+<!-- Component -->
+<polygon class="layer-component" points="280,350 720,350 660,270 340,270"/>
+<text class="text" x="500" y="310">Component Tests</text>
+
+<!-- Contract -->
+<polygon class="layer-contract" points="340,270 660,270 610,200 390,200"/>
+<text class="text" x="500" y="235">Contract Tests</text>
+
+<!-- E2E -->
+<polygon class="layer-e2e" points="390,200 610,200 560,140 440,140"/>
+<text class="text" x="500" y="170">Minimal E2E</text>
+
+</svg>
