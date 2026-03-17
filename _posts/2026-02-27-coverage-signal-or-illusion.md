@@ -1,6 +1,7 @@
 ---
 title: "Test Coverage: Signal, Illusion, or Guardrail?"
 date: 2026-02-27 09:00:00 +0000
+description: "High coverage isn't proof of quality. Low coverage guarantees blind spots. How to use coverage as a genuine guardrail, not a vanity metric."
 excerpt: "High coverage numbers are not proof of quality — but ignoring coverage guarantees blind spots. Why treating it as a target does more harm than good, and how to use it as a genuine guardrail instead."
 permalink: /coverage-signal-or-illusion/
 categories: [testing, strategy]

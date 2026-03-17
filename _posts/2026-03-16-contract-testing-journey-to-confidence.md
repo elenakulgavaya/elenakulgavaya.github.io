@@ -2,6 +2,7 @@
 layout: post
 title: "Contract Testing: The Journey to Confidence"
 date: 2026-03-16 09:00:00 +0000
+description: "How contract testing validates microservice integrations without full environments — enabling safe, confident releases on every branch."
 excerpt: "Contract testing is the key to validating microservice integrations without full end-to-end environments. Learn how consumer-driven contracts, branch-level pipelines, and the surety framework enable safe releases from day one."
 permalink: /contract-testing-journey-to-confidence/
 categories: [cicd, strategy]
