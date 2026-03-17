@@ -1,7 +1,7 @@
 ---
 layout: post
-author_profile: true
 title: "The Trap of Test Reports"
+date: 2026-02-15 09:00:00 +0000
 excerpt: "Why dashboards, coverage charts and flaky statistics rarely improve product quality — and why a stable green pipeline matters more than sophisticated reporting."
 permalink: /trap-of-test-reports/
 categories: [automation]

@@ -1,7 +1,7 @@
 ---
 layout: post
-author_profile: true
 title: "Testing in Production: You Fail Before You Start"
+date: 2026-02-16 09:00:00 +0000
 excerpt: "Why discovering issues in production is already too late, and how proper environments, data strategy and branch-level testing prevent defects before users see them."
 permalink: /testing-in-production/
 categories: [strategy]

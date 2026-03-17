@@ -1,7 +1,7 @@
 ---
 layout: post
-author_profile: true
 title: "Continuous Delivery: Why It Matters and How to Actually Make It Work"
+date: 2026-02-11 09:00:00 +0000
 excerpt: "Why Continuous Delivery is not just a buzzword but a business-driven necessity — and what it actually takes to make it work in real engineering teams."
 permalink: /continuous-delivery-why-and-how/
 categories: [cicd, automation]

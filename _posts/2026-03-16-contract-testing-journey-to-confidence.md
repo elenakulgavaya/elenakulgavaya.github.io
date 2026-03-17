@@ -1,10 +1,11 @@
 ---
 layout: post
 title: "Contract Testing: The Journey to Confidence"
+date: 2026-03-16 09:00:00 +0000
 excerpt: "Contract testing is the key to validating microservice integrations without full end-to-end environments. Learn how consumer-driven contracts, branch-level pipelines, and the surety framework enable safe releases from day one."
 permalink: /contract-testing-journey-to-confidence/
 categories: [cicd, strategy]
-tags: [testing, contract-testing, microservices, ci-cd, automation, python, surety, integration-testing, test-pyramid]
+tags: [testing, contract-testing, microservices, cicd, automation, python, surety, integration-testing, test-pyramid]
 read_time: true
 toc: true
 ---

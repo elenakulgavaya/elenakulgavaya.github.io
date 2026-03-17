@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Test Before You Merge"
+date: 2026-03-10 09:00:00 +0000
 excerpt: "Why testing on the branch is the most effective quality gate — and what process, environment, and pipeline setup it actually requires to make it work."
 permalink: /test-before-you-merge/
 categories: [cicd, strategy]

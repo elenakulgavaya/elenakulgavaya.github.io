@@ -1,7 +1,7 @@
 ---
 layout: post
-author_profile: true
 title: "Green or Gone: Why We Stop Trusting Tests"
+date: 2026-02-12 09:00:00 +0000
 excerpt: "How slow and unstable tests destroy trust, red pipelines become noise, and what it really takes to keep automated testing reliable and valuable."
 permalink: /why-tests-are-skipped/
 categories: [cicd, automation]
