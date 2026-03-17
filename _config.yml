@@ -23,10 +23,10 @@ social:
 ## ↑ --------------------------
 ## The end of `jekyll-seo-tag` settings
 #
-## Web Analytics Settings
-#analytics:
-#  google:
-#    id: # fill in your Google Analytics ID
+# Web Analytics Settings
+analytics:
+  google:
+    id: "G-89VYXDBKYV"
 #
 #
 # Page views settings
