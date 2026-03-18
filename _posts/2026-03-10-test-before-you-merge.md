@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Test Before You Merge"
+author: elena
 date: 2026-03-10 09:00:00 +0000
 description: "Why merging first and testing later breaks everything — and what branch-level testing actually requires to work in practice."
 excerpt: "Why testing on the branch is the most effective quality gate — and what process, environment, and pipeline setup it actually requires to make it work."

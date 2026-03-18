@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Trap of Test Reports"
+author: elena
 date: 2026-02-15 09:00:00 +0000
 description: "Why test dashboards and coverage charts rarely improve quality — and why a stable green pipeline matters more than sophisticated reporting."
 excerpt: "Why dashboards, coverage charts and flaky statistics rarely improve product quality — and why a stable green pipeline matters more than sophisticated reporting."

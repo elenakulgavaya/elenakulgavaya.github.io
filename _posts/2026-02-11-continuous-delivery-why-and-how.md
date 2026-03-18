@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Continuous Delivery: Why It Matters and How to Actually Make It Work"
+author: elena
 date: 2026-02-11 09:00:00 +0000
 description: "Learn why Continuous Delivery is a business necessity and what it actually takes to implement it in real engineering teams."
 excerpt: "Why Continuous Delivery is not just a buzzword but a business-driven necessity — and what it actually takes to make it work in real engineering teams."

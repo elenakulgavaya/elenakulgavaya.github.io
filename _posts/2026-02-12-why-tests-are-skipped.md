@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Green or Gone: Why We Stop Trusting Tests"
+author: elena
 date: 2026-02-12 09:00:00 +0000
 description: "Why slow and unstable tests lose team trust, turn pipelines into noise, and what it takes to build a reliable automated testing culture."
 excerpt: "How slow and unstable tests destroy trust, red pipelines become noise, and what it really takes to keep automated testing reliable and valuable."
