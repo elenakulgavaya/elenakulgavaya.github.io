@@ -1,6 +1,6 @@
 theme: jekyll-theme-chirpy
 
-title: ""
+title: "QA Explained"
 tagline: "<strong>Elena Kulgavaya</strong><br><span style='opacity:0.85'>QA Tech Lead</span><br><span style='opacity:0.65'>Automation & CI/CD Strategy</span>"
 description: Practical notes on test automation, CI/CD, and quality engineering
 url: "https://qaexplained.com"

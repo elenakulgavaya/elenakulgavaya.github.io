@@ -208,7 +208,7 @@ With the results, the provider knows whether the change is safe to merge.
 
 ---
 
-## Contract Testing with surety
+## Contract Testing with Surety
 
 One of the biggest practical challenges is organizing a framework that supports contract definitions as first-class objects.
 The [surety](https://pypi.org/project/surety/) test framework was built to solve exactly this problem.
