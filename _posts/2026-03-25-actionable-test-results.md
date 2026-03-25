@@ -2,7 +2,7 @@
 layout: post
 title: "Let Failures Speak"
 author: elena
-date: 2026-03-25 15:00:00 +0000
+date: 2026-03-25 09:00:00 +0000
 description: "How to design tests, failures, and artifacts so that every failure points directly to the fix, without re-running or manual investigation."
 excerpt: "A failing test is only useful if it leads directly to action. Here is how to design tests, failures, and artifacts so issues are identified and fixed fast."
 permalink: /actionable-test-results/
