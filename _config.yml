@@ -1,8 +1,8 @@
 theme: jekyll-theme-chirpy
 
 title: "QA Explained"
-tagline: "<strong>Elena Kulgavaya</strong><br><span style='opacity:0.85'>QA Tech Lead</span><br><span style='opacity:0.65'>Automation & CI/CD Strategy</span>"
-description: Practical notes on test automation, CI/CD, and quality engineering
+tagline: "<strong>Elena Kulgavaya</strong><br><span style='opacity:0.85'>QA Tech Lead</span><br><span style='opacity:0.65'>Rethinking quality engineering — one uncomfortable truth at a time.</span>"
+description: Rethinking quality engineering — one uncomfortable truth at a time. Practical insights on test automation, CI/CD, and quality engineering for teams that ship fast.
 url: "https://qaexplained.com"
 baseurl: ""
 lang: en

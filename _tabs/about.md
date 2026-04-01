@@ -7,25 +7,24 @@ order: 4
 
 ## Elena Kulgavaya
 
-QA Tech Lead with over 15 years in test automation and quality engineering.
+Fifteen years in QA teaches you a lot of wrong lessons.
 
-I’ve spent most of that time solving the same core problem from different angles: how do you make a team confident enough to release fast without breaking things for users? That usually means rethinking the test architecture, fixing the pipeline, and changing how the team thinks about quality — not just adding more tests.
+You learn to protect the release gate. You learn to write more tests. You learn to say "it needs more testing" when you’re not sure. And then at some point you realize that all of those instincts were making things slower, not safer.
 
-My belief is that quality is a process, not a phase. The best QA setup is one where problems surface before code is merged, not after it’s deployed.
+This blog is where I work through what actually helps. Posts on test automation, CI/CD pipelines, shift-left approaches, and the uncomfortable gaps between what conventional QA wisdom recommends and what actually moves teams forward.
 
-This blog is a collection of practical notes from that work — things that helped, patterns that failed, and ideas worth thinking through.
+I’m a QA Tech Lead with over 15 years in test automation and quality engineering. The central problem I keep returning to: how do you make a team confident enough to release fast without breaking things for users? The answer is never "more tests." It’s always about where and when and what the tests are actually telling you.
 
-### What I work on
+### What I write about
 
 - Test architecture and strategy
 - CI/CD pipelines and delivery processes
 - Contract testing and integration confidence
-- Flaky test elimination
-- Test environment strategy
+- Flaky test elimination and test environment strategy
 - Branch-level testing and shift-left approaches
-- Quality engineering culture
+- Quality engineering culture and team mindset
 
-### Connect with me
+### Connect
 
 <div class="social-links">
   <a href="https://github.com/elenakulgavaya" target="_blank" title="GitHub">
@@ -39,7 +38,5 @@ This blog is a collection of practical notes from that work — things that help
   </a>
 </div>
 
----
-
-If you’re interested in discussing automation, delivery processes, or QA leadership — feel free to reach out via LinkedIn.
+{% include newsletter.html %}
 
