@@ -14,6 +14,24 @@
   display: none;
 }
 
+.home-intro-text {
+  font-size: 1rem;
+  opacity: 0.8;
+  line-height: 1.6;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 0;
+
+  a {
+    color: #00c896;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 .newsletter-form {
   margin-top: 2rem;
   padding: 1.25rem 1.5rem;
