@@ -26,7 +26,9 @@
         </a>
       </li>
       <!-- the real tabs -->
+      {% assign hidden_tabs = 'categories,tags' | split: ',' %}
       {% for tab in site.tabs %}
+        {% unless hidden_tabs contains tab.slug %}
         <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
           <a href="{{ tab.url | relative_url }}" class="nav-link">
             <i class="fa-fw {{ tab.icon }}"></i>
@@ -36,6 +38,7 @@
           </a>
         </li>
         <!-- .nav-item -->
+        {% endunless %}
       {% endfor %}
       <!-- subscribe -->
       <li class="nav-item">
