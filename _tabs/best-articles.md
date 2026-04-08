@@ -1,9 +1,8 @@
 ---
 layout: page
-title: Best Articles
+title: "Best Articles"
 icon: fas fa-star
 order: 2
-permalink: /best-articles/
 ---
 
 The articles below cut through the noise. No theory for theory's sake — just what actually changes how teams work.
