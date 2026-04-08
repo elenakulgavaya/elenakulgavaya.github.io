@@ -46,6 +46,13 @@ Coverage tells you what was executed, not what was verified. How to use it witho
 
 ---
 
+## Culture and Process
+
+**[Every Heroic Bug Fix Is a Process Failure](/heroic-bug-fix-process-failure/)**
+Praising emergency fixes feels natural — but it rewards failure recovery, not quality. Why the bug fix praise loop keeps teams stuck, and what healthy engineering culture celebrates instead.
+
+---
+
 ## Service Integration
 
 **[Contract Testing: The Journey to Confidence](/contract-testing-journey-to-confidence/)**
