@@ -43,6 +43,9 @@ Why dashboards and coverage charts rarely improve quality — and what to track 
 **[Coverage: Signal, Illusion, or Guardrail?](/coverage-signal-or-illusion/)**
 Coverage tells you what was executed, not what was verified. How to use it without being misled by it.
 
+**[Tests No One Wants to Touch](/smelly-tests/)**
+The most common test smells and how to fix them — before they erode trust in the suite.
+
 ---
 
 ## Culture and Process
