@@ -2,7 +2,7 @@
 layout: post
 title: "Tests No One Wants to Touch"
 author: elena
-date: 2026-04-22 05:00:00 +0000
+date: 2026-04-21 05:00:00 +0000
 description: "Test code deserves the same care as production code — reviews, refactoring, and clear standards. Here are the most common test smells and how to address them before they erode your suite."
 excerpt: "When test code starts to smell, nobody wants to fix it. And when nobody wants to fix it, nobody trusts it. Here are the most common signs of deteriorating tests — and how to address them before they become a liability."
 permalink: /smelly-tests/
