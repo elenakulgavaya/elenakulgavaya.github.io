@@ -53,6 +53,9 @@ The most common test smells and how to fix them — before they erode trust in t
 **[Every Heroic Bug Fix Is a Process Failure](/heroic-bug-fix-process-failure/)**
 Praising emergency fixes feels natural — but it rewards failure recovery, not quality. Why the bug fix praise loop keeps teams stuck, and what healthy engineering culture celebrates instead.
 
+**[End-to-End Testing: The Slow Road to Blame and Burnout](/end-to-end-testing-slow-road-to-blame-and-burnout/)**
+When E2E tests become your primary strategy, they quietly erode ownership, trust, and the QA engineer's will to keep going. Here is how the spiral unfolds — and how to break it.
+
 ---
 
 ## Service Integration

@@ -2,7 +2,7 @@
 layout: post
 title: "End-to-End Testing: The Slow Road to Blame and Burnout"
 author: elena
-date: 2026-05-07 05:00:00 +0000
+date: 2026-05-07 03:00:00 +0000
 description: "End-to-end tests feel like a safety net — but when they become your primary strategy, they quietly erode ownership, trust, and team confidence."
 excerpt: "E2E tests don't just slow down your pipeline. Done wrong, they quietly dissolve team trust, ownership, and the QA engineer's will to keep going."
 permalink: /end-to-end-testing-slow-road-to-blame-and-burnout/
