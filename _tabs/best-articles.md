@@ -56,6 +56,9 @@ Praising emergency fixes feels natural — but it rewards failure recovery, not 
 **[End-to-End Testing: The Slow Road to Blame and Burnout](/end-to-end-testing-slow-road-to-blame-and-burnout/)**
 When E2E tests become your primary strategy, they quietly erode ownership, trust, and the QA engineer's will to keep going. Here is how the spiral unfolds — and how to break it.
 
+**[Shifting Left Without Burning Bridges](/shifting-left-without-burning-bridges/)**
+You already know what needs to change. A practical path through the harder part — moving the team without turning a process fix into a blame event.
+
 ---
 
 ## Service Integration
