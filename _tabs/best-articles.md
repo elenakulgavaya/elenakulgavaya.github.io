@@ -65,3 +65,6 @@ You already know what needs to change. A practical path through the harder part 
 
 **[Contract Testing: The Journey to Confidence](/contract-testing-journey-to-confidence/)**
 How contract testing validates microservice integrations across all environments — enabling safe, confident releases.
+
+**[Your Biggest Contract Is Hidden Inside an E2E Test](/your-biggest-contract-is-hidden-inside-an-e2e-test/)**
+How to migrate an existing E2E suite to contract tests — step by step, starting from the tests you already have.
