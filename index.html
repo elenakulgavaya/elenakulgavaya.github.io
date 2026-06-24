@@ -2,39 +2,45 @@
 layout: home
 ---
 
-<div class="home-hero">
-  <p class="home-hero-label">QA Explained</p>
-  <h1 class="home-hero-title">Stop wasting time on testing that doesn't catch real problems.</h1>
-  <p class="home-hero-subtitle">Learn how to design testing, CI/CD and contract testing systems that <strong>actually work in real teams.</strong></p>
-  <div class="home-hero-actions">
-    <a href="/test-before-you-merge/" class="btn-hero btn-hero-primary">Start here → Learn testing strategy step by step</a>
-    <a href="/best-articles/" class="btn-hero btn-hero-secondary">See what actually works</a>
-  </div>
+<div class="featured">
+  <p class="featured-meta">Latest &nbsp;·&nbsp; Jun 2026</p>
+  <h1 class="featured-title">Code Review:<br>Cost, Not Investment</h1>
+  <p class="featured-excerpt">You've clicked Approve without reading. So has everyone else. At some point the team stopped reviewing code and started acknowledging it — here's how that happens and what it costs.</p>
+  <a href="/code-review-cost-or-investment/" class="btn-featured">Read now →</a>
 </div>
 
+<div class="home-divider"></div>
+
 <div class="home-grid">
-  <div class="home-card">
-    <h2 class="home-card-title">Start here</h2>
-    <p class="home-card-intro">Follow this path to build a testing strategy that actually works in production:</p>
-    <ul class="home-path-list">
+  <div class="home-section">
+    <h2 class="home-section-label">Start here</h2>
+    <ol class="home-path-steps">
       <li>
-        <a href="/test-before-you-merge/">Test Before You Merge</a>
-        <span>How to keep the main branch stable and catch issues before they reach production</span>
+        <span class="step-num">01</span>
+        <div class="step-content">
+          <a href="/test-before-you-merge/">Test Before You Merge</a>
+          <span>Keep the main branch stable and catch issues before they reach production</span>
+        </div>
       </li>
       <li>
-        <a href="/shift-left-or-fall-behind/">Shift Left or Fall Behind</a>
-        <span>Why delayed testing compounds against you — and how to stop it</span>
+        <span class="step-num">02</span>
+        <div class="step-content">
+          <a href="/shift-left-or-fall-behind/">Shift Left or Fall Behind</a>
+          <span>Why delayed testing compounds against you — and how to stop it</span>
+        </div>
       </li>
       <li>
-        <a href="/contract-testing-journey-to-confidence/">Contract Testing: Journey to Confidence</a>
-        <span>How to validate service integrations without spinning up full environments</span>
+        <span class="step-num">03</span>
+        <div class="step-content">
+          <a href="/contract-testing-journey-to-confidence/">Contract Testing: Journey to Confidence</a>
+          <span>How to validate service integrations without spinning up full environments</span>
+        </div>
       </li>
-    </ul>
-    <a href="/test-before-you-merge/" class="btn-hero btn-hero-primary home-card-btn">Start learning →</a>
+    </ol>
   </div>
 
-  <div class="home-card">
-    <h2 class="home-card-title">Most useful articles</h2>
+  <div class="home-section">
+    <h2 class="home-section-label">Worth reading</h2>
     <ul class="home-articles-list">
       <li>
         <a href="/actionable-test-results/">Let Failures Speak</a>
@@ -45,8 +51,8 @@ layout: home
         <span>How to migrate from E2E tests to contract tests — step by step, without throwing away what you've built.</span>
       </li>
       <li>
-        <a href="/smelly-tests/">Tests No One Wants to Touch</a>
-        <span>The most common test smells and how to fix them before they erode the suite.</span>
+        <a href="/heroic-bug-fix-process-failure/">Every Heroic Bug Fix Is a Process Failure</a>
+        <span>The bug isn't the problem. The process that let it reach production is.</span>
       </li>
     </ul>
     <a href="/best-articles/" class="home-view-all">View all articles →</a>

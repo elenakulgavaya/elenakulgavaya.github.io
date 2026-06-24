@@ -59,6 +59,9 @@ When E2E tests become your primary strategy, they quietly erode ownership, trust
 **[Shifting Left Without Burning Bridges](/shifting-left-without-burning-bridges/)**
 You already know what needs to change. A practical path through the harder part — moving the team without turning a process fix into a blame event.
 
+**[Code Review: Cost, Not Investment](/code-review-cost-or-investment/)**
+Why teams click Approve without reading — and what it takes to rebuild a review culture that actually catches problems before they reach production.
+
 ---
 
 ## Service Integration
