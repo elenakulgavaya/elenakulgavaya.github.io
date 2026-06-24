@@ -11,12 +11,12 @@
 /* append your custom style below */
 
 .site-title {
-  display: none;
+  display: none !important;
 }
 
 #sidebar .profile-wrapper {
   flex-shrink: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem !important;
 }
 
 /* Brand color overrides — covers both Chirpy data-mode and Bootstrap data-bs-theme attributes */
