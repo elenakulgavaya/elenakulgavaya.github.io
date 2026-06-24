@@ -80,6 +80,26 @@ html:not([data-mode]) {
   color: #00c896;
 }
 
+/* Fix category and tag link colors on article pages */
+.post-tail-wrapper .post-meta a,
+header .post-meta a {
+  color: #00c896 !important;
+}
+
+/* Fix sidebar nav overlapping profile section at certain viewport heights */
+#sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+#sidebar .profile-wrapper {
+  flex-shrink: 0;
+}
+
+#sidebar nav {
+  flex-shrink: 0;
+}
+
 /* Featured article */
 .featured {
   padding: 1.25rem 0 1.5rem;
