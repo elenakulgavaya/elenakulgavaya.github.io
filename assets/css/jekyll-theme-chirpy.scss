@@ -16,12 +16,17 @@
 
 #sidebar .profile-wrapper {
   flex-shrink: 0;
+  margin-bottom: 2rem;
 }
 
-/* Brand color overrides — match Chirpy's specificity */
+/* Brand color overrides — covers both Chirpy data-mode and Bootstrap data-bs-theme attributes */
 html,
 html[data-mode='dark'],
-html:not([data-mode]) {
+html[data-mode='light'],
+html:not([data-mode]),
+:root[data-bs-theme='light'],
+:root[data-bs-theme='dark'],
+:root:not([data-bs-theme]) {
   --link-color: #00c896;
   --link-underline-color: #00a87e;
   --toc-highlight: #00c896;
