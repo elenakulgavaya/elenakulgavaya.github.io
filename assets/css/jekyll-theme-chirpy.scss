@@ -14,6 +14,10 @@
   display: none;
 }
 
+#sidebar .profile-wrapper {
+  flex-shrink: 0;
+}
+
 /* Brand color overrides — match Chirpy's specificity */
 html,
 html[data-mode='dark'],
