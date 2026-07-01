@@ -1,30 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520">
+<rect x="1" y="1" width="998" height="518" rx="14" fill="#1b1a18" stroke="#3d3b34" stroke-width="1"></rect>
+<text x="40" y="52" font-family="&#39;IBM Plex Mono&#39;, ui-monospace, monospace" font-size="13" letter-spacing="2.2" fill="#e5a04e">TESTING PYRAMID · MICROSERVICES</text>
 
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520">
-<style>
-.layer-unit{fill:#F1F5F9;stroke:#334155;stroke-width:2}
-.layer-component{fill:#E2E8F0;stroke:#334155;stroke-width:2}
-.layer-contract{fill:#E0F2FE;stroke:#0369A1;stroke-width:2}
-.layer-e2e{fill:#FEE2E2;stroke:#B91C1C;stroke-width:2}
-.text{font-family:Inter,Segoe UI,Arial;font-size:18px;fill:#0F172A;text-anchor:middle;dominant-baseline:middle}
-.title{font-family:Inter,Segoe UI,Arial;font-size:26px;fill:#0F172A;text-anchor:middle}
-</style>
 
-<text class="title" x="500" y="50">Testing Pyramid for Microservices</text>
+<polygon points="200,430 800,430 720,350 280,350" fill="#2b2926" stroke="#4d4a42" stroke-width="1.5"></polygon>
+<text x="500" y="394" font-family="&#39;IBM Plex Sans&#39;, system-ui, sans-serif" font-size="19" font-weight="500" fill="#f2efe9" text-anchor="middle">Unit Tests</text>
 
-<!-- Unit -->
-<polygon class="layer-unit" points="200,430 800,430 720,350 280,350"/>
-<text class="text" x="500" y="390">Unit Tests</text>
 
-<!-- Component -->
-<polygon class="layer-component" points="280,350 720,350 660,270 340,270"/>
-<text class="text" x="500" y="310">Component Tests</text>
+<polygon points="280,350 720,350 660,270 340,270" fill="#332f2a" stroke="#524d44" stroke-width="1.5"></polygon>
+<text x="500" y="314" font-family="&#39;IBM Plex Sans&#39;, system-ui, sans-serif" font-size="18" font-weight="500" fill="#f2efe9" text-anchor="middle">Component Tests</text>
 
-<!-- Contract -->
-<polygon class="layer-contract" points="340,270 660,270 610,200 390,200"/>
-<text class="text" x="500" y="235">Contract Tests</text>
 
-<!-- E2E -->
-<polygon class="layer-e2e" points="390,200 610,200 560,140 440,140"/>
-<text class="text" x="500" y="170">Minimal E2E</text>
+<polygon points="340,270 660,270 610,200 390,200" fill="#3a2c12" stroke="#e5a04e" stroke-width="2"></polygon>
+<text x="500" y="239" font-family="&#39;IBM Plex Sans&#39;, system-ui, sans-serif" font-size="18" font-weight="600" fill="#f6e6cf" text-anchor="middle">Contract Tests</text>
 
+
+<polygon points="390,200 610,200 560,140 440,140" fill="#403c34" stroke="#5c574d" stroke-width="1.5"></polygon>
+<text x="500" y="174" font-family="&#39;IBM Plex Sans&#39;, system-ui, sans-serif" font-size="16" font-weight="500" fill="#f2efe9" text-anchor="middle">Minimal E2E</text>
 </svg>

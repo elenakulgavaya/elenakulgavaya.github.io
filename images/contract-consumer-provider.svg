@@ -1,29 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="420">
-<style>
-.box{fill:#F5F7FA;stroke:#334155;stroke-width:2;rx:12;ry:12}
-.contract{fill:#E6F4FF;stroke:#0369A1;stroke-width:2;rx:12;ry:12}
-.pipeline{fill:#F0E9FF;stroke:#6D28D9;stroke-width:2;rx:12;ry:12}
-.success{fill:#E6F9EC;stroke:#15803D;stroke-width:2;rx:12;ry:12}
-.text{font-family:Inter,Segoe UI,Arial;font-size:16px;fill:#0F172A;text-anchor:middle;dominant-baseline:middle}
-.title{font-family:Inter,Segoe UI,Arial;font-size:24px;fill:#0F172A;text-anchor:middle}
-.label{font-family:Inter,Segoe UI,Arial;font-size:14px;fill:#334155;text-anchor:middle}
-.line{stroke:#475569;stroke-width:2;marker-end:url(#arrow)}
-</style>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="420" viewBox="0 0 1000 420">
 <defs>
-<marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-<path d="M0,0 L9,3 L0,6 Z" fill="#475569"/>
-</marker>
+<marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#e5a04e"></path></marker>
 </defs>
 
-<rect class="box" x="200" y="170" width="200" height="80"/>
-<text class="text" x="300" y="210">Consumer</text>
+<rect x="1" y="1" width="998" height="418" rx="14" fill="#1b1a18" stroke="#3d3b34" stroke-width="1"></rect>
+<text x="40" y="50" font-family="&#39;IBM Plex Mono&#39;, ui-monospace, monospace" font-size="13" letter-spacing="2.2" fill="#e5a04e">CONTRACT TESTING · CONSUMER ↔ PROVIDER</text>
 
-<rect class="box" x="600" y="170" width="200" height="80"/>
-<text class="text" x="700" y="210">Provider</text>
 
-<line class="line" x1="400" y1="200" x2="600" y2="200"/>
-<text class="label" x="500" y="180">Request</text>
+<rect x="200" y="170" width="200" height="80" rx="10" fill="#2b2926" stroke="#4d4a42" stroke-width="1.5"></rect>
+<text x="300" y="217" font-family="&#39;IBM Plex Sans&#39;, system-ui, sans-serif" font-size="19" font-weight="500" fill="#f2efe9" text-anchor="middle">Consumer</text>
 
-<line class="line" x1="600" y1="240" x2="400" y2="240"/>
-<text class="label" x="500" y="270">Response</text>
+
+<rect x="600" y="170" width="200" height="80" rx="10" fill="#2b2926" stroke="#4d4a42" stroke-width="1.5"></rect>
+<text x="700" y="217" font-family="&#39;IBM Plex Sans&#39;, system-ui, sans-serif" font-size="19" font-weight="500" fill="#f2efe9" text-anchor="middle">Provider</text>
+
+
+<line x1="404" y1="198" x2="596" y2="198" stroke="#e5a04e" stroke-width="2" marker-end="url(#arrow)"></line>
+<text x="500" y="184" font-family="&#39;IBM Plex Mono&#39;, ui-monospace, monospace" font-size="14" fill="#e5a04e" text-anchor="middle">request</text>
+
+
+<line x1="596" y1="238" x2="404" y2="238" stroke="#6f6b60" stroke-width="2" marker-end="url(#arrow)"></line>
+<text x="500" y="262" font-family="&#39;IBM Plex Mono&#39;, ui-monospace, monospace" font-size="14" fill="#b0aca3" text-anchor="middle">response</text>
 </svg>

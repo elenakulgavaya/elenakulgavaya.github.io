@@ -1,0 +1,134 @@
+---
+layout: default
+---
+
+{% include lang.html %}
+
+<div class="arch">
+
+  <div class="arch-header">
+    <div class="arch-eyebrow">ARCHIVES &middot; {{ site.posts | size }} essays</div>
+    <h1 class="arch-title">{{ page.title | default: "Everything, newest first" }}</h1>
+  </div>
+
+  {% assign post_years = site.posts | map: 'year' | uniq %}
+
+  {% for year in post_years %}
+    <div class="arch-year-group">
+      <div class="arch-year-header">{{ year }}</div>
+      {% assign posts_in_year = site.posts | where: 'year', year %}
+      {% for post in posts_in_year %}
+        <a href="{{ post.url | relative_url }}" class="arch-row">
+          <span class="arch-date">{{ post.date | date: "%b %-d" }}</span>
+          <div class="arch-body">
+            <div class="arch-post-title">{{ post.title }}</div>
+            {% if post.description %}
+              <div class="arch-post-desc">{{ post.description | truncatewords: 18 }}</div>
+            {% endif %}
+          </div>
+          {% if post.categories.size > 0 %}
+            <span class="arch-tag">{{ post.categories.first }}</span>
+          {% endif %}
+        </a>
+      {% endfor %}
+    </div>
+  {% endfor %}
+
+</div>
+
+<style>
+  .arch {
+    font-family: 'IBM Plex Sans', sans-serif;
+    padding: 52px 0;
+    color: #eae7e1;
+  }
+
+  .arch-header {
+    margin-bottom: 36px;
+  }
+
+  .arch-eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #e5a04e;
+    margin-bottom: 14px;
+  }
+
+  .arch-title {
+    font-family: 'IBM Plex Serif', serif !important;
+    font-size: clamp(28px, 5vw, 42px) !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.02em !important;
+    color: #eae7e1 !important;
+    margin: 0 !important;
+  }
+
+  .arch-year-group {
+    margin-bottom: 8px;
+  }
+
+  .arch-year-header {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    color: #928d84;
+    letter-spacing: 0.06em;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #48443f;
+    margin-bottom: 0;
+  }
+
+  .arch-row {
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
+    padding: 20px 0;
+    border-bottom: 1px solid #33302c;
+    text-decoration: none;
+    color: inherit;
+    transition: background 150ms ease;
+
+    &:hover {
+      .arch-post-title { color: #e5a04e; }
+    }
+  }
+
+  .arch-date {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    color: #928d84;
+    width: 60px;
+    flex-shrink: 0;
+  }
+
+  .arch-body {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .arch-post-title {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #eae7e1;
+    margin-bottom: 4px;
+    transition: color 150ms ease;
+    line-height: 1.25;
+  }
+
+  .arch-post-desc {
+    font-size: 14px;
+    color: #928d84;
+    line-height: 1.4;
+  }
+
+  .arch-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11.5px;
+    color: #e5a04e;
+    flex-shrink: 0;
+    text-transform: lowercase;
+  }
+</style>

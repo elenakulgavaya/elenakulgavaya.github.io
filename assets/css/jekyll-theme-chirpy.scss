@@ -17,7 +17,7 @@
   padding-bottom: 1.5rem;
 }
 
-/* Brand color overrides — covers both Chirpy data-mode and Bootstrap data-bs-theme attributes */
+/* Brand color overrides — amber accent throughout */
 html,
 html[data-mode='dark'],
 html[data-mode='light'],
@@ -25,324 +25,162 @@ html:not([data-mode]),
 :root[data-bs-theme='light'],
 :root[data-bs-theme='dark'],
 :root:not([data-bs-theme]) {
-  --link-color: #00c896;
-  --link-underline-color: #00a87e;
-  --toc-highlight: #00c896;
-  --checkbox-checked-color: #00c896;
-  --tag-hover: rgb(0 200 150 / 12%);
-  --tag-border: rgb(0 200 150 / 30%);
-  --sidebar-active-color: #00c896;
-  --timeline-node-bg: #00c896;
+  --link-color: #e5a04e;
+  --link-underline-color: rgba(229, 160, 78, 0.35);
+  --toc-highlight: #e5a04e;
+  --checkbox-checked-color: #e5a04e;
+  --tag-hover: rgba(229, 160, 78, 0.10);
+  --tag-border: rgba(229, 160, 78, 0.28);
+  --sidebar-active-color: #e5a04e;
+  --timeline-node-bg: #e5a04e;
+  --bs-focus-ring-color: rgba(229, 160, 78, 0.25);
+  --bs-link-color: #e5a04e;
+  --bs-link-hover-color: #d4904a;
+}
+
+/* Tag hover — kill Bootstrap blue across all contexts */
+.post-tag,
+a.tag {
+  &:hover, &:focus, &:focus-visible {
+    color: #e5a04e !important;
+    border-color: #e5a04e !important;
+    background-color: rgba(229, 160, 78, 0.10) !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+}
+
+/* Chirpy has .btn-outline-primary:not(.disabled):hover { border-color: #007bff !important }
+   which has specificity (0,2,1) — match it to prevent the blue from winning */
+.btn-outline-primary:not(.disabled) {
+  &:hover, &:focus, &:focus-visible, &:active {
+    border-color: #e5a04e !important;
+    color: #e5a04e !important;
+    background-color: rgba(229, 160, 78, 0.10) !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
 }
 
 /* Post navigation and pagination buttons */
 .btn-outline-primary {
-  --bs-btn-color: #00c896;
-  --bs-btn-border-color: #00c896;
-  --bs-btn-hover-bg: #00c896;
-  --bs-btn-hover-border-color: #00c896;
-  --bs-btn-active-bg: #00b085;
-  --bs-btn-active-border-color: #00b085;
-  --bs-btn-focus-shadow-rgb: 0, 200, 150;
-  --bs-focus-ring-color: rgba(0, 200, 150, 0.25);
-  color: #00c896;
-  border-color: #00c896;
+  --bs-btn-color: #e5a04e;
+  --bs-btn-border-color: #e5a04e;
+  --bs-btn-hover-bg: #e5a04e;
+  --bs-btn-hover-border-color: #e5a04e;
+  --bs-btn-active-bg: #d4904a;
+  --bs-btn-active-border-color: #d4904a;
+  --bs-btn-focus-shadow-rgb: 229, 160, 78;
+  --bs-focus-ring-color: rgba(229, 160, 78, 0.25);
+  color: #e5a04e;
+  border-color: #e5a04e;
 
   &:hover,
   &:focus,
   &:active,
   &.active {
-    background-color: #00c896 !important;
-    border-color: #00c896 !important;
+    background-color: rgba(229, 160, 78, 0.10) !important;
+    border-color: #e5a04e !important;
+    color: #e5a04e !important;
     box-shadow: none !important;
   }
 }
 
 .page-item.active .page-link {
-  background-color: #00c896;
-  border-color: #00c896;
+  background-color: #e5a04e;
+  border-color: #e5a04e;
 }
 
 .page-link {
-  color: #00c896;
+  color: #e5a04e;
 
   &:hover {
-    color: #00a87e;
+    color: #d4904a;
   }
 }
 
 /* Sidebar icons and active nav */
 #sidebar .nav-link.active,
 #sidebar .nav-link:hover {
-  color: #00c896 !important;
+  color: #e5a04e !important;
 }
 
 #sidebar .nav-link.active i,
 #sidebar .nav-link:hover i {
-  color: #00c896 !important;
+  color: #e5a04e !important;
 }
 
 /* Social icons in sidebar bottom */
 #sidebar .sidebar-bottom a:hover i {
-  color: #00c896;
+  color: #e5a04e;
 }
 
-/* Fix category and tag link colors on article pages */
+/* Category and tag link colors on article pages */
 .post-tail-wrapper .post-meta a,
 header .post-meta a {
-  color: #00c896 !important;
-}
-
-
-/* Featured article */
-.featured {
-  padding: 1.25rem 0 1.5rem;
-  margin-bottom: 0;
-}
-
-.featured-meta {
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #00c896;
-  margin-bottom: 0.85rem;
-}
-
-.featured-title {
-  font-size: 1.55rem;
-  font-weight: 800;
-  line-height: 1.25;
-  letter-spacing: -0.01em;
-  margin-bottom: 0.65rem;
-  color: inherit;
-}
-
-.featured-excerpt {
-  font-size: 0.88rem;
-  line-height: 1.65;
-  opacity: 0.5;
-  margin-bottom: 1.1rem;
-  max-width: 520px;
-}
-
-.btn-featured {
-  display: inline-block;
-  background: #00c896;
-  color: #000 !important;
-  font-size: 0.8rem;
-  font-weight: 700;
-  padding: 0.45rem 1.1rem;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: opacity 0.15s ease, transform 0.1s ease;
+  color: #928d84 !important;
 
   &:hover {
-    opacity: 0.88;
-    transform: translateY(-1px);
-    text-decoration: none;
+    color: #e5a04e !important;
   }
 }
 
-/* Divider */
-.home-divider {
-  border-top: 1px solid rgba(255, 255, 255, 0.07);
-  margin: 1.5rem 0 2rem;
-}
+/* ── Syntax highlighting — warm dark palette ──────────────── */
+/* Override Chirpy's light-mode token colors which look wrong on dark bg */
 
-/* Homepage two-column grid */
-.home-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
-  margin-bottom: 1.5rem;
-
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Sections */
-.home-section {
-  display: flex;
-  flex-direction: column;
-}
-
-.home-section-label {
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #00c896;
-  margin-top: 0;
-  margin-bottom: 1.1rem;
-  padding-bottom: 0.7rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-/* Numbered path steps */
-.home-path-steps {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 1rem;
-  flex: 1;
-
-  li {
-    display: flex;
-    gap: 0.9rem;
-    padding: 0.8rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-
-    &:last-child {
-      border-bottom: none;
-    }
-
-    &::before {
-      display: none;
-    }
-  }
-}
-
-.step-num {
-  font-size: 0.95rem;
-  font-weight: 800;
-  color: rgba(0, 200, 150, 0.22);
-  flex-shrink: 0;
-  width: 1.6rem;
-  line-height: 1.55;
-  font-variant-numeric: tabular-nums;
-}
-
-.step-content {
-  display: flex;
-  flex-direction: column;
-
-  a {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: #00c896;
-    text-decoration: none;
-    margin-bottom: 0.2rem;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  span {
-    font-size: 0.85rem;
-    opacity: 0.45;
-    line-height: 1.5;
-  }
-}
-
-/* Articles list */
-.home-articles-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 1rem;
-  flex: 1;
-
-  li {
-    display: flex;
-    flex-direction: column;
-    padding: 0.8rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-
-    &:last-child {
-      border-bottom: none;
-    }
-
-    &::before {
-      display: none;
-    }
-
-    a {
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: #00c896;
-      text-decoration: none;
-      margin-bottom: 0.2rem;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-
-    span {
-      font-size: 0.85rem;
-      opacity: 0.45;
-      line-height: 1.5;
-    }
-  }
-}
-
-.home-view-all {
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.35);
-  text-decoration: none;
-  margin-top: auto;
-
-  &:hover {
-    color: rgba(255, 255, 255, 0.75);
-    text-decoration: none;
-  }
-}
-
-.newsletter-form {
-  margin-top: 2rem;
-  padding: 1.25rem 1.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+.highlight {
+  background-color: #181715 !important;
+  color: #c2beb6 !important;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.03);
-
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0.3rem;
-    font-size: 1rem;
-  }
-
-  p {
-    margin-bottom: 0.75rem;
-    opacity: 0.65;
-    font-size: 0.85rem;
-  }
-
-  form {
-    display: flex;
-    gap: 0.4rem;
-    flex-wrap: wrap;
-  }
-
-  input[type="email"] {
-    flex: 1;
-    min-width: 0;
-    width: 100%;
-    padding: 0.4rem 0.65rem;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 4px;
-    background: rgba(255, 255, 255, 0.05);
-    color: inherit;
-    font-size: 0.85rem;
-
-    &::placeholder {
-      opacity: 0.4;
-    }
-  }
-
-  input[type="submit"] {
-    padding: 0.4rem 1rem;
-    border: none;
-    border-radius: 4px;
-    background: #00c896;
-    color: #fff;
-    font-size: 0.85rem;
-    cursor: pointer;
-    white-space: nowrap;
-
-    &:hover {
-      background: #00b085;
-    }
-  }
 }
+
+/* Default text in code blocks */
+.highlight .w { color: #c2beb6 !important; }
+
+/* Keywords (def, class, if, return, lambda, import…) — bright primary */
+.highlight .k, .highlight .kd, .highlight .kn, .highlight .kp,
+.highlight .kr, .highlight .kt, .highlight .kv, .highlight .kc { color: #eae7e1 !important; }
+
+/* Function / method names — amber accent (the callables stand out) */
+.highlight .nf, .highlight .fm { color: #e5a04e !important; }
+
+/* Identifiers, variable names — muted warm */
+.highlight .n, .highlight .na, .highlight .nb, .highlight .nc,
+.highlight .nd, .highlight .ne, .highlight .ni, .highlight .nl,
+.highlight .nn, .highlight .no, .highlight .nt, .highlight .nv,
+.highlight .vc, .highlight .vg, .highlight .vi, .highlight .vm,
+.highlight .bp, .highlight .py { color: #c2beb6 !important; }
+
+/* Strings — warm gold (distinct from amber function names) */
+.highlight .s, .highlight .s1, .highlight .s2, .highlight .sa,
+.highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd,
+.highlight .se, .highlight .sh, .highlight .si, .highlight .sx,
+.highlight .ss { color: #d4b878 !important; }
+
+/* Numbers — warm gold (same family as strings) */
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh,
+.highlight .mi, .highlight .il, .highlight .mo, .highlight .mx,
+.highlight .l, .highlight .ld { color: #d4b878 !important; }
+
+/* Comments — dim */
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm,
+.highlight .cp, .highlight .cpf, .highlight .c1, .highlight .cs { color: #928d84 !important; font-style: italic; }
+
+/* Operators, punctuation — dim */
+.highlight .o, .highlight .ow, .highlight .p, .highlight .pi { color: #928d84 !important; }
+
+/* Decorators */
+.highlight .nd { color: #d4b878 !important; }
+
+/* Errors */
+.highlight .err { color: #c2beb6 !important; background: none !important; }
+
+/* Generic diff */
+.highlight .gi { color: #e5a04e !important; background: none !important; }
+.highlight .gd { color: #928d84 !important; background: none !important; }
+
+/* Line number gutter */
+.highlight .rouge-gutter, .highlight .gl,
+.highlight table td:first-child, .linenos { color: #48443f !important; background: #181715 !important; }
+
+

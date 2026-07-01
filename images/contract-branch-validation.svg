@@ -1,21 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420">
-<style>
-.box{fill:#f8fafc;stroke:#334155;stroke-width:2;rx:10;ry:10}
-.contract{fill:#e0f2fe;stroke:#0284c7;stroke-width:2;rx:10;ry:10}
-.pipeline{fill:#ede9fe;stroke:#7c3aed;stroke-width:2;rx:10;ry:10}
-.text{font-family:Inter,Segoe UI,Arial;font-size:16px;fill:#0f172a;text-anchor:middle;dominant-baseline:middle}
-.label{font-family:Inter,Segoe UI,Arial;font-size:14px;fill:#334155;text-anchor:middle}
-.line{stroke:#475569;stroke-width:2;marker-end:url(#arrow)}
-</style>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420">
 <defs>
-<marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-<path d="M0,0 L9,3 L0,6 Z" fill="#475569"/>
-</marker>
+<marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#6f6b60"></path></marker>
 </defs>
 
-<rect class="box" x="80" y="180" width="200" height="80"/><text class="text" x="180" y="220">Contract Change</text>
-<rect class="contract" x="360" y="180" width="220" height="80"/><text class="text" x="470" y="220">Run Consumer Tests</text>
-<rect class="pipeline" x="660" y="180" width="200" height="80"/><text class="text" x="760" y="220">Safe to Merge</text>
-<line class="line" x1="280" y1="220" x2="360" y2="220"/>
-<line class="line" x1="580" y1="220" x2="660" y2="220"/>
+<rect x="1" y="1" width="898" height="418" rx="14" fill="#1b1a18" stroke="#3d3b34" stroke-width="1"></rect>
+<text x="40" y="50" font-family="&#39;IBM Plex Mono&#39;, ui-monospace, monospace" font-size="13" letter-spacing="2.2" fill="#e5a04e">CONTRACT TESTING · BRANCH VALIDATION</text>
+
+
+<line x1="284" y1="220" x2="352" y2="220" stroke="#6f6b60" stroke-width="2" marker-end="url(#arrow)"></line>
+<line x1="584" y1="220" x2="652" y2="220" stroke="#6f6b60" stroke-width="2" marker-end="url(#arrow)"></line>
+
+
+<rect x="80" y="180" width="200" height="80" rx="10" fill="#2b2926" stroke="#4d4a42" stroke-width="1.5"></rect>
+<text x="102" y="210" font-family="&#39;IBM Plex Mono&#39;, ui-monospace, monospace" font-size="12" fill="#e5a04e">01</text>
+<text x="180" y="228" font-family="&#39;IBM Plex Sans&#39;, system-ui, sans-serif" font-size="18" font-weight="500" fill="#f2efe9" text-anchor="middle">Contract Change</text>
+
+
+<rect x="360" y="180" width="220" height="80" rx="10" fill="#2f2716" stroke="#e5a04e" stroke-width="1.5"></rect>
+<text x="382" y="210" font-family="&#39;IBM Plex Mono&#39;, ui-monospace, monospace" font-size="12" fill="#e5a04e">02</text>
+<text x="470" y="228" font-family="&#39;IBM Plex Sans&#39;, system-ui, sans-serif" font-size="18" font-weight="500" fill="#f2efe9" text-anchor="middle">Run Consumer Tests</text>
+
+
+<rect x="660" y="180" width="200" height="80" rx="10" fill="#e5a04e" stroke="#e5a04e" stroke-width="1.5"></rect>
+<text x="682" y="210" font-family="&#39;IBM Plex Mono&#39;, ui-monospace, monospace" font-size="12" fill="#8a5a12">03</text>
+<text x="760" y="228" font-family="&#39;IBM Plex Sans&#39;, system-ui, sans-serif" font-size="18" font-weight="600" fill="#12100b" text-anchor="middle">Safe to Merge</text>
 </svg>

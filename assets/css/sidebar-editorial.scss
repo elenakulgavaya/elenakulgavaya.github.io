@@ -1,0 +1,352 @@
+---
+---
+
+/*
+  Editorial sidebar — reskins Chirpy's #sidebar with warm-dark palette + amber accent.
+  Width kept at Chirpy's 260px so #main-wrapper margin needs no override.
+*/
+
+/* Chirpy sidebar shell */
+#sidebar {
+  background: #181715;
+  border-right: 1px solid #33302c;
+  display: flex !important;
+  flex-direction: column;
+  align-items: stretch !important;
+  padding: 30px 24px;
+  gap: 0;
+  overflow-y: auto;
+  /* keep Chirpy's positioning/width */
+}
+
+/* ── Brand ───────────────────────────────────────────────── */
+
+.sb-brand {
+  margin-bottom: 28px;
+}
+
+.sb-brand-link {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  text-decoration: none;
+  color: #eae7e1;
+  transition: opacity 150ms ease;
+
+  &:hover {
+    opacity: 0.8;
+    color: #eae7e1;
+  }
+}
+
+.sb-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
+}
+
+.sb-wordmark {
+  font-family: 'IBM Plex Serif', serif;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #eae7e1;
+}
+
+/* ── Author ──────────────────────────────────────────────── */
+
+.sb-author {
+  margin-bottom: 28px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #33302c;
+}
+
+.sb-author-name {
+  font-family: 'IBM Plex Serif', serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #eae7e1;
+  margin-bottom: 4px;
+}
+
+.sb-author-role {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11.5px;
+  letter-spacing: 0.08em;
+  color: #e5a04e;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.sb-author-thesis {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #928d84;
+  margin: 0;
+}
+
+/* ── Nav ─────────────────────────────────────────────────── */
+
+.sb-nav {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #33302c;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+}
+
+.sb-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 9px 12px;
+  border-radius: 7px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #c2beb6;
+  text-decoration: none;
+  transition: background 150ms ease, color 150ms ease;
+
+  &:hover {
+    color: #eae7e1;
+    background: rgba(229, 160, 78, 0.06);
+    text-decoration: none;
+  }
+
+  &--active {
+    font-weight: 600;
+    color: #eae7e1;
+    background: oklch(0.20 0.02 65);
+    box-shadow: inset 3px 0 0 #e5a04e;
+  }
+}
+
+.sb-nav-idx {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: #928d84;
+  flex-shrink: 0;
+
+  .sb-nav-item--active & {
+    color: #e5a04e;
+  }
+}
+
+.sb-nav-label {
+  flex: 1;
+}
+
+/* ── Subscribe CTA ───────────────────────────────────────── */
+
+.sb-cta {
+  background: #e5a04e;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.sb-cta-title {
+  font-family: 'IBM Plex Serif', serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #0d0d10;
+  margin-bottom: 4px;
+}
+
+.sb-cta-sub {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 12.5px;
+  line-height: 1.4;
+  color: oklch(0.28 0.06 65);
+  margin: 0 0 12px;
+}
+
+.sb-cta-btn {
+  display: block;
+  background: #0d0d10;
+  color: #e5a04e;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  padding: 9px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: opacity 150ms ease;
+
+  &:hover {
+    opacity: 0.88;
+    color: #e5a04e;
+    text-decoration: none;
+  }
+}
+
+/* ── Trending tags ───────────────────────────────────────── */
+
+.sb-tags {
+  margin-bottom: 24px;
+}
+
+.sb-section-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #928d84;
+  margin-bottom: 12px;
+}
+
+.sb-tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.sb-tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11.5px;
+  color: #c2beb6;
+  border: 1px solid #33302c;
+  padding: 4px 9px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: border-color 150ms ease, color 150ms ease;
+
+  &:hover {
+    border-color: #e5a04e;
+    color: #e5a04e;
+    text-decoration: none;
+  }
+}
+
+/* ── Footer ──────────────────────────────────────────────── */
+
+.sb-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding-top: 18px;
+  border-top: 1px solid #33302c;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12.5px;
+
+  a {
+    color: #928d84;
+    text-decoration: none;
+    transition: color 150ms ease;
+
+    &:hover {
+      color: #e5a04e;
+      text-decoration: none;
+    }
+  }
+}
+
+.sb-mode-toggle {
+  margin-left: auto;
+  padding: 0;
+  color: #928d84 !important;
+  font-size: 14px;
+  background: none;
+  border: none;
+
+  &:hover {
+    color: #c2beb6 !important;
+  }
+}
+
+/* ── Suppress old Chirpy sidebar elements ────────────────── */
+
+#sidebar .profile-wrapper,
+#sidebar .site-title,
+#sidebar .site-subtitle,
+#sidebar nav.flex-column,
+#sidebar .sidebar-bottom {
+  display: none !important;
+}
+
+/* ── Right panel: hidden (trending tags moved into sidebar) ── */
+
+#panel-wrapper {
+  display: none !important;
+}
+
+/* ── Right panel (kept for future, now hidden) ───────────── */
+
+.panel-wrapper-restyle {
+  border-left: 1px solid #33302c;
+  padding-left: 1.5rem;
+
+  #access-lastmod,
+  .panel-heading {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #928d84;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 12px;
+  }
+
+  #access-lastmod li,
+  ul li {
+    &::before { content: none; }
+  }
+
+  a {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 13.5px;
+    color: #c2beb6;
+    text-decoration: none;
+    transition: color 150ms ease;
+
+    &:hover {
+      color: #e5a04e;
+    }
+  }
+}
+
+/* ── Topbar: editorial reskin ────────────────────────────── */
+
+#topbar-wrapper {
+  background: #181715;
+  border-bottom: 1px solid #33302c;
+}
+
+#topbar {
+  #breadcrumb {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12.5px;
+    color: #928d84;
+
+    a {
+      color: #e5a04e;
+      text-decoration: none;
+
+      &:hover {
+        color: #eae7e1;
+      }
+    }
+  }
+
+  #topbar-title {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #eae7e1;
+  }
+}

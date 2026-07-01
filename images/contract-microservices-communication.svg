@@ -1,26 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="420">
-<style>
-.box{fill:#F5F7FA;stroke:#334155;stroke-width:2;rx:12;ry:12}
-.contract{fill:#E6F4FF;stroke:#0369A1;stroke-width:2;rx:12;ry:12}
-.pipeline{fill:#F0E9FF;stroke:#6D28D9;stroke-width:2;rx:12;ry:12}
-.success{fill:#E6F9EC;stroke:#15803D;stroke-width:2;rx:12;ry:12}
-.text{font-family:Inter,Segoe UI,Arial;font-size:16px;fill:#0F172A;text-anchor:middle;dominant-baseline:middle}
-.title{font-family:Inter,Segoe UI,Arial;font-size:24px;fill:#0F172A;text-anchor:middle}
-.label{font-family:Inter,Segoe UI,Arial;font-size:14px;fill:#334155;text-anchor:middle}
-.line{stroke:#475569;stroke-width:2;marker-end:url(#arrow)}
-</style>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="420" viewBox="0 0 1000 420">
 <defs>
-<marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-<path d="M0,0 L9,3 L0,6 Z" fill="#475569"/>
-</marker>
+<marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#6f6b60"></path></marker>
 </defs>
 
-<rect class="box" x="430" y="70" width="140" height="70"/><text class="text" x="500" y="105">Service A</text>
-<rect class="box" x="200" y="260" width="140" height="70"/><text class="text" x="270" y="295">Service B</text>
-<rect class="box" x="430" y="260" width="140" height="70"/><text class="text" x="500" y="295">Service C</text>
-<rect class="box" x="660" y="260" width="140" height="70"/><text class="text" x="730" y="295">Service D</text>
+<rect x="1" y="1" width="998" height="418" rx="14" fill="#1b1a18" stroke="#3d3b34" stroke-width="1"></rect>
+<text x="40" y="50" font-family="&#39;IBM Plex Mono&#39;, ui-monospace, monospace" font-size="13" letter-spacing="2.2" fill="#e5a04e">MICROSERVICES · COMMUNICATION</text>
 
-<line class="line" x1="500" y1="140" x2="270" y2="260"/>
-<line class="line" x1="500" y1="140" x2="500" y2="260"/>
-<line class="line" x1="500" y1="140" x2="730" y2="260"/>
+
+<line x1="480" y1="140" x2="285" y2="256" stroke="#6f6b60" stroke-width="2" marker-end="url(#arrow)"></line>
+<line x1="500" y1="140" x2="500" y2="256" stroke="#6f6b60" stroke-width="2" marker-end="url(#arrow)"></line>
+<line x1="520" y1="140" x2="715" y2="256" stroke="#6f6b60" stroke-width="2" marker-end="url(#arrow)"></line>
+
+
+<rect x="430" y="70" width="140" height="70" rx="9" fill="#2f2716" stroke="#e5a04e" stroke-width="1.5"></rect>
+<text x="500" y="110" font-family="&#39;IBM Plex Sans&#39;, system-ui, sans-serif" font-size="17" font-weight="600" fill="#f2efe9" text-anchor="middle">Service A</text>
+
+
+<rect x="200" y="260" width="140" height="70" rx="9" fill="#2b2926" stroke="#4d4a42" stroke-width="1.5"></rect>
+<text x="270" y="300" font-family="&#39;IBM Plex Sans&#39;, system-ui, sans-serif" font-size="17" font-weight="500" fill="#f2efe9" text-anchor="middle">Service B</text>
+
+
+<rect x="430" y="260" width="140" height="70" rx="9" fill="#2b2926" stroke="#4d4a42" stroke-width="1.5"></rect>
+<text x="500" y="300" font-family="&#39;IBM Plex Sans&#39;, system-ui, sans-serif" font-size="17" font-weight="500" fill="#f2efe9" text-anchor="middle">Service C</text>
+
+
+<rect x="660" y="260" width="140" height="70" rx="9" fill="#2b2926" stroke="#4d4a42" stroke-width="1.5"></rect>
+<text x="730" y="300" font-family="&#39;IBM Plex Sans&#39;, system-ui, sans-serif" font-size="17" font-weight="500" fill="#f2efe9" text-anchor="middle">Service D</text>
 </svg>

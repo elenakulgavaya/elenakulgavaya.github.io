@@ -1,0 +1,11 @@
+- url: /test-before-you-merge/
+  title: Test Before You Merge
+  description: Keep the main branch stable and catch issues before they reach production.
+
+- url: /shift-left-or-fall-behind/
+  title: Shift Left or Fall Behind
+  description: Why delayed testing compounds against you — and how to stop it.
+
+- url: /contract-testing-journey-to-confidence/
+  title: "Contract Testing: Journey to Confidence"
+  description: Validate service integrations without spinning up full environments.

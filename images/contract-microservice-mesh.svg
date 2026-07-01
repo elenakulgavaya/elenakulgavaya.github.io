@@ -1,28 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="420">
-<style>
-.box{fill:#F5F7FA;stroke:#334155;stroke-width:2;rx:12;ry:12}
-.contract{fill:#E6F4FF;stroke:#0369A1;stroke-width:2;rx:12;ry:12}
-.pipeline{fill:#F0E9FF;stroke:#6D28D9;stroke-width:2;rx:12;ry:12}
-.success{fill:#E6F9EC;stroke:#15803D;stroke-width:2;rx:12;ry:12}
-.text{font-family:Inter,Segoe UI,Arial;font-size:16px;fill:#0F172A;text-anchor:middle;dominant-baseline:middle}
-.title{font-family:Inter,Segoe UI,Arial;font-size:24px;fill:#0F172A;text-anchor:middle}
-.label{font-family:Inter,Segoe UI,Arial;font-size:14px;fill:#334155;text-anchor:middle}
-.line{stroke:#475569;stroke-width:2;marker-end:url(#arrow)}
-</style>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="420" viewBox="0 0 1000 420">
 <defs>
-<marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-<path d="M0,0 L9,3 L0,6 Z" fill="#475569"/>
-</marker>
+<marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#6f6b60"></path></marker>
 </defs>
 
-<rect class="box" x="250" y="170" width="150" height="70"/><text class="text" x="325" y="205">Service A</text>
-<rect class="box" x="450" y="100" width="150" height="70"/><text class="text" x="525" y="135">Service B</text>
-<rect class="box" x="650" y="170" width="150" height="70"/><text class="text" x="725" y="205">Service C</text>
+<rect x="1" y="1" width="998" height="418" rx="14" fill="#1b1a18" stroke="#3d3b34" stroke-width="1"></rect>
+<text x="40" y="50" font-family="&#39;IBM Plex Mono&#39;, ui-monospace, monospace" font-size="13" letter-spacing="2.2" fill="#e5a04e">CONTRACT TESTING · SERVICE MESH</text>
 
-<rect class="contract" x="450" y="270" width="200" height="70"/>
-<text class="text" x="550" y="305">Shared Contracts</text>
 
-<line class="line" x1="325" y1="240" x2="450" y2="305"/>
-<line class="line" x1="525" y1="170" x2="550" y2="270"/>
-<line class="line" x1="725" y1="240" x2="650" y2="305"/>
+<line x1="360" y1="235" x2="470" y2="290" stroke="#6f6b60" stroke-width="2" marker-end="url(#arrow)"></line>
+<line x1="540" y1="170" x2="550" y2="262" stroke="#6f6b60" stroke-width="2" marker-end="url(#arrow)"></line>
+<line x1="690" y1="235" x2="630" y2="290" stroke="#6f6b60" stroke-width="2" marker-end="url(#arrow)"></line>
+
+
+<rect x="250" y="170" width="150" height="70" rx="9" fill="#2b2926" stroke="#4d4a42" stroke-width="1.5"></rect>
+<text x="325" y="210" font-family="&#39;IBM Plex Sans&#39;, system-ui, sans-serif" font-size="17" font-weight="500" fill="#f2efe9" text-anchor="middle">Service A</text>
+
+
+<rect x="450" y="100" width="150" height="70" rx="9" fill="#2b2926" stroke="#4d4a42" stroke-width="1.5"></rect>
+<text x="525" y="140" font-family="&#39;IBM Plex Sans&#39;, system-ui, sans-serif" font-size="17" font-weight="500" fill="#f2efe9" text-anchor="middle">Service B</text>
+
+
+<rect x="650" y="170" width="150" height="70" rx="9" fill="#2b2926" stroke="#4d4a42" stroke-width="1.5"></rect>
+<text x="725" y="210" font-family="&#39;IBM Plex Sans&#39;, system-ui, sans-serif" font-size="17" font-weight="500" fill="#f2efe9" text-anchor="middle">Service C</text>
+
+
+<rect x="450" y="270" width="200" height="70" rx="9" fill="#2f2716" stroke="#e5a04e" stroke-width="1.5"></rect>
+<text x="550" y="310" font-family="&#39;IBM Plex Sans&#39;, system-ui, sans-serif" font-size="17" font-weight="600" fill="#f2efe9" text-anchor="middle">Shared Contracts</text>
 </svg>

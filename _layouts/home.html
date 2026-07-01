@@ -4,143 +4,130 @@ layout: default
 
 {% include lang.html %}
 
-{% assign all_pinned = site.posts | where: 'pin', 'true' %}
-{% assign all_normal = site.posts | where_exp: 'item', 'item.pin != true and item.hidden != true' %}
+{% assign latest = site.posts.first %}
+{% assign words = latest.content | number_of_words %}
+{% assign minutes = words | divided_by: 200 %}
+{% if minutes < 1 %}{% assign minutes = 1 %}{% endif %}
 
-{% assign posts = '' | split: '' %}
+<div class="he">
 
-<!-- Get pinned posts on current page -->
+  <!-- Top nav -->
+  <nav class="he-topnav" aria-label="Site navigation">
+    <a href="{{ '/' | relative_url }}" class="he-topnav-brand">
+      {%- if site.avatar -%}
+        <img src="{{ site.avatar | relative_url }}" class="he-topnav-avatar" width="36" height="36" alt="{{ site.social.name | default: site.title }}">
+      {%- endif -%}
+      <span class="he-topnav-wordmark">{{ site.title }}</span>
+    </a>
+    <div class="he-topnav-links">
+      <a href="{{ '/' | relative_url }}">HOME</a>
+      <a href="/best-articles/">BEST ARTICLES</a>
+      <a href="/archives/">ARCHIVES</a>
+      <a href="/about/">ABOUT</a>
+      <a href="https://buttondown.com/qaexplained" class="he-topnav-subscribe" target="_blank" rel="noopener noreferrer">SUBSCRIBE</a>
+    </div>
+  </nav>
 
-{% assign visible_start = paginator.page | minus: 1 | times: paginator.per_page %}
-{% assign visible_end = visible_start | plus: paginator.per_page %}
+  <!-- Hero: latest essay -->
+  <section class="he-hero">
+    <div class="he-eyebrow">
+      <span class="he-eyebrow-dot" aria-hidden="true"></span>
+      <span>LATEST &middot; {{ latest.date | date: "%b %Y" | upcase }}</span>
+    </div>
+    <h1 class="he-hero-title">
+      <a href="{{ latest.url | relative_url }}">{{ latest.title }}</a>
+    </h1>
+    <p class="he-hero-deck">{{ latest.excerpt | default: latest.description | strip_html | truncatewords: 45 }}</p>
+    <div class="he-hero-cta">
+      <a href="{{ latest.url | relative_url }}" class="he-pill">Read the essay &rarr;</a>
+      <span class="he-meta">{{ minutes }} min
+        {%- if latest.categories.size > 0 %} &middot; {{ latest.categories | join: ', ' }}{% endif %}</span>
+    </div>
+  </section>
 
-{% if all_pinned.size > visible_start %}
-  {% if all_pinned.size > visible_end %}
-    {% assign pinned_size = paginator.per_page %}
-  {% else %}
-    {% assign pinned_size = all_pinned.size | minus: visible_start %}
-  {% endif %}
+  <!-- Author credibility strip -->
+  <section class="he-author">
+    <img
+      src="{{ '/assets/img/avatar.jpeg' | relative_url }}"
+      alt="Elena Kulgavaya"
+      class="he-author-avatar"
+      width="64"
+      height="64"
+    >
+    <div class="he-author-bio">
+      <div class="he-author-nameline">
+        <span class="he-author-name">Elena Kulgavaya</span>
+        <span class="he-author-role">QA TECH LEAD</span>
+      </div>
+      <p class="he-author-blurb">Rethinking quality engineering — one uncomfortable truth at a time. Helping teams build reliable CI/CD and testing systems.</p>
+    </div>
+    <a href="/about/" class="he-btn-outline">About Elena</a>
+  </section>
 
-  {% for i in (visible_start..all_pinned.size) limit: pinned_size %}
-    {% assign posts = posts | push: all_pinned[i] %}
-  {% endfor %}
-{% else %}
-  {% assign pinned_size = 0 %}
-{% endif %}
+  <!-- Start here: three numbered cards -->
+  <section class="he-start">
+    <div class="he-section-header">
+      <h2 class="he-h2">Start here</h2>
+      <span class="he-section-cap">THE THREE THAT SET THE TONE</span>
+    </div>
+    <div class="he-cards">
+      {% for item in site.data.start_here %}
+      <article class="he-card{% if forloop.first %} he-card--accent{% endif %}">
+        <span class="he-card-idx">0{{ forloop.index }}</span>
+        <h3 class="he-card-title">
+          <a href="{{ item.url }}">{{ item.title }}</a>
+        </h3>
+        <p class="he-card-desc">{{ item.description }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
 
-<!-- Get normal posts on current page -->
-
-{% assign normal_size = paginator.posts | size | minus: pinned_size %}
-
-{% if normal_size > 0 %}
-  {% if pinned_size > 0 %}
-    {% assign normal_start = 0 %}
-  {% else %}
-    {% assign normal_start = visible_start | minus: all_pinned.size %}
-  {% endif %}
-
-  {% assign normal_end = normal_start | plus: normal_size | minus: 1 %}
-
-  {% for i in (normal_start..normal_end) %}
-    {% assign posts = posts | push: all_normal[i] %}
-  {% endfor %}
-{% endif %}
-
-{% if content != empty %}
-  <div id="home-intro" class="flex-grow-1 px-xl-1">
-    {{ content }}
-  </div>
-{% endif %}
-
-<div id="post-list" class="flex-grow-1 px-xl-1">
-  {% for post in posts %}
-    <article class="card-wrapper card">
-      <a href="{{ post.url | relative_url }}" class="post-preview row g-0 flex-md-row-reverse">
-        {% assign card_body_col = '12' %}
-
-        {% if post.image %}
-          {% assign src = post.image.path | default: post.image %}
-
-          {% if post.media_subpath %}
-            {% unless src contains '://' %}
-              {% assign src = post.media_subpath
-                | append: '/'
-                | append: src
-                | replace: '///', '/'
-                | replace: '//', '/'
-              %}
-            {% endunless %}
-          {% endif %}
-
-          {% if post.image.lqip %}
-            {% assign lqip = post.image.lqip %}
-
-            {% if post.media_subpath %}
-              {% unless lqip contains 'data:' %}
-                {% assign lqip = post.media_subpath
-                  | append: '/'
-                  | append: lqip
-                  | replace: '///', '/'
-                  | replace: '//', '/'
-                %}
-              {% endunless %}
-            {% endif %}
-
-            {% assign lqip_attr = 'lqip="' | append: lqip | append: '"' %}
-          {% endif %}
-
-          {% assign alt = post.image.alt | xml_escape | default: 'Preview Image' %}
-
-          <div class="col-md-5">
-            <img src="{{ src }}" alt="{{ alt }}" {{ lqip_attr }}>
-          </div>
-
-          {% assign card_body_col = '7' %}
-        {% endif %}
-
-        <div class="col-md-{{ card_body_col }}">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">{{ post.title }}</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>{% include post-summary.html %}</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                {% include datetime.html date=post.date lang=lang %}
-
-                <!-- categories -->
-                {% if post.categories.size > 0 %}
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    {% for category in post.categories %}
-                      {{ category }}
-                      {%- unless forloop.last -%},{%- endunless -%}
-                    {% endfor %}
-                  </span>
-                {% endif %}
-              </div>
-
-              {% if post.pin %}
-                <div class="pin ms-1">
-                  <i class="fas fa-thumbtack fa-fw"></i>
-                  <span>{{ site.data.locales[lang].post.pin_prompt }}</span>
-                </div>
-              {% endif %}
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
+  <!-- Worth reading: typographic list -->
+  <section class="he-worth">
+    <h2 class="he-h2">Worth reading</h2>
+    <div class="he-reading-list">
+      {% for item in site.data.worth_reading %}
+      <div class="he-reading-row">
+        <div class="he-reading-title">
+          <a href="{{ item.url }}">{{ item.title }}</a>
         </div>
-      </a>
-    </article>
-  {% endfor %}
-</div>
-<!-- #post-list -->
+        <div class="he-reading-desc">{{ item.description }}</div>
+      </div>
+      {% endfor %}
+    </div>
+    <a href="/best-articles/" class="he-view-all">View all articles &rarr;</a>
+  </section>
 
-{% if paginator.total_pages > 1 %}
-  {% include post-paginator.html %}
-{% endif %}
+  <!-- Newsletter signup -->
+  <section class="he-newsletter">
+    <div class="he-nl-copy">
+      <h2 class="he-nl-title">One uncomfortable truth,<br>in your inbox.</h2>
+      <p class="he-nl-sub">No cadence promises, no fluff. Just the next essay on quality engineering when it's ready.</p>
+    </div>
+    <div class="he-nl-form-wrap">
+      <form
+        id="he-nl-form"
+        action="https://buttondown.com/api/emails/embed-subscribe/qaexplained"
+        method="post"
+        target="popupwindow"
+        onsubmit="window.open('https://buttondown.com/qaexplained','popupwindow')"
+      >
+        <div class="he-nl-row">
+          <input
+            type="email"
+            name="email"
+            placeholder="you@team.dev"
+            class="he-field"
+            required
+            autocomplete="email"
+            aria-label="Email address"
+          >
+          <button type="submit" class="he-pill">Subscribe</button>
+        </div>
+      </form>
+      <p class="he-nl-feedback" aria-live="polite"></p>
+    </div>
+  </section>
+
+</div>

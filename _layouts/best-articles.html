@@ -1,0 +1,156 @@
+---
+layout: default
+---
+
+{% include lang.html %}
+
+{% assign total_count = 0 %}
+{% for group in site.data.best_articles %}
+  {% assign total_count = total_count | plus: group.posts.size %}
+{% endfor %}
+
+<div class="ba">
+
+  <div class="ba-header">
+    <div class="ba-eyebrow">BEST ARTICLES &middot; {{ total_count }} essays</div>
+    <h1 class="ba-title">The ones worth your time.</h1>
+    <p class="ba-lede">A curated path through quality engineering — start at the top, or jump to what's biting you.</p>
+  </div>
+
+  {% for group in site.data.best_articles %}
+    <div class="ba-group">
+      <div class="ba-group-header">
+        <span class="ba-group-name">{{ group.heading }}</span>
+        <span class="ba-group-caption">{{ group.caption }}</span>
+      </div>
+      {% for slug in group.posts %}
+        {% assign post_url = '/' | append: slug | append: '/' %}
+        {% assign the_post = site.posts | where: 'url', post_url | first %}
+        {% if the_post %}
+          <a href="{{ the_post.url | relative_url }}" class="ba-row">
+            <div class="ba-body">
+              <div class="ba-post-title">{{ the_post.title }}</div>
+              {% if the_post.description %}
+                <div class="ba-post-desc">{{ the_post.description | truncatewords: 20 }}</div>
+              {% endif %}
+            </div>
+            {% if the_post.categories.size > 0 %}
+              <span class="ba-tag">{{ the_post.categories.first }}</span>
+            {% endif %}
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endfor %}
+
+</div>
+
+<style>
+  .ba {
+    font-family: 'IBM Plex Sans', sans-serif;
+    padding: 52px 0;
+    color: #eae7e1;
+  }
+
+  .ba-header {
+    margin-bottom: 44px;
+  }
+
+  .ba-eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #e5a04e;
+    margin-bottom: 14px;
+  }
+
+  .ba-title {
+    font-family: 'IBM Plex Serif', serif !important;
+    font-size: clamp(28px, 5vw, 42px) !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.02em !important;
+    color: #eae7e1 !important;
+    margin: 0 0 12px !important;
+  }
+
+  .ba-lede {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 16px;
+    color: #c2beb6;
+    max-width: 62ch;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .ba-group {
+    margin-bottom: 12px;
+  }
+
+  .ba-group-header {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #48443f;
+    margin-bottom: 0;
+  }
+
+  .ba-group-name {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #eae7e1;
+  }
+
+  .ba-group-caption {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    color: #928d84;
+    text-transform: uppercase;
+  }
+
+  .ba-row {
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
+    padding: 20px 0;
+    border-bottom: 1px solid #33302c;
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      .ba-post-title { color: #e5a04e; }
+    }
+  }
+
+  .ba-body {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .ba-post-title {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #eae7e1;
+    margin-bottom: 4px;
+    transition: color 150ms ease;
+    line-height: 1.25;
+  }
+
+  .ba-post-desc {
+    font-size: 14px;
+    color: #928d84;
+    line-height: 1.4;
+  }
+
+  .ba-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11.5px;
+    color: #e5a04e;
+    flex-shrink: 0;
+    text-transform: lowercase;
+  }
+</style>

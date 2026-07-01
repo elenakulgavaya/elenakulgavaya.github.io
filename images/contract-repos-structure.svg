@@ -1,23 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420">
-<style>
-.box{fill:#f8fafc;stroke:#334155;stroke-width:2;rx:10;ry:10}
-.contract{fill:#e0f2fe;stroke:#0284c7;stroke-width:2;rx:10;ry:10}
-.pipeline{fill:#ede9fe;stroke:#7c3aed;stroke-width:2;rx:10;ry:10}
-.text{font-family:Inter,Segoe UI,Arial;font-size:16px;fill:#0f172a;text-anchor:middle;dominant-baseline:middle}
-.label{font-family:Inter,Segoe UI,Arial;font-size:14px;fill:#334155;text-anchor:middle}
-.line{stroke:#475569;stroke-width:2;marker-end:url(#arrow)}
-</style>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420">
 <defs>
-<marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-<path d="M0,0 L9,3 L0,6 Z" fill="#475569"/>
-</marker>
+<marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#6f6b60"></path></marker>
 </defs>
 
-<rect class="contract" x="350" y="60" width="200" height="80"/><text class="text" x="450" y="100">Contracts Repo</text>
-<rect class="box" x="120" y="280" width="200" height="80"/><text class="text" x="220" y="320">Service A Tests</text>
-<rect class="box" x="350" y="280" width="200" height="80"/><text class="text" x="450" y="320">Service B Tests</text>
-<rect class="box" x="580" y="280" width="200" height="80"/><text class="text" x="680" y="320">Service C Tests</text>
-<line class="line" x1="450" y1="140" x2="220" y2="280"/>
-<line class="line" x1="450" y1="140" x2="450" y2="280"/>
-<line class="line" x1="450" y1="140" x2="680" y2="280"/>
+<rect x="1" y="1" width="898" height="418" rx="14" fill="#1b1a18" stroke="#3d3b34" stroke-width="1"></rect>
+<text x="40" y="50" font-family="&#39;IBM Plex Mono&#39;, ui-monospace, monospace" font-size="13" letter-spacing="2.2" fill="#e5a04e">CONTRACT TESTING · REPOSITORY STRUCTURE</text>
+
+
+<line x1="440" y1="140" x2="225" y2="276" stroke="#6f6b60" stroke-width="2" marker-end="url(#arrow)"></line>
+<line x1="450" y1="140" x2="450" y2="276" stroke="#6f6b60" stroke-width="2" marker-end="url(#arrow)"></line>
+<line x1="460" y1="140" x2="675" y2="276" stroke="#6f6b60" stroke-width="2" marker-end="url(#arrow)"></line>
+
+
+<rect x="350" y="60" width="200" height="80" rx="10" fill="#2f2716" stroke="#e5a04e" stroke-width="1.5"></rect>
+<text x="450" y="107" font-family="&#39;IBM Plex Sans&#39;, system-ui, sans-serif" font-size="18" font-weight="600" fill="#f2efe9" text-anchor="middle">Contracts Repo</text>
+
+
+<rect x="120" y="280" width="200" height="80" rx="10" fill="#2b2926" stroke="#4d4a42" stroke-width="1.5"></rect>
+<text x="220" y="327" font-family="&#39;IBM Plex Sans&#39;, system-ui, sans-serif" font-size="17" font-weight="500" fill="#f2efe9" text-anchor="middle">Service A Tests</text>
+
+
+<rect x="350" y="280" width="200" height="80" rx="10" fill="#2b2926" stroke="#4d4a42" stroke-width="1.5"></rect>
+<text x="450" y="327" font-family="&#39;IBM Plex Sans&#39;, system-ui, sans-serif" font-size="17" font-weight="500" fill="#f2efe9" text-anchor="middle">Service B Tests</text>
+
+
+<rect x="580" y="280" width="200" height="80" rx="10" fill="#2b2926" stroke="#4d4a42" stroke-width="1.5"></rect>
+<text x="680" y="327" font-family="&#39;IBM Plex Sans&#39;, system-ui, sans-serif" font-size="17" font-weight="500" fill="#f2efe9" text-anchor="middle">Service C Tests</text>
 </svg>

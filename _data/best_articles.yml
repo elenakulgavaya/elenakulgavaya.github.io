@@ -1,0 +1,34 @@
+- heading: "Testing Strategy"
+  caption: "3 essays"
+  posts:
+    - test-before-you-merge
+    - shift-left-or-fall-behind
+    - testing-in-production
+
+- heading: "CI/CD and Pipelines"
+  caption: "2 essays"
+  posts:
+    - why-tests-are-skipped
+    - continuous-delivery-why-and-how
+
+- heading: "Test Design and Results"
+  caption: "4 essays"
+  posts:
+    - actionable-test-results
+    - trap-of-test-reports
+    - coverage-signal-or-illusion
+    - smelly-tests
+
+- heading: "Culture and Process"
+  caption: "4 essays"
+  posts:
+    - heroic-bug-fix-process-failure
+    - end-to-end-testing-slow-road-to-blame-and-burnout
+    - shifting-left-without-burning-bridges
+    - code-review-cost-or-investment
+
+- heading: "Service Integration"
+  caption: "2 essays"
+  posts:
+    - contract-testing-journey-to-confidence
+    - your-biggest-contract-is-hidden-inside-an-e2e-test

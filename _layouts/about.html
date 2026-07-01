@@ -1,0 +1,272 @@
+---
+layout: default
+---
+
+{% include lang.html %}
+
+<div class="ab">
+
+  <div class="ab-eyebrow">ABOUT</div>
+
+  <!-- Hero row: portrait + headline + lede -->
+  <div class="ab-hero">
+    <img
+      src="{{ '/assets/img/avatar.jpeg' | relative_url }}"
+      alt="Elena Kulgavaya"
+      class="ab-portrait"
+    >
+    <div class="ab-hero-text">
+      <h1 class="ab-h1">Quality is a discipline, not a phase.</h1>
+      <p class="ab-lede">I&rsquo;m Elena Kulgavaya &mdash; a QA Tech Lead who writes about the parts of quality engineering nobody puts on a slide.</p>
+    </div>
+  </div>
+
+  <!-- Narrative -->
+  <div class="ab-narrative">
+    <p>Fifteen years in QA teaches you a lot of wrong lessons. You learn to protect the release gate. You learn to write more tests. You learn to say &ldquo;it needs more testing&rdquo; when you&rsquo;re not sure. And then at some point you realize that all of those instincts were making things slower, not safer.</p>
+    <p>QA Explained is where I work through what actually helps. No vendor pitches, no maturity-model bingo. Just what actually moves quality: where to test, when to shift left, and how to design failures that point straight at the fix.</p>
+  </div>
+
+  <hr class="ab-divider">
+
+  <!-- Two-column footer block -->
+  <div class="ab-footer-grid">
+    <div class="ab-col">
+      <h2 class="ab-col-heading">What I write about</h2>
+      <ul class="ab-topics">
+        <li><span class="ab-dash">&mdash;</span> Test strategy &amp; shift-left</li>
+        <li><span class="ab-dash">&mdash;</span> Contract testing over E2E</li>
+        <li><span class="ab-dash">&mdash;</span> CI/CD &amp; branch-level testing</li>
+        <li><span class="ab-dash">&mdash;</span> Quality culture &amp; process</li>
+      </ul>
+    </div>
+    <div class="ab-col">
+      <h2 class="ab-col-heading">Elsewhere</h2>
+      <ul class="ab-links">
+        <li><a href="https://github.com/elenakulgavaya" target="_blank" rel="noopener">github.com/elenakulgavaya &rarr;</a></li>
+        <li><a href="https://buttondown.com/qaexplained" target="_blank" rel="noopener">buttondown.com/qaexplained &rarr;</a></li>
+        <li><a href="/feed.xml" target="_blank">feed.xml &rarr;</a></li>
+      </ul>
+      <form
+        class="ab-nl-form"
+        action="https://buttondown.com/api/emails/embed-subscribe/qaexplained"
+        method="post"
+        target="popupwindow"
+        onsubmit="window.open('https://buttondown.com/qaexplained','popupwindow')"
+      >
+        <div class="ab-nl-row">
+          <input
+            type="email"
+            name="email"
+            placeholder="you@team.dev"
+            class="ab-nl-field"
+            required
+            autocomplete="email"
+            aria-label="Email address"
+          >
+          <button type="submit" class="ab-nl-btn">Subscribe</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+<style>
+  .ab {
+    font-family: 'IBM Plex Sans', sans-serif;
+    padding: 52px 0;
+    color: #eae7e1;
+  }
+
+  .ab-eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #e5a04e;
+    margin-bottom: 24px;
+  }
+
+  .ab-hero {
+    display: flex;
+    gap: 36px;
+    align-items: flex-start;
+    margin-bottom: 40px;
+  }
+
+  .ab-portrait {
+    width: 120px !important;
+    height: 120px !important;
+    border-radius: 12px;
+    object-fit: cover;
+    object-position: center center;
+    border: 1px solid #48443f;
+    flex: 0 0 auto;
+    display: block;
+  }
+
+  .ab-h1 {
+    font-family: 'IBM Plex Serif', serif !important;
+    font-size: clamp(30px, 7vw, 40px) !important;
+    font-weight: 600 !important;
+    line-height: 1.08 !important;
+    letter-spacing: -0.02em !important;
+    color: #eae7e1 !important;
+    margin: 0 0 14px !important;
+  }
+
+  .ab-lede {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #c2beb6;
+    max-width: 52ch;
+    margin: 0;
+  }
+
+  .ab-narrative {
+    max-width: 62ch;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .ab-narrative p {
+    font-size: 16px;
+    line-height: 1.68;
+    color: #d0ccc4;
+    margin: 0;
+  }
+
+  .ab-divider {
+    border: none;
+    border-top: 1px solid #33302c;
+    margin: 44px 0;
+  }
+
+  .ab-footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .ab-col-heading {
+    font-family: 'IBM Plex Serif', serif !important;
+    font-size: 19px !important;
+    font-weight: 600 !important;
+    color: #eae7e1 !important;
+    margin: 0 0 16px !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+
+  .ab-topics {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .ab-topics li {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    font-size: 15px;
+    color: #ccc9c0;
+  }
+
+  .ab-dash {
+    color: #e5a04e;
+    flex-shrink: 0;
+  }
+
+  .ab-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .ab-links a {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    color: #c9a870;
+    text-decoration: none;
+    transition: color 150ms ease;
+
+    &:hover {
+      color: #e5a04e;
+    }
+  }
+
+  .ab-nl-form {
+    margin-top: 22px;
+  }
+
+  .ab-nl-row {
+    display: flex;
+    gap: 8px;
+  }
+
+  .ab-nl-field {
+    flex: 1;
+    min-width: 0;
+    background: #221f1c;
+    border: 1px solid #48443f;
+    border-radius: 8px;
+    padding: 11px 14px;
+    color: #eae7e1;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1;
+    transition: border-color 150ms ease;
+    outline: none;
+
+    &::placeholder {
+      color: #928d84;
+    }
+
+    &:focus {
+      border-color: #e5a04e;
+    }
+  }
+
+  .ab-nl-btn {
+    flex-shrink: 0;
+    background: #e5a04e;
+    color: #0d0d10;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 11px 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    line-height: 1;
+    transition: opacity 150ms ease;
+    white-space: nowrap;
+
+    &:hover {
+      opacity: 0.92;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .ab-hero {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .ab-footer-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .ab-narrative {
+      max-width: 100%;
+    }
+  }
+</style>
