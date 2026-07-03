@@ -106,14 +106,19 @@
   display: inline-flex;
   align-items: center;
   gap: 9px;
+  padding: 11px 22px;
+  border-radius: 10px;
+  border: 1px solid var(--link-color);
   font-size: 14px;
   font-weight: 600;
   color: var(--link-color);
-  transition: gap 150ms ease;
+  text-decoration: none;
+  transition: background 150ms ease, gap 150ms ease;
 
   &:hover {
     gap: 14px;
     color: var(--link-color);
+    background: color-mix(in srgb, var(--link-color) 10%, transparent);
   }
 }
 

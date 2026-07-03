@@ -3,9 +3,9 @@
 <aside aria-label="Sidebar" id="sidebar">
 
   <div class="sb-identity">
-    <div class="sb-avatar-wrap">
+    <a href="{{ '/' | relative_url }}" class="sb-avatar-wrap" aria-label="Home">
       <img src="{{ site.avatar | relative_url }}" class="sb-avatar" width="104" height="104" alt="{{ site.social.name | default: site.title }}">
-    </div>
+    </a>
     <div class="sb-title">{{ site.title }}</div>
     <div class="sb-name">{{ site.social.name | default: 'Elena Kulgavaya' }}</div>
     <div class="sb-role">QA Tech Lead</div>

@@ -57,17 +57,7 @@ social_preview_image: "/assets/img/og-image.png"
 toc: true
 
 comments:
-  provider: giscus
-  giscus:
-    repo: elenakulgavaya/elenakulgavaya.github.io
-    repo_id: "R_kgDORRiI0A"
-    category: "General"
-    category_id: "DIC_kwDORRiI0M4C2jdO"
-    mapping: pathname
-    strict: 0
-    input_position: bottom
-    lang: en
-    reactions_enabled: 1
+  provider: false
 
 assets:
   self_host:
