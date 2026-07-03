@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520">
+<rect x="1" y="1" width="998" height="518" rx="14" fill="#f8f5f0" stroke="#c8c3ba" stroke-width="1"></rect>
+<text x="40" y="52" font-family="&#39;IBM Plex Mono&#39;, ui-monospace, monospace" font-size="13" letter-spacing="2.2" fill="#e5a04e">TESTING PYRAMID · MICROSERVICES</text>
+
+
+<polygon points="200,430 800,430 720,350 280,350" fill="#edebe4" stroke="#b8b3a8" stroke-width="1.5"></polygon>
+<text x="500" y="394" font-family="&#39;IBM Plex Sans&#39;, system-ui, sans-serif" font-size="19" font-weight="500" fill="#1a1816" text-anchor="middle">Unit Tests</text>
+
+
+<polygon points="280,350 720,350 660,270 340,270" fill="#e5e1d9" stroke="#afa9a0" stroke-width="1.5"></polygon>
+<text x="500" y="314" font-family="&#39;IBM Plex Sans&#39;, system-ui, sans-serif" font-size="18" font-weight="500" fill="#1a1816" text-anchor="middle">Component Tests</text>
+
+
+<polygon points="340,270 660,270 610,200 390,200" fill="#fdf0e0" stroke="#e5a04e" stroke-width="2"></polygon>
+<text x="500" y="239" font-family="&#39;IBM Plex Sans&#39;, system-ui, sans-serif" font-size="18" font-weight="600" fill="#4a3010" text-anchor="middle">Contract Tests</text>
+
+
+<polygon points="390,200 610,200 560,140 440,140" fill="#dedad1" stroke="#a8a39a" stroke-width="1.5"></polygon>
+<text x="500" y="174" font-family="&#39;IBM Plex Sans&#39;, system-ui, sans-serif" font-size="16" font-weight="500" fill="#1a1816" text-anchor="middle">Minimal E2E</text>
+</svg>

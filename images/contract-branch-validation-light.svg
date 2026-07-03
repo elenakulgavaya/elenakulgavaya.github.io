@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420">
+<defs>
+<marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#a0998e"></path></marker>
+</defs>
+
+<rect x="1" y="1" width="898" height="418" rx="14" fill="#f8f5f0" stroke="#c8c3ba" stroke-width="1"></rect>
+<text x="40" y="50" font-family="&#39;IBM Plex Mono&#39;, ui-monospace, monospace" font-size="13" letter-spacing="2.2" fill="#e5a04e">CONTRACT TESTING · BRANCH VALIDATION</text>
+
+
+<line x1="284" y1="220" x2="352" y2="220" stroke="#a0998e" stroke-width="2" marker-end="url(#arrow)"></line>
+<line x1="584" y1="220" x2="652" y2="220" stroke="#a0998e" stroke-width="2" marker-end="url(#arrow)"></line>
+
+
+<rect x="80" y="180" width="200" height="80" rx="10" fill="#edebe4" stroke="#b8b3a8" stroke-width="1.5"></rect>
+<text x="102" y="210" font-family="&#39;IBM Plex Mono&#39;, ui-monospace, monospace" font-size="12" fill="#e5a04e">01</text>
+<text x="180" y="228" font-family="&#39;IBM Plex Sans&#39;, system-ui, sans-serif" font-size="18" font-weight="500" fill="#1a1816" text-anchor="middle">Contract Change</text>
+
+
+<rect x="360" y="180" width="220" height="80" rx="10" fill="#fbefd6" stroke="#e5a04e" stroke-width="1.5"></rect>
+<text x="382" y="210" font-family="&#39;IBM Plex Mono&#39;, ui-monospace, monospace" font-size="12" fill="#e5a04e">02</text>
+<text x="470" y="228" font-family="&#39;IBM Plex Sans&#39;, system-ui, sans-serif" font-size="18" font-weight="500" fill="#1a1816" text-anchor="middle">Run Consumer Tests</text>
+
+
+<rect x="660" y="180" width="200" height="80" rx="10" fill="#e5a04e" stroke="#e5a04e" stroke-width="1.5"></rect>
+<text x="682" y="210" font-family="&#39;IBM Plex Mono&#39;, ui-monospace, monospace" font-size="12" fill="#f5d9a0">03</text>
+<text x="760" y="228" font-family="&#39;IBM Plex Sans&#39;, system-ui, sans-serif" font-size="18" font-weight="600" fill="#f0ece6" text-anchor="middle">Safe to Merge</text>
+</svg>

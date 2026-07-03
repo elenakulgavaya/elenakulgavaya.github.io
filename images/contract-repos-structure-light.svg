@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420">
+<defs>
+<marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#a0998e"></path></marker>
+</defs>
+
+<rect x="1" y="1" width="898" height="418" rx="14" fill="#f8f5f0" stroke="#c8c3ba" stroke-width="1"></rect>
+<text x="40" y="50" font-family="&#39;IBM Plex Mono&#39;, ui-monospace, monospace" font-size="13" letter-spacing="2.2" fill="#e5a04e">CONTRACT TESTING · REPOSITORY STRUCTURE</text>
+
+
+<line x1="440" y1="140" x2="225" y2="276" stroke="#a0998e" stroke-width="2" marker-end="url(#arrow)"></line>
+<line x1="450" y1="140" x2="450" y2="276" stroke="#a0998e" stroke-width="2" marker-end="url(#arrow)"></line>
+<line x1="460" y1="140" x2="675" y2="276" stroke="#a0998e" stroke-width="2" marker-end="url(#arrow)"></line>
+
+
+<rect x="350" y="60" width="200" height="80" rx="10" fill="#fbefd6" stroke="#e5a04e" stroke-width="1.5"></rect>
+<text x="450" y="107" font-family="&#39;IBM Plex Sans&#39;, system-ui, sans-serif" font-size="18" font-weight="600" fill="#1a1816" text-anchor="middle">Contracts Repo</text>
+
+
+<rect x="120" y="280" width="200" height="80" rx="10" fill="#edebe4" stroke="#b8b3a8" stroke-width="1.5"></rect>
+<text x="220" y="327" font-family="&#39;IBM Plex Sans&#39;, system-ui, sans-serif" font-size="17" font-weight="500" fill="#1a1816" text-anchor="middle">Service A Tests</text>
+
+
+<rect x="350" y="280" width="200" height="80" rx="10" fill="#edebe4" stroke="#b8b3a8" stroke-width="1.5"></rect>
+<text x="450" y="327" font-family="&#39;IBM Plex Sans&#39;, system-ui, sans-serif" font-size="17" font-weight="500" fill="#1a1816" text-anchor="middle">Service B Tests</text>
+
+
+<rect x="580" y="280" width="200" height="80" rx="10" fill="#edebe4" stroke="#b8b3a8" stroke-width="1.5"></rect>
+<text x="680" y="327" font-family="&#39;IBM Plex Sans&#39;, system-ui, sans-serif" font-size="17" font-weight="500" fill="#1a1816" text-anchor="middle">Service C Tests</text>
+</svg>

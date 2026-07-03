@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="420" viewBox="0 0 1000 420">
+<defs>
+<marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#a0998e"></path></marker>
+</defs>
+
+<rect x="1" y="1" width="998" height="418" rx="14" fill="#f8f5f0" stroke="#c8c3ba" stroke-width="1"></rect>
+<text x="40" y="50" font-family="&#39;IBM Plex Mono&#39;, ui-monospace, monospace" font-size="13" letter-spacing="2.2" fill="#e5a04e">MICROSERVICES · COMMUNICATION</text>
+
+
+<line x1="480" y1="140" x2="285" y2="256" stroke="#a0998e" stroke-width="2" marker-end="url(#arrow)"></line>
+<line x1="500" y1="140" x2="500" y2="256" stroke="#a0998e" stroke-width="2" marker-end="url(#arrow)"></line>
+<line x1="520" y1="140" x2="715" y2="256" stroke="#a0998e" stroke-width="2" marker-end="url(#arrow)"></line>
+
+
+<rect x="430" y="70" width="140" height="70" rx="9" fill="#fbefd6" stroke="#e5a04e" stroke-width="1.5"></rect>
+<text x="500" y="110" font-family="&#39;IBM Plex Sans&#39;, system-ui, sans-serif" font-size="17" font-weight="600" fill="#1a1816" text-anchor="middle">Service A</text>
+
+
+<rect x="200" y="260" width="140" height="70" rx="9" fill="#edebe4" stroke="#b8b3a8" stroke-width="1.5"></rect>
+<text x="270" y="300" font-family="&#39;IBM Plex Sans&#39;, system-ui, sans-serif" font-size="17" font-weight="500" fill="#1a1816" text-anchor="middle">Service B</text>
+
+
+<rect x="430" y="260" width="140" height="70" rx="9" fill="#edebe4" stroke="#b8b3a8" stroke-width="1.5"></rect>
+<text x="500" y="300" font-family="&#39;IBM Plex Sans&#39;, system-ui, sans-serif" font-size="17" font-weight="500" fill="#1a1816" text-anchor="middle">Service C</text>
+
+
+<rect x="660" y="260" width="140" height="70" rx="9" fill="#edebe4" stroke="#b8b3a8" stroke-width="1.5"></rect>
+<text x="730" y="300" font-family="&#39;IBM Plex Sans&#39;, system-ui, sans-serif" font-size="17" font-weight="500" fill="#1a1816" text-anchor="middle">Service D</text>
+</svg>

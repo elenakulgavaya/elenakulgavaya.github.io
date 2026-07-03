@@ -1,0 +1,8 @@
+{% comment %}
+  Usage: {% include themed-img.html src="contract-testing-pyramid" alt="Alt text" %}
+  Expects /images/{src}.svg (dark) and /images/{src}-light.svg (light).
+{% endcomment %}
+<span class="themed-img">
+  <img src="/images/{{ include.src }}.svg"       class="themed-img-dark"  alt="{{ include.alt }}">
+  <img src="/images/{{ include.src }}-light.svg" class="themed-img-light" alt="{{ include.alt }}">
+</span>
