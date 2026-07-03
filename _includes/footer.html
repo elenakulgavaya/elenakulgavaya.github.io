@@ -1,0 +1,18 @@
+{% include lang.html %}
+
+<footer class="hm-footer" aria-label="Site Info">
+  <span>&copy; {{ 'now' | date: '%Y' }} {{ site.social.name | default: 'Elena Kulgavaya' }} &middot; Some rights reserved</span>
+  <div class="hm-footer-links">
+    {% for entry in site.data.contact %}
+      {% case entry.type %}
+        {% when 'github' %}
+          {% if site.github.username %}
+            <a href="https://github.com/{{ site.github.username }}" target="_blank" rel="noopener noreferrer">github</a>
+          {% endif %}
+        {% when 'rss' %}
+          <a href="{{ '/feed.xml' | relative_url }}">rss</a>
+      {% endcase %}
+    {% endfor %}
+    <a href="https://buttondown.com/qaexplained" target="_blank" rel="noopener noreferrer">email</a>
+  </div>
+</footer>

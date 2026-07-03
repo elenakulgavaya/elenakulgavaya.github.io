@@ -1,96 +1,41 @@
 {% include lang.html %}
 
-<!-- Editorial sidebar -->
 <aside aria-label="Sidebar" id="sidebar">
 
-  <!-- Brand -->
-  <div class="sb-brand">
-    <a href="{{ '/' | relative_url }}" class="sb-brand-link">
-      {%- if site.avatar -%}
-        <img src="{{ site.avatar | relative_url }}" class="sb-avatar" width="36" height="36" alt="{{ site.social.name | default: site.title }}">
-      {%- endif -%}
-      <span class="sb-wordmark">{{ site.title }}</span>
-    </a>
+  <div class="sb-identity">
+    <div class="sb-avatar-wrap">
+      <img src="{{ site.avatar | relative_url }}" class="sb-avatar" width="104" height="104" alt="{{ site.social.name | default: site.title }}">
+    </div>
+    <div class="sb-title">{{ site.title }}</div>
+    <div class="sb-name">{{ site.social.name | default: 'Elena Kulgavaya' }}</div>
+    <div class="sb-role">QA Tech Lead</div>
+    <p class="sb-bio">Rethinking quality engineering — one uncomfortable truth at a time.</p>
   </div>
 
-  <!-- Author block -->
-  <div class="sb-author">
-    <div class="sb-author-name">{{ site.social.name | default: "Elena Kulgavaya" }}</div>
-    <div class="sb-author-role">QA TECH LEAD</div>
-    <p class="sb-author-thesis">Rethinking quality engineering — one uncomfortable truth at a time.</p>
-  </div>
-
-  <!-- Nav -->
   <nav class="sb-nav" aria-label="Main navigation">
-    <ul>
-      <li>
-        <a href="{{ '/' | relative_url }}" class="sb-nav-item{% if page.layout == 'home' %} sb-nav-item--active{% endif %}">
-          <span class="sb-nav-idx">01</span>
-          <span class="sb-nav-label">Home</span>
-        </a>
-      </li>
-      {% assign hidden_tabs = 'categories,tags' | split: ',' %}
-      {% assign nav_idx = 2 %}
-      {% for tab in site.tabs %}
-        {% unless hidden_tabs contains tab.slug %}
-          {% assign is_active = false %}
-          {% if tab.url == page.url %}{% assign is_active = true %}{% endif %}
-          {% if page.layout == 'post' and tab.slug == 'archives' %}{% assign is_active = false %}{% endif %}
-          <li>
-            <a href="{{ tab.url | relative_url }}" class="sb-nav-item{% if is_active %} sb-nav-item--active{% endif %}">
-              <span class="sb-nav-idx">0{{ nav_idx }}</span>
-              <span class="sb-nav-label">{{ tab.title }}</span>
-            </a>
-          </li>
-          {% assign nav_idx = nav_idx | plus: 1 %}
-        {% endunless %}
-      {% endfor %}
-    </ul>
+    <a href="{{ '/' | relative_url }}" class="sb-nav-item{% if page.layout == 'home' %} sb-nav-item--active{% endif %}">Home</a>
+    {% assign hidden_tabs = 'categories,tags' | split: ',' %}
+    {% for tab in site.tabs %}
+      {% unless hidden_tabs contains tab.slug %}
+        {% assign is_active = false %}
+        {% if tab.url == page.url %}{% assign is_active = true %}{% endif %}
+        <a href="{{ tab.url | relative_url }}" class="sb-nav-item{% if is_active %} sb-nav-item--active{% endif %}">{{ tab.title }}</a>
+      {% endunless %}
+    {% endfor %}
+    <a href="https://buttondown.com/qaexplained" class="sb-nav-item" target="_blank" rel="noopener noreferrer">Subscribe</a>
   </nav>
 
-  <!-- Subscribe CTA -->
-  <div class="sb-cta">
-    <div class="sb-cta-title">Get the next essay</div>
-    <p class="sb-cta-sub">One uncomfortable truth at a time.</p>
-    <a href="https://buttondown.com/qaexplained" class="sb-cta-btn" target="_blank" rel="noopener noreferrer">Subscribe →</a>
-  </div>
-
-  <!-- Trending tags -->
-  <div class="sb-tags">
-    <div class="sb-section-label">TRENDING</div>
-    <div class="sb-tag-cloud">
-      {% assign tag_limit = 8 %}
-      {% assign tag_count = 0 %}
-      {% for tag in site.tags %}
-        {% if tag_count < tag_limit %}
-          <a href="{{ site.baseurl }}/tags/{{ tag[0] | downcase | url_encode }}/" class="sb-tag">{{ tag[0] }}</a>
-          {% assign tag_count = tag_count | plus: 1 %}
-        {% endif %}
-      {% endfor %}
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <div class="sb-footer">
+  <div class="sb-social">
     {% for entry in site.data.contact %}
       {% case entry.type %}
         {% when 'github' %}
           {% if site.github.username %}
-            <a href="https://github.com/{{ site.github.username }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub">github</a>
+            <a href="https://github.com/{{ site.github.username }}" target="_blank" rel="noopener noreferrer">github</a>
           {% endif %}
         {% when 'rss' %}
-          <a href="{{ '/feed.xml' | relative_url }}" aria-label="RSS">rss</a>
+          <a href="{{ '/feed.xml' | relative_url }}">rss</a>
       {% endcase %}
     {% endfor %}
-    <a href="https://buttondown.com/qaexplained" target="_blank" rel="noopener noreferrer" aria-label="Newsletter">email</a>
-
-    <!-- Keep mode toggle for accessibility -->
-    {% unless site.theme_mode %}
-      <button type="button" class="sb-mode-toggle btn btn-link" aria-label="Switch Mode" id="mode-toggle">
-        <i class="fas fa-adjust fa-fw"></i>
-      </button>
-    {% endunless %}
   </div>
 
 </aside>
-<!-- #sidebar -->

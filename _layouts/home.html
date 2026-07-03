@@ -9,125 +9,91 @@ layout: default
 {% assign minutes = words | divided_by: 200 %}
 {% if minutes < 1 %}{% assign minutes = 1 %}{% endif %}
 
-<div class="he">
+<div class="hm-main">
 
-  <!-- Top nav -->
-  <nav class="he-topnav" aria-label="Site navigation">
-    <a href="{{ '/' | relative_url }}" class="he-topnav-brand">
-      {%- if site.avatar -%}
-        <img src="{{ site.avatar | relative_url }}" class="he-topnav-avatar" width="36" height="36" alt="{{ site.social.name | default: site.title }}">
-      {%- endif -%}
-      <span class="he-topnav-wordmark">{{ site.title }}</span>
+  <!-- Hero -->
+  <section class="hm-hero">
+    <div class="hm-hero-eyebrow">
+      <span class="hm-eyebrow-latest">Latest</span>
+      <span class="hm-eyebrow-rule"></span>
+      <span class="hm-eyebrow-date">{{ latest.date | date: "%b %Y" | upcase }}</span>
+    </div>
+    <a href="{{ latest.url | relative_url }}" class="hm-hero-title-link">
+      <h1 class="hm-hero-h1">{{ latest.title }}.</h1>
     </a>
-    <div class="he-topnav-links">
-      <a href="{{ '/' | relative_url }}">HOME</a>
-      <a href="/best-articles/">BEST ARTICLES</a>
-      <a href="/archives/">ARCHIVES</a>
-      <a href="/about/">ABOUT</a>
-      <a href="https://buttondown.com/qaexplained" class="he-topnav-subscribe" target="_blank" rel="noopener noreferrer">SUBSCRIBE</a>
-    </div>
-  </nav>
-
-  <!-- Hero: latest essay -->
-  <section class="he-hero">
-    <div class="he-eyebrow">
-      <span class="he-eyebrow-dot" aria-hidden="true"></span>
-      <span>LATEST &middot; {{ latest.date | date: "%b %Y" | upcase }}</span>
-    </div>
-    <h1 class="he-hero-title">
-      <a href="{{ latest.url | relative_url }}">{{ latest.title }}</a>
-    </h1>
-    <p class="he-hero-deck">{{ latest.excerpt | default: latest.description | strip_html | truncatewords: 45 }}</p>
-    <div class="he-hero-cta">
-      <a href="{{ latest.url | relative_url }}" class="he-pill">Read the essay &rarr;</a>
-      <span class="he-meta">{{ minutes }} min
-        {%- if latest.categories.size > 0 %} &middot; {{ latest.categories | join: ', ' }}{% endif %}</span>
+    <p class="hm-hero-lead">{{ latest.excerpt | default: latest.description | strip_html | truncatewords: 50 }}</p>
+    <div class="hm-hero-actions">
+      <a href="{{ latest.url | relative_url }}" class="hm-hero-read">Read the essay <span class="hm-mono">→</span></a>
+      <span class="hm-hero-meta">{{ minutes }} min{%- if latest.categories.size > 0 %} · {{ latest.categories | join: ' · ' | upcase }}{% endif %}</span>
     </div>
   </section>
 
-  <!-- Author credibility strip -->
-  <section class="he-author">
-    <img
-      src="{{ '/assets/img/avatar.jpeg' | relative_url }}"
-      alt="Elena Kulgavaya"
-      class="he-author-avatar"
-      width="64"
-      height="64"
-    >
-    <div class="he-author-bio">
-      <div class="he-author-nameline">
-        <span class="he-author-name">Elena Kulgavaya</span>
-        <span class="he-author-role">QA TECH LEAD</span>
-      </div>
-      <p class="he-author-blurb">Rethinking quality engineering — one uncomfortable truth at a time. Helping teams build reliable CI/CD and testing systems.</p>
+  <!-- Start here -->
+  <section class="hm-start">
+    <div class="hm-section-head">
+      <h2 class="hm-h2">Start here</h2>
     </div>
-    <a href="/about/" class="he-btn-outline">About Elena</a>
-  </section>
-
-  <!-- Start here: three numbered cards -->
-  <section class="he-start">
-    <div class="he-section-header">
-      <h2 class="he-h2">Start here</h2>
-      <span class="he-section-cap">THE THREE THAT SET THE TONE</span>
-    </div>
-    <div class="he-cards">
+    <div class="hm-cards">
       {% for item in site.data.start_here %}
-      <article class="he-card{% if forloop.first %} he-card--accent{% endif %}">
-        <span class="he-card-idx">0{{ forloop.index }}</span>
-        <h3 class="he-card-title">
-          <a href="{{ item.url }}">{{ item.title }}</a>
-        </h3>
-        <p class="he-card-desc">{{ item.description }}</p>
-      </article>
+      <a href="{{ item.url }}" class="hm-card">
+        <span class="hm-card-idx">0{{ forloop.index }}</span>
+        <h3 class="hm-card-h3">{{ item.title }}</h3>
+        <p class="hm-card-desc">{{ item.description }}</p>
+      </a>
       {% endfor %}
     </div>
   </section>
 
-  <!-- Worth reading: typographic list -->
-  <section class="he-worth">
-    <h2 class="he-h2">Worth reading</h2>
-    <div class="he-reading-list">
+  <!-- Worth reading + aside -->
+  <section class="hm-reading-zone">
+    <div class="hm-worth">
+      <h2 class="hm-h2">Worth reading</h2>
       {% for item in site.data.worth_reading %}
-      <div class="he-reading-row">
-        <div class="he-reading-title">
-          <a href="{{ item.url }}">{{ item.title }}</a>
-        </div>
-        <div class="he-reading-desc">{{ item.description }}</div>
-      </div>
+      <a href="{{ item.url }}" class="hm-reading-row{% if forloop.last %} hm-reading-row--last{% endif %}">
+        <h3 class="hm-reading-h3">{{ item.title }}</h3>
+        <p class="hm-reading-desc">{{ item.description }}</p>
+        {% if item.tags %}<span class="hm-reading-tags">{{ item.tags }}</span>{% endif %}
+      </a>
       {% endfor %}
+      <a href="/best-articles/" class="hm-view-all">View all articles <span class="hm-mono">→</span></a>
     </div>
-    <a href="/best-articles/" class="he-view-all">View all articles &rarr;</a>
+
+    <aside class="hm-aside">
+      <div class="hm-panel">
+        <span class="hm-panel-label">Recently updated</span>
+        <div class="hm-recent-list">
+          {% for post in site.posts limit: 5 %}
+          <a href="{{ post.url | relative_url }}" class="hm-recent-link{% if forloop.last %} hm-recent-link--last{% endif %}">{{ post.title }}</a>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="hm-panel">
+        <span class="hm-panel-label">Trending tags</span>
+        <div class="hm-tags">
+          {% assign tag_limit = 6 %}
+          {% assign tag_count = 0 %}
+          {% for tag in site.tags %}
+            {% if tag_count < tag_limit %}
+              <a href="{{ site.baseurl }}/tags/{{ tag[0] | downcase | url_encode }}/" class="hm-tag">{{ tag[0] }}</a>
+              {% assign tag_count = tag_count | plus: 1 %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </aside>
   </section>
 
-  <!-- Newsletter signup -->
-  <section class="he-newsletter">
-    <div class="he-nl-copy">
-      <h2 class="he-nl-title">One uncomfortable truth,<br>in your inbox.</h2>
-      <p class="he-nl-sub">No cadence promises, no fluff. Just the next essay on quality engineering when it's ready.</p>
+  <!-- Inbox CTA -->
+  <section class="hm-inbox">
+    <div class="hm-inbox-copy">
+      <h2 class="hm-inbox-h2">One uncomfortable truth, in your inbox.</h2>
+      <p class="hm-inbox-sub">No cadence promises, no fluff. Just the next essay on quality engineering — when it's ready.</p>
     </div>
-    <div class="he-nl-form-wrap">
-      <form
-        id="he-nl-form"
-        action="https://buttondown.com/api/emails/embed-subscribe/qaexplained"
-        method="post"
-        target="popupwindow"
-        onsubmit="window.open('https://buttondown.com/qaexplained','popupwindow')"
-      >
-        <div class="he-nl-row">
-          <input
-            type="email"
-            name="email"
-            placeholder="you@team.dev"
-            class="he-field"
-            required
-            autocomplete="email"
-            aria-label="Email address"
-          >
-          <button type="submit" class="he-pill">Subscribe</button>
-        </div>
-      </form>
-      <p class="he-nl-feedback" aria-live="polite"></p>
-    </div>
+    <form action="https://buttondown.com/api/emails/embed-subscribe/qaexplained" method="post" class="hm-inbox-form">
+      <input type="email" name="email" placeholder="your@email.com" class="hm-inbox-input" required autocomplete="email">
+      <button type="submit" class="hm-inbox-btn">Subscribe <span class="hm-mono">→</span></button>
+    </form>
   </section>
+
 
 </div>

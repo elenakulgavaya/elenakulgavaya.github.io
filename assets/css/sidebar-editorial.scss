@@ -2,351 +2,195 @@
 ---
 
 /*
-  Editorial sidebar — reskins Chirpy's #sidebar with warm-dark palette + amber accent.
-  Width kept at Chirpy's 260px so #main-wrapper margin needs no override.
+  Sidebar — unified design, all pages.
+  Colors sourced from Chirpy's dark-theme CSS variables.
 */
 
-/* Chirpy sidebar shell */
+/* ── Override Chirpy's sidebar container ─────────────────── */
+
 #sidebar {
-  background: #181715;
-  border-right: 1px solid #33302c;
+  background: var(--sidebar-bg) !important;
+  border-right: 1px solid var(--sidebar-border-color) !important;
   display: flex !important;
-  flex-direction: column;
-  align-items: stretch !important;
-  padding: 30px 24px;
-  gap: 0;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  gap: 0 !important;
+  padding: 28px 18px 20px !important;
   overflow-y: auto;
-  /* keep Chirpy's positioning/width */
+
+  /* Hide all Chirpy default chrome we're replacing */
+  .profile-wrapper,
+  .site-title,
+  .site-subtitle,
+  .sidebar-bottom,
+  .nav-link,
+  ul.nav { display: none !important; }
 }
 
-/* ── Brand ───────────────────────────────────────────────── */
+/* ── Identity block ──────────────────────────────────────── */
 
-.sb-brand {
-  margin-bottom: 28px;
-}
-
-.sb-brand-link {
+.sb-identity {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 11px;
-  text-decoration: none;
-  color: #eae7e1;
-  transition: opacity 150ms ease;
+  text-align: center;
+  gap: 0;
+  width: 100%;
+  padding-bottom: 20px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--sidebar-border-color);
+}
 
-  &:hover {
-    opacity: 0.8;
-    color: #eae7e1;
-  }
+.sb-avatar-wrap {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid var(--avatar-border-color);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+  flex-shrink: 0;
+  margin-bottom: 14px;
 }
 
 .sb-avatar {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
+  width: 100% !important;
+  height: 100% !important;
   object-fit: cover;
+  object-position: center 15%;
   display: block;
-  flex-shrink: 0;
 }
 
-.sb-wordmark {
-  font-family: 'IBM Plex Serif', serif;
+.sb-title {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-weight: 600;
   font-size: 17px;
-  font-weight: 600;
   letter-spacing: -0.01em;
-  color: #eae7e1;
-}
-
-/* ── Author ──────────────────────────────────────────────── */
-
-.sb-author {
-  margin-bottom: 28px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid #33302c;
-}
-
-.sb-author-name {
-  font-family: 'IBM Plex Serif', serif;
-  font-size: 16px;
-  font-weight: 600;
-  color: #eae7e1;
+  color: var(--heading-color);
   margin-bottom: 4px;
 }
 
-.sb-author-role {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 11.5px;
-  letter-spacing: 0.08em;
-  color: #e5a04e;
-  margin-bottom: 10px;
+.sb-name {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
+  color: var(--link-color);
+  margin-bottom: 3px;
 }
 
-.sb-author-thesis {
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 13px;
-  line-height: 1.55;
-  color: #928d84;
-  margin: 0;
+.sb-role {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--sidebar-muted-color);
+  margin-bottom: 10px;
+}
+
+.sb-bio {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--sidebar-muted-color);
+  margin: 0 !important;
+  max-width: 22ch;
+  padding: 0 !important;
 }
 
 /* ── Nav ─────────────────────────────────────────────────── */
 
 .sb-nav {
-  margin-bottom: 24px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid #33302c;
-
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-  }
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: left;
+  margin-bottom: 16px;
 }
 
 .sb-nav-item {
-  display: flex;
-  align-items: center;
-  gap: 11px;
-  padding: 9px 12px;
-  border-radius: 7px;
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  color: #c2beb6;
-  text-decoration: none;
+  display: block !important;
+  padding: 10px 12px;
+  border-radius: 10px;
+  color: var(--text-color) !important;
+  border: 1px solid transparent;
   transition: background 150ms ease, color 150ms ease;
+  text-decoration: none;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 
   &:hover {
-    color: #eae7e1;
-    background: rgba(229, 160, 78, 0.06);
-    text-decoration: none;
+    background: var(--sidebar-hover-bg) !important;
+    color: var(--heading-color) !important;
   }
 
   &--active {
+    background: color-mix(in srgb, var(--link-color) 12%, transparent) !important;
+    border-color: color-mix(in srgb, var(--link-color) 25%, transparent) !important;
+    color: var(--heading-color) !important;
     font-weight: 600;
-    color: #eae7e1;
-    background: oklch(0.20 0.02 65);
-    box-shadow: inset 3px 0 0 #e5a04e;
   }
 }
 
-.sb-nav-idx {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 12px;
-  color: #928d84;
-  flex-shrink: 0;
+/* ── Social links ────────────────────────────────────────── */
 
-  .sb-nav-item--active & {
-    color: #e5a04e;
-  }
-}
-
-.sb-nav-label {
-  flex: 1;
-}
-
-/* ── Subscribe CTA ───────────────────────────────────────── */
-
-.sb-cta {
-  background: #e5a04e;
-  border-radius: 8px;
-  padding: 16px;
-  margin-bottom: 24px;
-}
-
-.sb-cta-title {
-  font-family: 'IBM Plex Serif', serif;
-  font-size: 15px;
-  font-weight: 600;
-  color: #0d0d10;
-  margin-bottom: 4px;
-}
-
-.sb-cta-sub {
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 12.5px;
-  line-height: 1.4;
-  color: oklch(0.28 0.06 65);
-  margin: 0 0 12px;
-}
-
-.sb-cta-btn {
-  display: block;
-  background: #0d0d10;
-  color: #e5a04e;
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  text-align: center;
-  padding: 9px;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: opacity 150ms ease;
-
-  &:hover {
-    opacity: 0.88;
-    color: #e5a04e;
-    text-decoration: none;
-  }
-}
-
-/* ── Trending tags ───────────────────────────────────────── */
-
-.sb-tags {
-  margin-bottom: 24px;
-}
-
-.sb-section-label {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #928d84;
-  margin-bottom: 12px;
-}
-
-.sb-tag-cloud {
+.sb-social {
   display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-.sb-tag {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 11.5px;
-  color: #c2beb6;
-  border: 1px solid #33302c;
-  padding: 4px 9px;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: border-color 150ms ease, color 150ms ease;
-
-  &:hover {
-    border-color: #e5a04e;
-    color: #e5a04e;
-    text-decoration: none;
-  }
-}
-
-/* ── Footer ──────────────────────────────────────────────── */
-
-.sb-footer {
+  gap: 20px;
+  padding-top: 14px;
+  border-top: 1px solid var(--sidebar-border-color);
+  width: 100%;
+  justify-content: center;
   margin-top: auto;
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  padding-top: 18px;
-  border-top: 1px solid #33302c;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 12.5px;
 
   a {
-    color: #928d84;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--sidebar-muted-color);
+    transition: color 150ms ease;
+    text-decoration: none;
+
+    &:hover { color: var(--link-color) !important; }
+  }
+}
+
+/* ── Site footer ─────────────────────────────────────────── */
+
+.hm-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px 24px;
+  padding: 24px 0 12px;
+  border-top: 1px solid var(--sidebar-border-color);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sidebar-muted-color);
+}
+
+.hm-footer-links {
+  display: flex;
+  gap: 20px;
+
+  a {
+    color: var(--sidebar-muted-color);
     text-decoration: none;
     transition: color 150ms ease;
-
-    &:hover {
-      color: #e5a04e;
-      text-decoration: none;
-    }
+    &:hover { color: var(--link-color) !important; }
   }
 }
 
-.sb-mode-toggle {
-  margin-left: auto;
-  padding: 0;
-  color: #928d84 !important;
-  font-size: 14px;
-  background: none;
-  border: none;
-
-  &:hover {
-    color: #c2beb6 !important;
-  }
-}
-
-/* ── Suppress old Chirpy sidebar elements ────────────────── */
-
-#sidebar .profile-wrapper,
-#sidebar .site-title,
-#sidebar .site-subtitle,
-#sidebar nav.flex-column,
-#sidebar .sidebar-bottom {
-  display: none !important;
-}
-
-/* ── Right panel: hidden (trending tags moved into sidebar) ── */
+/* ── Right panel (TOC on posts) ──────────────────────────── */
 
 #panel-wrapper {
   display: none !important;
-}
-
-/* ── Right panel (kept for future, now hidden) ───────────── */
-
-.panel-wrapper-restyle {
-  border-left: 1px solid #33302c;
-  padding-left: 1.5rem;
-
-  #access-lastmod,
-  .panel-heading {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: #928d84;
-    border-bottom: none;
-    padding-bottom: 0;
-    margin-bottom: 12px;
-  }
-
-  #access-lastmod li,
-  ul li {
-    &::before { content: none; }
-  }
-
-  a {
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 13.5px;
-    color: #c2beb6;
-    text-decoration: none;
-    transition: color 150ms ease;
-
-    &:hover {
-      color: #e5a04e;
-    }
-  }
-}
-
-/* ── Topbar: editorial reskin ────────────────────────────── */
-
-#topbar-wrapper {
-  background: #181715;
-  border-bottom: 1px solid #33302c;
-}
-
-#topbar {
-  #breadcrumb {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 12.5px;
-    color: #928d84;
-
-    a {
-      color: #e5a04e;
-      text-decoration: none;
-
-      &:hover {
-        color: #eae7e1;
-      }
-    }
-  }
-
-  #topbar-title {
-    font-family: 'IBM Plex Serif', serif;
-    font-size: 16px;
-    font-weight: 600;
-    color: #eae7e1;
-  }
 }

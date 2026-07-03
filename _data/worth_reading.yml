@@ -1,11 +1,14 @@
 - url: /actionable-test-results/
   title: Let Failures Speak
   description: Design tests so every failure points directly to the fix — no re-running, no guessing.
+  tags: "REPORTING · TEST-ARCHITECTURE"
 
 - url: /your-biggest-contract-is-hidden-inside-an-e2e-test/
   title: The Contract Inside Your E2E Test
   description: How to migrate from E2E tests to contract tests — step by step, without throwing away what you've built.
+  tags: "E2E · CONTRACT-TESTING"
 
 - url: /heroic-bug-fix-process-failure/
   title: Every Heroic Bug Fix Is a Process Failure
   description: The bug isn't the problem. The process that let it reach production is.
+  tags: "QUALITY-CULTURE · PROCESS"

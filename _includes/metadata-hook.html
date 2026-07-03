@@ -2,36 +2,23 @@
   <meta name="robots" content="noindex, follow">
 {% endif %}
 
-<meta name="theme-color" content="#0d0d10">
+<meta name="theme-color" content="#1b1b1e">
 
-<!-- IBM Plex fonts for editorial design system -->
+<!-- Fonts: Newsreader + Space Grotesk + JetBrains Mono (sidebar/home) + IBM Plex (posts) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=IBM+Plex+Serif:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="{{ '/assets/css/sidebar-editorial.css' | relative_url }}">
 
 {% if page.layout == 'home' %}
   <link rel="stylesheet" href="{{ '/assets/css/home-editorial.css' | relative_url }}">
-  <style>
-    /* Full-width editorial home: no sidebar, no Chirpy topbar */
-    #sidebar { display: none !important; }
-    #topbar-wrapper { display: none !important; }
-    @media (min-width: 850px) {
-      #main-wrapper { margin-left: 0 !important; }
-    }
-    #main-wrapper > .container { padding-left: 0 !important; padding-right: 0 !important; }
-    main { padding: 0 !important; }
-    #panel-wrapper { display: none !important; }
-  </style>
 {% endif %}
-
-{% unless page.layout == 'home' %}
-  <link rel="stylesheet" href="{{ '/assets/css/sidebar-editorial.css' | relative_url }}">
-{% endunless %}
 
 {% if page.layout == 'post' %}
   <link rel="stylesheet" href="{{ '/assets/css/post-editorial.css' | relative_url }}">
   <style>
-    /* Re-enable TOC panel for posts (hidden globally by sidebar-editorial) */
+    /* Re-enable TOC panel for posts */
     #panel-wrapper { display: block !important; }
   </style>
 {% endif %}
