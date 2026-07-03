@@ -47,7 +47,7 @@ The result is faster, more focused feedback that can run on any branch, at any p
 
 Testing on the branch becomes possible when we shift validation lower in the pyramid.
 
-![Contract Testing Pyramid](/images/contract-testing-pyramid.svg)
+{% include themed-img.html src="contract-testing-pyramid" alt="Contract Testing Pyramid" %}
 
 *Figure: Contract tests reduce the need for expensive end-to-end testing.*
 
@@ -66,7 +66,7 @@ Contract tests effectively replace most integration testing traditionally perfor
 
 In contract testing we treat **service interaction itself as a unit of testing**.
 
-![Microservices communication](/images/contract-microservices-communication.svg)
+{% include themed-img.html src="contract-microservices-communication" alt="Microservices communication" %}
 
 Think of it this way: a service may work perfectly in isolation, but still fail in production because it sends a field the downstream service doesn't expect, or because the response it receives has changed shape.
 These are integration failures — and they are invisible to unit tests.
@@ -85,7 +85,7 @@ When a contract test fails, the failure points directly at the communication bou
 Communication between services is always bidirectional.
 Even if a service only performs a request, it still depends on the response format.
 
-![Consumer Provider interaction](/images/contract-consumer-provider.svg)
+{% include themed-img.html src="contract-consumer-provider" alt="Consumer Provider interaction" %}
 
 In contract terminology:
 
@@ -130,7 +130,7 @@ This boundary is what makes contracts lightweight and stable — they change onl
 
 Consistency is achieved by having **one shared contract definition**.
 
-![Microservice contract architecture](/images/contract-microservice-mesh.svg)
+{% include themed-img.html src="contract-microservice-mesh" alt="Microservice contract architecture" %}
 
 Without a shared source, each team defines their own understanding of the interface.
 Providers write mocks based on what they think they return.
@@ -144,7 +144,7 @@ Every service validates against the same definitions.
 
 When the contract changes, everyone sees the change. There is no ambiguity about what the current interface looks like.
 
-![Repositories structure with shared contracts](/images/contract-repos-structure.svg)
+{% include themed-img.html src="contract-repos-structure" alt="Repositories structure with shared contracts" %}
 
 *Figure: Service repositories reference a shared contracts package — the single source of truth for schemas and test data generation.*
 
@@ -159,7 +159,7 @@ When the provider changes the contract, the responsibility shifts to the provide
 It is their change, and it is their job to verify it does not break any of the dependent consumers.
 The provider runs the consumer test suites against the updated contract and their new implementation.
 
-![Contract testing branch flow](/images/contract-testing-branch-flow.svg)
+{% include themed-img.html src="contract-testing-branch-flow-v2" alt="Contract testing branch flow" %}
 
 *Figure: Contract changes trigger consumer verification before code is merged.*
 
@@ -182,7 +182,7 @@ The provider never has to guess whether their change is safe — the tests give 
 
 To support this workflow, the **branching strategy must align with the testing strategy**.
 
-![Branch validation flow](/images/contract-branch-validation.svg)
+{% include themed-img.html src="contract-branch-validation" alt="Branch validation flow" %}
 
 *Figure: When a contract branch is updated, consumer tests run automatically against the new provider implementation — catching incompatibilities before merge.*
 

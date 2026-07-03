@@ -118,69 +118,68 @@ a.tag {
 /* Category and tag link colors on article pages */
 .post-tail-wrapper .post-meta a,
 header .post-meta a {
-  color: #928d84 !important;
+  color: var(--text-muted-color) !important;
 
   &:hover {
-    color: #e5a04e !important;
+    color: var(--link-color) !important;
   }
 }
 
-/* ── Syntax highlighting — warm dark palette ──────────────── */
-/* Override Chirpy's light-mode token colors which look wrong on dark bg */
+/* ── Syntax highlighting — warm dark palette (dark mode only) ── */
 
-.highlight {
-  background-color: #181715 !important;
-  color: #c2beb6 !important;
-  border-radius: 8px;
+@mixin warm-dark-highlight {
+  .highlight {
+    background-color: #181715 !important;
+    color: #c2beb6 !important;
+    border-radius: 8px;
+  }
+
+  .highlight .w { color: #c2beb6 !important; }
+
+  .highlight .k, .highlight .kd, .highlight .kn, .highlight .kp,
+  .highlight .kr, .highlight .kt, .highlight .kv, .highlight .kc { color: #eae7e1 !important; }
+
+  .highlight .nf, .highlight .fm { color: #e5a04e !important; }
+
+  .highlight .n, .highlight .na, .highlight .nb, .highlight .nc,
+  .highlight .nd, .highlight .ne, .highlight .ni, .highlight .nl,
+  .highlight .nn, .highlight .no, .highlight .nt, .highlight .nv,
+  .highlight .vc, .highlight .vg, .highlight .vi, .highlight .vm,
+  .highlight .bp, .highlight .py { color: #c2beb6 !important; }
+
+  .highlight .s, .highlight .s1, .highlight .s2, .highlight .sa,
+  .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd,
+  .highlight .se, .highlight .sh, .highlight .si, .highlight .sx,
+  .highlight .ss { color: #d4b878 !important; }
+
+  .highlight .m, .highlight .mb, .highlight .mf, .highlight .mh,
+  .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx,
+  .highlight .l, .highlight .ld { color: #d4b878 !important; }
+
+  .highlight .c, .highlight .ch, .highlight .cd, .highlight .cm,
+  .highlight .cp, .highlight .cpf, .highlight .c1, .highlight .cs { color: #928d84 !important; font-style: italic; }
+
+  .highlight .o, .highlight .ow, .highlight .p, .highlight .pi { color: #928d84 !important; }
+
+  .highlight .nd { color: #d4b878 !important; }
+
+  .highlight .err { color: #c2beb6 !important; background: none !important; }
+
+  .highlight .gi { color: #e5a04e !important; background: none !important; }
+  .highlight .gd { color: #928d84 !important; background: none !important; }
+
+  .highlight .rouge-gutter, .highlight .gl,
+  .highlight table td:first-child, .linenos { color: #48443f !important; background: #181715 !important; }
 }
 
-/* Default text in code blocks */
-.highlight .w { color: #c2beb6 !important; }
+html[data-mode='dark'] {
+  @include warm-dark-highlight;
+}
 
-/* Keywords (def, class, if, return, lambda, import…) — bright primary */
-.highlight .k, .highlight .kd, .highlight .kn, .highlight .kp,
-.highlight .kr, .highlight .kt, .highlight .kv, .highlight .kc { color: #eae7e1 !important; }
-
-/* Function / method names — amber accent (the callables stand out) */
-.highlight .nf, .highlight .fm { color: #e5a04e !important; }
-
-/* Identifiers, variable names — muted warm */
-.highlight .n, .highlight .na, .highlight .nb, .highlight .nc,
-.highlight .nd, .highlight .ne, .highlight .ni, .highlight .nl,
-.highlight .nn, .highlight .no, .highlight .nt, .highlight .nv,
-.highlight .vc, .highlight .vg, .highlight .vi, .highlight .vm,
-.highlight .bp, .highlight .py { color: #c2beb6 !important; }
-
-/* Strings — warm gold (distinct from amber function names) */
-.highlight .s, .highlight .s1, .highlight .s2, .highlight .sa,
-.highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd,
-.highlight .se, .highlight .sh, .highlight .si, .highlight .sx,
-.highlight .ss { color: #d4b878 !important; }
-
-/* Numbers — warm gold (same family as strings) */
-.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh,
-.highlight .mi, .highlight .il, .highlight .mo, .highlight .mx,
-.highlight .l, .highlight .ld { color: #d4b878 !important; }
-
-/* Comments — dim */
-.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm,
-.highlight .cp, .highlight .cpf, .highlight .c1, .highlight .cs { color: #928d84 !important; font-style: italic; }
-
-/* Operators, punctuation — dim */
-.highlight .o, .highlight .ow, .highlight .p, .highlight .pi { color: #928d84 !important; }
-
-/* Decorators */
-.highlight .nd { color: #d4b878 !important; }
-
-/* Errors */
-.highlight .err { color: #c2beb6 !important; background: none !important; }
-
-/* Generic diff */
-.highlight .gi { color: #e5a04e !important; background: none !important; }
-.highlight .gd { color: #928d84 !important; background: none !important; }
-
-/* Line number gutter */
-.highlight .rouge-gutter, .highlight .gl,
-.highlight table td:first-child, .linenos { color: #48443f !important; background: #181715 !important; }
+@media (prefers-color-scheme: dark) {
+  html:not([data-mode]) {
+    @include warm-dark-highlight;
+  }
+}
 
 

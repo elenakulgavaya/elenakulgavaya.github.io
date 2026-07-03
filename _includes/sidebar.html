@@ -36,6 +36,11 @@
           <a href="{{ '/feed.xml' | relative_url }}">rss</a>
       {% endcase %}
     {% endfor %}
+    {% unless site.theme_mode %}
+      <button type="button" id="mode-toggle" class="sb-mode-toggle" aria-label="Switch Mode">
+        <i class="fas fa-adjust"></i>
+      </button>
+    {% endunless %}
   </div>
 
 </aside>

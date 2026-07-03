@@ -49,7 +49,7 @@ layout: default
   .ba {
     font-family: 'IBM Plex Sans', sans-serif;
     padding: 52px 0;
-    color: #eae7e1;
+    color: var(--text-color);
   }
 
   .ba-header {
@@ -61,7 +61,7 @@ layout: default
     font-size: 12px;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: #e5a04e;
+    color: var(--link-color);
     margin-bottom: 14px;
   }
 
@@ -70,14 +70,14 @@ layout: default
     font-size: clamp(28px, 5vw, 42px) !important;
     font-weight: 600 !important;
     letter-spacing: -0.02em !important;
-    color: #eae7e1 !important;
+    color: var(--heading-color) !important;
     margin: 0 0 12px !important;
   }
 
   .ba-lede {
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 16px;
-    color: #c2beb6;
+    color: var(--text-muted-color);
     max-width: 62ch;
     line-height: 1.6;
     margin: 0;
@@ -92,7 +92,7 @@ layout: default
     align-items: baseline;
     gap: 14px;
     padding-bottom: 12px;
-    border-bottom: 2px solid #48443f;
+    border-bottom: 2px solid var(--main-border-color);
     margin-bottom: 0;
   }
 
@@ -100,14 +100,14 @@ layout: default
     font-family: 'IBM Plex Serif', serif;
     font-size: 18px;
     font-weight: 600;
-    color: #e5a04e;
+    color: var(--link-color);
   }
 
   .ba-group-caption {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 12px;
     letter-spacing: 0.08em;
-    color: #928d84;
+    color: var(--text-muted-color);
     text-transform: uppercase;
   }
 
@@ -116,12 +116,12 @@ layout: default
     align-items: baseline;
     gap: 24px;
     padding: 20px 0;
-    border-bottom: 1px solid #33302c;
+    border-bottom: 1px solid var(--main-border-color);
     text-decoration: none;
     color: inherit;
 
     &:hover {
-      .ba-post-title { color: #e5a04e; }
+      .ba-post-title { color: var(--link-color); }
     }
   }
 
@@ -134,7 +134,7 @@ layout: default
     font-family: 'IBM Plex Serif', serif;
     font-size: 20px;
     font-weight: 600;
-    color: #eae7e1;
+    color: var(--heading-color);
     margin-bottom: 4px;
     transition: color 150ms ease;
     line-height: 1.25;
@@ -142,14 +142,14 @@ layout: default
 
   .ba-post-desc {
     font-size: 14px;
-    color: #928d84;
+    color: var(--text-muted-color);
     line-height: 1.4;
   }
 
   .ba-tag {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 11.5px;
-    color: #e5a04e;
+    color: var(--link-color);
     flex-shrink: 0;
     text-transform: lowercase;
   }

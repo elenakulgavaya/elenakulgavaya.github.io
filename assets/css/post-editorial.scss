@@ -4,6 +4,7 @@
 /*
   Editorial article styles — reskins Chirpy's post layout.
   IBM Plex typescale, amber accent, 64ch reading measure.
+  All colors via CSS variables — supports light and dark themes.
 */
 
 /* ── Article title ───────────────────────────────────────── */
@@ -17,7 +18,7 @@ article h1[data-toc-skip] {
   line-height: 1.05 !important;
   letter-spacing: -0.02em !important;
   max-width: 20ch;
-  color: #eae7e1 !important;
+  color: var(--heading-color) !important;
   margin-bottom: 22px !important;
 }
 
@@ -27,13 +28,13 @@ header .post-meta,
 .post-meta {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 13px;
-  color: #928d84;
+  color: var(--text-muted-color);
 
   a {
-    color: #e5a04e;
+    color: var(--link-color);
 
     &:hover {
-      color: #eae7e1;
+      color: var(--heading-color);
     }
   }
 }
@@ -53,17 +54,17 @@ header .post-meta,
   font-family: 'IBM Plex Mono', monospace;
   font-size: 12px;
   letter-spacing: 0.06em;
-  color: #928d84;
+  color: var(--text-muted-color);
 
   .breadcrumb-item a {
-    color: #e5a04e;
+    color: var(--link-color);
     text-decoration: none;
 
-    &:hover { color: #eae7e1; }
+    &:hover { color: var(--heading-color); }
   }
 
   .breadcrumb-item.active {
-    color: #eae7e1;
+    color: var(--heading-color);
   }
 }
 
@@ -73,12 +74,12 @@ header .post-meta,
   font-family: 'IBM Plex Sans', sans-serif !important;
   font-size: 17.5px !important;
   line-height: 1.72 !important;
-  color: #c2beb6 !important;
+  color: var(--text-color) !important;
   max-width: 64ch;
 
   p {
     margin-bottom: 22px;
-    color: #c2beb6;
+    color: var(--text-color);
   }
 
   /* Section headings */
@@ -87,7 +88,7 @@ header .post-meta,
     font-size: 26px !important;
     font-weight: 600 !important;
     letter-spacing: -0.01em !important;
-    color: #eae7e1 !important;
+    color: var(--heading-color) !important;
     margin-top: 48px !important;
     margin-bottom: 18px !important;
   }
@@ -96,7 +97,7 @@ header .post-meta,
     font-family: 'IBM Plex Serif', serif !important;
     font-size: 20px !important;
     font-weight: 600 !important;
-    color: #eae7e1 !important;
+    color: var(--heading-color) !important;
     margin-top: 36px !important;
     margin-bottom: 14px !important;
   }
@@ -107,8 +108,8 @@ header .post-meta,
     font-size: 18px;
     font-style: italic;
     line-height: 1.5;
-    color: #eae7e1;
-    border-left: 2px solid #e5a04e !important;
+    color: var(--heading-color);
+    border-left: 2px solid var(--link-color) !important;
     border-top: none;
     border-bottom: none;
     border-right: none;
@@ -117,7 +118,7 @@ header .post-meta,
     background: none !important;
 
     p {
-      color: #eae7e1;
+      color: var(--heading-color);
       margin: 0;
       font-size: inherit;
       line-height: inherit;
@@ -130,23 +131,23 @@ header .post-meta,
   code:not([class]) {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 15px;
-    background: #221f1c;
-    border: 1px solid #33302c;
+    background: var(--highlight-bg-color);
+    border: 1px solid var(--main-border-color);
     border-radius: 4px;
     padding: 1px 5px;
-    color: #e5a04e;
+    color: var(--link-color);
   }
 
   /* Links */
   a:not(.img-link) {
-    color: #e5a04e;
-    border-bottom: 1px solid rgba(229, 160, 78, 0.35) !important;
+    color: var(--link-color);
+    border-bottom: 1px solid var(--link-underline-color) !important;
     text-decoration: none;
     transition: border-color 150ms ease, color 150ms ease;
 
     &:hover {
-      color: #eae7e1;
-      border-bottom-color: #eae7e1 !important;
+      color: var(--heading-color);
+      border-bottom-color: var(--heading-color) !important;
     }
   }
 
@@ -155,7 +156,7 @@ header .post-meta,
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 17.5px;
     line-height: 1.72;
-    color: #c2beb6;
+    color: var(--text-color);
     margin-bottom: 8px;
   }
 }
@@ -163,7 +164,7 @@ header .post-meta,
 /* ── Table of contents panel ─────────────────────────────── */
 
 #panel-wrapper {
-  border-left: 1px solid #33302c;
+  border-left: 1px solid var(--main-border-color);
   padding-left: 0;
 }
 
@@ -172,7 +173,7 @@ header .post-meta,
   font-size: 11px !important;
   letter-spacing: 0.12em !important;
   text-transform: uppercase !important;
-  color: #928d84 !important;
+  color: var(--text-muted-color) !important;
   font-weight: 500 !important;
   border-bottom: none !important;
   padding-bottom: 4px !important;
@@ -187,20 +188,20 @@ header .post-meta,
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 13px;
   line-height: 1.5;
-  color: #928d84;
+  color: var(--text-muted-color);
   text-decoration: none;
   border-bottom: none !important;
   transition: color 150ms ease;
 
   &:hover {
-    color: #eae7e1;
+    color: var(--heading-color);
     border-bottom: none !important;
   }
 }
 
 #toc .toc-item.active > .toc-link,
 #toc .toc-link.active {
-  color: #e5a04e;
+  color: var(--link-color);
 }
 
 #toc li::before { content: none !important; }
@@ -215,7 +216,7 @@ header .post-meta,
 /* ── Post header divider ─────────────────────────────────── */
 
 header.post-header {
-  border-bottom: 1px solid #33302c;
+  border-bottom: 1px solid var(--main-border-color);
   padding-bottom: 28px;
   margin-bottom: 34px;
 }
@@ -225,7 +226,7 @@ header.post-header {
 .post-navigation,
 .post-nav,
 #post-nav {
-  border-top: 1px solid #33302c;
+  border-top: 1px solid var(--main-border-color);
   padding-top: 32px;
   margin-top: 44px;
   display: grid;
@@ -260,22 +261,53 @@ header.post-header {
     font-size: 11.5px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: #928d84;
+    color: var(--text-muted-color);
   }
 
   p, .title {
     font-family: 'IBM Plex Serif', serif;
     font-size: 16px;
     font-weight: 600;
-    color: #c2beb6;
+    color: var(--text-color);
     transition: color 150ms ease;
   }
 
   a:hover p,
   a:hover .title {
-    color: #e5a04e;
+    color: var(--link-color);
   }
 }
+
+/* ── Themed diagrams ─────────────────────────────────────── */
+
+.themed-img {
+  display: block;
+  margin: 28px 0;
+
+  img {
+    max-width: 100%;
+    border-radius: 12px;
+    display: block;
+  }
+}
+
+/* Default: dark visible, light hidden (0,2,0 beats nested img rule 0,1,1) */
+.themed-img .themed-img-light { display: none; }
+.themed-img .themed-img-dark  { display: block; }
+
+/* OS prefers light + no manual override */
+@media (prefers-color-scheme: light) {
+  html:not([data-mode]) .themed-img .themed-img-dark  { display: none; }
+  html:not([data-mode]) .themed-img .themed-img-light { display: block; }
+}
+
+/* Manual light mode */
+html[data-mode='light'] .themed-img .themed-img-dark  { display: none; }
+html[data-mode='light'] .themed-img .themed-img-light { display: block; }
+
+/* Manual dark mode */
+html[data-mode='dark'] .themed-img .themed-img-dark  { display: block; }
+html[data-mode='dark'] .themed-img .themed-img-light { display: none; }
 
 /* ── Tags row ────────────────────────────────────────────── */
 
@@ -283,14 +315,14 @@ header.post-header {
   .post-tag {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 12px;
-    color: #c2beb6;
-    border-color: #33302c;
+    color: var(--text-color);
+    border-color: var(--main-border-color);
     border-radius: 5px;
     transition: border-color 150ms ease, color 150ms ease;
 
     &:hover, &:focus, &:focus-visible {
-      color: #e5a04e !important;
-      border-color: #e5a04e !important;
+      color: var(--link-color) !important;
+      border-color: var(--link-color) !important;
       background: none !important;
       box-shadow: none !important;
     }
