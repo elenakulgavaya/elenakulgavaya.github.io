@@ -1,9 +1,10 @@
 - heading: "Testing Strategy"
-  caption: "3 essays"
+  caption: "4 essays"
   posts:
     - test-before-you-merge
     - shift-left-or-fall-behind
     - testing-in-production
+    - finding-the-bug-is-the-easy-part
 
 - heading: "CI/CD and Pipelines"
   caption: "2 essays"
