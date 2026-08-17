@@ -348,6 +348,118 @@
   }
 }
 
+/* ── About Elena ─────────────────────────────────────────── */
+
+.hm-about {
+  padding: clamp(26px, 4vw, 40px) 0;
+  border-top: 1px solid var(--main-border-color);
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(16px, 2vw, 28px) clamp(32px, 6vw, 72px);
+  align-items: flex-start;
+
+  .hm-h2 { flex-shrink: 0; min-width: 140px; }
+}
+
+.hm-about-body {
+  flex: 1 1 320px;
+  min-width: 0;
+}
+
+.hm-about-p {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: clamp(1rem, 1.3vw, 1.1rem);
+  line-height: 1.65;
+  color: var(--text-color);
+
+  & + & { margin-top: 14px !important; }
+}
+
+.hm-about-build {
+  display: block;
+  margin-top: 20px;
+  padding: 16px 18px;
+  background: var(--card-bg);
+  border: 1px solid var(--main-border-color);
+  border-left: 3px solid var(--link-color);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: border-color 150ms ease, background 150ms ease;
+
+  &:hover {
+    border-color: var(--link-color);
+    background: color-mix(in srgb, var(--link-color) 6%, transparent);
+  }
+}
+
+.hm-about-build-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.hm-about-build-verb {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted-color);
+}
+
+.hm-about-build-arrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--link-color);
+}
+
+.hm-about-build-name {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--heading-color);
+  margin-bottom: 6px;
+}
+
+.hm-about-build-desc {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text-muted-color);
+}
+
+.hm-about-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+  margin-top: 22px;
+}
+
+.hm-about-link {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  text-decoration: none;
+  transition: opacity 150ms ease;
+
+  &:hover { opacity: 0.75; }
+}
+
+.hm-about-link-label {
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted-color);
+}
+
+.hm-about-link-sep {
+  color: var(--main-border-color);
+}
+
+.hm-about-link-val {
+  color: var(--link-color);
+}
+
 /* ── Inbox CTA ───────────────────────────────────────────── */
 
 .hm-inbox {
