@@ -130,6 +130,18 @@
   color: var(--text-muted-color);
 }
 
+.hm-hero-author {
+  margin-left: auto;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted-color);
+  transition: color 150ms ease;
+
+  &:hover { color: var(--link-color); }
+}
+
 /* ── Start here ──────────────────────────────────────────── */
 
 .hm-start {
