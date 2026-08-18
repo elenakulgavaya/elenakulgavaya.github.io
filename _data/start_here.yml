@@ -1,3 +1,7 @@
+- url: /why-tests-are-skipped/
+  title: "Green or Gone: Why We Stop Trusting Tests"
+  description: How slow and unstable tests turn pipelines into noise — and what it takes to build a suite people actually trust.
+
 - url: /test-before-you-merge/
   title: Test Before You Merge
   description: Keep the main branch stable and catch issues before they reach production.

@@ -13,12 +13,13 @@
     - continuous-delivery-why-and-how
 
 - heading: "Test Design and Results"
-  caption: "4 essays"
+  caption: "5 essays"
   posts:
     - actionable-test-results
     - trap-of-test-reports
     - coverage-signal-or-illusion
     - smelly-tests
+    - some-tests-should-die
 
 - heading: "Culture and Process"
   caption: "4 essays"
