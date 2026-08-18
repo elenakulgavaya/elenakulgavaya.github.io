@@ -8,6 +8,9 @@ excerpt: "E2E tests don't just slow down your pipeline. Done wrong, they quietly
 permalink: /end-to-end-testing-slow-road-to-blame-and-burnout/
 categories: [testing, strategy]
 tags: [e2e, test-strategy, quality-culture, automation]
+image:
+  path: /assets/img/posts/end-to-end-testing-slow-road-to-blame-and-burnout-og.png
+  alt: "End-to-End Testing: The Slow Road to Blame and Burnout"
 read_time: true
 toc: true
 ---

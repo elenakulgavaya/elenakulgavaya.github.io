@@ -8,6 +8,9 @@ excerpt: "When a team celebrates a late-night production fix, no one asks why it
 permalink: /heroic-bug-fix-process-failure/
 categories: [testing, strategy]
 tags: [process, quality-culture, production, automation]
+image:
+  path: /assets/img/posts/heroic-bug-fix-process-failure-og.png
+  alt: "Every Heroic Bug Fix Is a Process Failure"
 read_time: true
 toc: true
 ---

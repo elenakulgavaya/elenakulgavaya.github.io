@@ -8,6 +8,9 @@ excerpt: "When test code starts to smell, nobody wants to fix it. And when nobod
 permalink: /smelly-tests/
 categories: [testing, strategy]
 tags: [automation, refactoring, quality, code-quality, maintainability]
+image:
+  path: /assets/img/posts/smelly-tests-og.png
+  alt: "Tests No One Wants to Touch"
 read_time: true
 toc: true
 ---

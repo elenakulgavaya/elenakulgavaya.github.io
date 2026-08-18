@@ -8,6 +8,9 @@ excerpt: "Every team waiting to shift left is waiting for a moment that never co
 permalink: /shift-left-or-fall-behind/
 categories: [testing, strategy]
 tags: [shift-left, technical-debt, cicd, automation]
+image:
+  path: /assets/img/posts/shift-left-or-fall-behind-og.png
+  alt: "Shift Left or Fall Behind"
 read_time: true
 toc: true
 ---

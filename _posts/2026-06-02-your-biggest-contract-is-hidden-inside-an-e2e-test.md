@@ -8,6 +8,9 @@ excerpt: "You've read about contract testing. You know E2E tests are the problem
 permalink: /your-biggest-contract-is-hidden-inside-an-e2e-test/
 categories: [testing, strategy]
 tags: [e2e, contract-testing, test-strategy, automation, integration-testing, frontend, shift-left]
+image:
+  path: /assets/img/posts/your-biggest-contract-is-hidden-inside-an-e2e-test-og.png
+  alt: "Your Biggest Contract Is Hidden Inside an E2E Test"
 read_time: true
 toc: true
 ---

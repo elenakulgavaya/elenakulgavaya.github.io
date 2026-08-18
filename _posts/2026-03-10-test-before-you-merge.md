@@ -8,6 +8,9 @@ excerpt: "Why testing on the branch is the most effective quality gate — and w
 permalink: /test-before-you-merge/
 categories: [cicd, strategy]
 tags: [automation, cicd, pipelines, branching, test-environment]
+image:
+  path: /assets/img/posts/test-before-you-merge-og.png
+  alt: "Test Before You Merge"
 read_time: true
 toc: true
 ---

@@ -8,6 +8,9 @@ excerpt: "A failing test is only useful if it leads directly to action. Here is 
 permalink: /actionable-test-results/
 categories: [testing, strategy]
 tags: [automation, pipelines, quality, debugging]
+image:
+  path: /assets/img/posts/actionable-test-results-og.png
+  alt: "Let Failures Speak"
 read_time: true
 toc: true
 ---

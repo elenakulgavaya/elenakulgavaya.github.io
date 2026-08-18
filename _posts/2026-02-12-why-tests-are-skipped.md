@@ -8,6 +8,9 @@ excerpt: "How slow and unstable tests destroy trust, red pipelines become noise,
 permalink: /why-tests-are-skipped/
 categories: [cicd, automation]
 tags: [cicd, testing, automation, flaky-tests, test-architecture]
+image:
+  path: /assets/img/posts/why-tests-are-skipped-og.png
+  alt: "Green or Gone: Why We Stop Trusting Tests"
 read_time: true
 toc: true
 ---

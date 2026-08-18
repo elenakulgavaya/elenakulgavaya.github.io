@@ -8,6 +8,9 @@ excerpt: "High coverage numbers are not proof of quality — but ignoring covera
 permalink: /coverage-signal-or-illusion/
 categories: [testing, strategy]
 tags: [coverage, metrics, quality, pipelines]
+image:
+  path: /assets/img/posts/coverage-signal-or-illusion-og.png
+  alt: "Test Coverage: Signal, Illusion, or Guardrail?"
 toc: true
 ---
 

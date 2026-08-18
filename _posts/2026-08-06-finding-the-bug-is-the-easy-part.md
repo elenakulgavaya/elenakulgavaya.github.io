@@ -8,6 +8,9 @@ excerpt: "The slow death of test automation doesn't start with bad code. It star
 permalink: /finding-the-bug-is-the-easy-part/
 categories: [testing, strategy]
 tags: [test-strategy, defects, automation, quality, quality-culture]
+image:
+  path: /assets/img/posts/finding-the-bug-is-the-easy-part-og.png
+  alt: "Finding the Bug Is the Easy Part"
 read_time: true
 toc: true
 ---

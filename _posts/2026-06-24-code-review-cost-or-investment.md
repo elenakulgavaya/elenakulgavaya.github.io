@@ -8,6 +8,9 @@ excerpt: "You've clicked Approve without reading. So has everyone else. At some 
 permalink: /code-review-cost-or-investment/
 categories: [development, quality]
 tags: [code-review, quality-culture, collaboration, pull-request, team-process]
+image:
+  path: /assets/img/posts/code-review-cost-or-investment-og.png
+  alt: "Code Review: Cost, Not Investment"
 read_time: true
 toc: true
 ---

@@ -8,6 +8,9 @@ excerpt: "Contract testing is the key to validating microservice integrations wi
 permalink: /contract-testing-journey-to-confidence/
 categories: [cicd, strategy]
 tags: [testing, contract-testing, microservices, cicd, automation, python, surety, integration-testing, test-pyramid]
+image:
+  path: /assets/img/posts/contract-testing-journey-to-confidence-og.png
+  alt: "Contract Testing: The Journey to Confidence"
 read_time: true
 toc: true
 ---

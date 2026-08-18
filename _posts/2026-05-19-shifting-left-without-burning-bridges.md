@@ -8,6 +8,9 @@ excerpt: "Everyone can see the suite is broken. The harder question is how to pi
 permalink: /shifting-left-without-burning-bridges/
 categories: [testing, strategy]
 tags: [e2e, test-strategy, quality-culture, shift-left, automation]
+image:
+  path: /assets/img/posts/shifting-left-without-burning-bridges-og.png
+  alt: "Shifting Left Without Burning Bridges"
 read_time: true
 toc: true
 ---

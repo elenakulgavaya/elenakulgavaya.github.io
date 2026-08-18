@@ -8,6 +8,9 @@ excerpt: "Why discovering issues in production is already too late, and how prop
 permalink: /testing-in-production/
 categories: [strategy]
 tags: [automation, cicd, test-environment]
+image:
+  path: /assets/img/posts/testing-in-production-og.png
+  alt: "Testing in Production: You Fail Before You Start"
 read_time: true
 toc: true
 ---

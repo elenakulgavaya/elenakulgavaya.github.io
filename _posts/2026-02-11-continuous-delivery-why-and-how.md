@@ -8,6 +8,9 @@ excerpt: "Why Continuous Delivery is not just a buzzword but a business-driven n
 permalink: /continuous-delivery-why-and-how/
 categories: [cicd, automation]
 tags: [cicd, testing, devops, pipelines]
+image:
+  path: /assets/img/posts/continuous-delivery-why-and-how-og.png
+  alt: "Continuous Delivery: Why It Matters and How to Actually Make It Work"
 read_time: true
 toc: true
 ---

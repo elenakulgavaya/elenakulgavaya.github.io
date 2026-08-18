@@ -8,6 +8,9 @@ excerpt: "Why dashboards, coverage charts and flaky statistics rarely improve pr
 permalink: /trap-of-test-reports/
 categories: [automation]
 tags: [automation, cicd, pipelines, reporting, quality]
+image:
+  path: /assets/img/posts/trap-of-test-reports-og.png
+  alt: "The Trap of Test Reports"
 read_time: true
 toc: true
 ---
