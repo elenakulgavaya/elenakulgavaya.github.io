@@ -328,3 +328,5 @@ html[data-mode='dark'] .themed-img .themed-img-light { display: none; }
     }
   }
 }
+
+div:has(> .preview-img) { display: none; }
