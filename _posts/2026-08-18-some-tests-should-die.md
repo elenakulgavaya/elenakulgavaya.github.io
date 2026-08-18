@@ -8,6 +8,9 @@ excerpt: "Green doesn't mean useful. Tests have a cost even when they pass — a
 permalink: /some-tests-should-die/
 categories: [testing, strategy]
 tags: [automation, quality, test-design, maintainability]
+image:
+  path: /assets/img/posts/some-tests-should-die-og.png
+  alt: Some Tests Should Die
 read_time: true
 toc: true
 ---
