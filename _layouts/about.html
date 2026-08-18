@@ -602,13 +602,27 @@ layout: default
       max-width: 100%;
     }
 
+    .ab-upcoming-row {
+      flex-direction: column;
+    }
+
     .ab-past-talk {
-      grid-template-columns: 3ch 1fr;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      column-gap: 10px;
       row-gap: 2px;
     }
 
     .ab-past-conf {
-      grid-column: 2;
+      flex: 1;
+      min-width: 0;
+      text-align: left;
+    }
+
+    .ab-past-title {
+      width: 100%;
+      padding-left: calc(3ch + 10px);
       text-align: left;
     }
   }
