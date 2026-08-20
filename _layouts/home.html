@@ -61,23 +61,31 @@ layout: default
 
     <aside class="hm-aside">
       <div class="hm-panel">
+        <span class="hm-panel-label">Upcoming talks</span>
+        <div class="hm-speaking-list">
+          <a href="https://seetest.org/" class="hm-speaking-item" target="_blank" rel="noopener noreferrer">
+            <img src="{{ '/assets/img/seetest-2026-square.jpg' | relative_url }}" alt="SEETEST 2026" class="hm-speaking-thumb">
+            <div class="hm-speaking-meta">
+              <span class="hm-speaking-event">SEETEST 2026</span>
+              <span class="hm-speaking-location">Ljubljana</span>
+              <span class="hm-speaking-date">Oct 7, 2026</span>
+            </div>
+          </a>
+          <a href="https://clc-conference.eu/" class="hm-speaking-item" target="_blank" rel="noopener noreferrer">
+            <img src="{{ '/assets/img/clc-2026-square.png' | relative_url }}" alt="CLC 2026" class="hm-speaking-thumb">
+            <div class="hm-speaking-meta">
+              <span class="hm-speaking-event">CLC 2026</span>
+              <span class="hm-speaking-location">Mannheim</span>
+              <span class="hm-speaking-date">Nov 11–12, 2026</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="hm-panel">
         <span class="hm-panel-label">Recently updated</span>
         <div class="hm-recent-list">
           {% for post in site.posts limit: 5 %}
           <a href="{{ post.url | relative_url }}" class="hm-recent-link{% if forloop.last %} hm-recent-link--last{% endif %}">{{ post.title }}</a>
-          {% endfor %}
-        </div>
-      </div>
-      <div class="hm-panel">
-        <span class="hm-panel-label">Trending tags</span>
-        <div class="hm-tags">
-          {% assign tag_limit = 6 %}
-          {% assign tag_count = 0 %}
-          {% for tag in site.tags %}
-            {% if tag_count < tag_limit %}
-              <a href="{{ site.baseurl }}/tags/{{ tag[0] | downcase | url_encode }}/" class="hm-tag">{{ tag[0] }}</a>
-              {% assign tag_count = tag_count | plus: 1 %}
-            {% endif %}
           {% endfor %}
         </div>
       </div>

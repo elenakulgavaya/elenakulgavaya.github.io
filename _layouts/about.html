@@ -69,16 +69,26 @@ layout: default
 
     <div class="ab-upcoming-row">
       <a href="https://www.seetest.org/index.php?page=sessions" class="ab-upcoming-card" target="_blank" rel="noopener noreferrer">
-        <span class="ab-upcoming-chip">upcoming</span>
-        <div class="ab-upcoming-conf">SEETEST</div>
-        <div class="ab-upcoming-talk">From E2E to Contract Tests: A Practical Migration Path Beyond Microservices</div>
-        <div class="ab-upcoming-date">October 2026</div>
+        <img src="{{ '/assets/img/seetest-2026-square.jpg' | relative_url }}" alt="SEETEST 2026" class="ab-upcoming-thumb">
+        <div class="ab-upcoming-text">
+          <div class="ab-upcoming-event-row">
+            <span class="ab-upcoming-event">SEETEST 2026</span>
+            <span class="ab-upcoming-chip">upcoming</span>
+          </div>
+          <span class="ab-upcoming-talk">From E2E to Contract Tests: A Practical Migration Path Beyond Microservices</span>
+          <span class="ab-upcoming-date">Ljubljana · October 7, 2026</span>
+        </div>
       </a>
       <a href="https://clc-conference.eu/index_en.php" class="ab-upcoming-card" target="_blank" rel="noopener noreferrer">
-        <span class="ab-upcoming-chip">upcoming</span>
-        <div class="ab-upcoming-conf">CLC Conference</div>
-        <div class="ab-upcoming-talk">Your Pipeline Is Ready. Your Tests Are Not.</div>
-        <div class="ab-upcoming-date">November 2026</div>
+        <img src="{{ '/assets/img/clc-2026-square.png' | relative_url }}" alt="CLC 2026" class="ab-upcoming-thumb">
+        <div class="ab-upcoming-text">
+          <div class="ab-upcoming-event-row">
+            <span class="ab-upcoming-event">CLC Conference</span>
+            <span class="ab-upcoming-chip">upcoming</span>
+          </div>
+          <span class="ab-upcoming-talk">Your Pipeline Is Ready. Your Tests Are Not.</span>
+          <span class="ab-upcoming-date">Mannheim · November 11–12, 2026</span>
+        </div>
       </a>
     </div>
 
@@ -443,26 +453,54 @@ layout: default
   /* Speaking section */
   .ab-upcoming-row {
     display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 4px;
     margin-bottom: 32px;
   }
 
   .ab-upcoming-card {
-    flex: 1 1 180px;
     display: flex;
-    flex-direction: column;
-    gap: 5px;
-    padding: 12px 16px;
-    border: 1px solid var(--main-border-color);
-    border-radius: 10px;
+    align-items: center;
+    gap: 0.75rem;
     text-decoration: none;
-    transition: border-color 150ms ease, background 150ms ease;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: background 150ms ease;
 
     &:hover {
-      border-color: color-mix(in srgb, var(--link-color) 50%, transparent);
-      background: color-mix(in srgb, var(--link-color) 5%, transparent);
+      background: rgba(255,255,255,0.04);
+      text-decoration: none;
     }
+  }
+
+  /* Chirpy wraps img (direct child of <a>) in .preview-img.shimmer */
+  .ab-upcoming-card .preview-img {
+    width: 64px !important;
+    height: 64px !important;
+    aspect-ratio: unset !important;
+    flex-shrink: 0;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .ab-upcoming-thumb {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .ab-upcoming-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    min-width: 0;
+  }
+
+  .ab-upcoming-event-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 
   .ab-upcoming-chip {
@@ -475,34 +513,25 @@ layout: default
     border-radius: 3px;
     padding: 2px 5px;
     align-self: flex-start;
-    margin-bottom: 4px;
   }
 
-  .ab-upcoming-conf {
+  .ab-upcoming-event {
     font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 15px;
+    font-size: 0.85rem;
     font-weight: 600;
-    color: var(--heading-color);
+    color: var(--link-color);
   }
 
   .ab-upcoming-talk {
-    font-family: 'IBM Plex Serif', serif;
-    font-size: 13px;
-    line-height: 1.4;
+    font-size: 0.82rem;
+    line-height: 1.35;
     color: var(--text-color);
-    margin-top: 1px;
   }
 
   .ab-upcoming-date {
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.04em;
+    font-size: 0.72rem;
     color: var(--text-muted-color);
-    margin-top: 4px;
-  }
-
-  .ab-upcoming-arrow {
-    display: none;
   }
 
   /* Past talks list */

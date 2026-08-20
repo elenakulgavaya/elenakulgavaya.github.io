@@ -510,3 +510,71 @@
   }
 }
 
+/* ── Upcoming talks (aside panel) ──────────────────────────── */
+
+.hm-speaking-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.hm-speaking-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: background 150ms ease;
+
+  &:hover {
+    background: rgba(255,255,255,0.04);
+    text-decoration: none;
+  }
+}
+
+.hm-speaking-item .preview-img {
+  width: 56px !important;
+  height: 56px !important;
+  aspect-ratio: unset !important;
+  flex-shrink: 0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.hm-speaking-thumb {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  display: block;
+}
+
+.hm-speaking-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.hm-speaking-event {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--link-color);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hm-speaking-location {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--text-muted-color, #888);
+}
+
+.hm-speaking-date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--text-muted-color, #888);
+}
+
