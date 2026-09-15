@@ -2,7 +2,7 @@
 layout: post
 title: "No Bugs Filed. No Trust Earned"
 author: elena
-date: 2026-09-15 15:00:00 +0000
+date: 2026-09-15 10:00:00 +0000
 description: "Modern testing creates a strange trust problem: the better QA gets at preventing bugs, the less visible its work becomes. Here is why teams mistake testing activity for quality and how to build trust without the rituals."
 excerpt: "The most effective testing leaves no visible trace — no tickets, no staging drama, no blocked releases. Filing 50 bugs makes you look valuable. Preventing 50 from ever existing makes you look idle. That is the trap modern QA walks into."
 permalink: /no-bugs-filed-no-trust-earned/

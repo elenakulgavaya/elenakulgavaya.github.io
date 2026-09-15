@@ -22,12 +22,13 @@
     - some-tests-should-die
 
 - heading: "Culture and Process"
-  caption: "4 essays"
+  caption: "5 essays"
   posts:
     - heroic-bug-fix-process-failure
     - end-to-end-testing-slow-road-to-blame-and-burnout
     - shifting-left-without-burning-bridges
     - code-review-cost-or-investment
+    - no-bugs-filed-no-trust-earned
 
 - heading: "Service Integration"
   caption: "2 essays"
