@@ -24,3 +24,7 @@ package-lock.json
 # Misc
 _sass/vendors
 assets/js/dist
+
+# Generated at build time from GitHub Secrets — never commit
+_data/booking.yml
+scripts/encrypt_booking_url.mjs

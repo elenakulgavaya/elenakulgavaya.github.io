@@ -1,0 +1,285 @@
+---
+layout: default
+---
+
+{% include lang.html %}
+
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+<div class="bk">
+
+  <div class="bk-eyebrow">BOOK A SESSION</div>
+
+  <h1 class="bk-h1">{{ page.title }}</h1>
+
+  <div class="bk-desc">
+    <p class="bk-desc-lead">Want to talk testing, automation, or the challenges you&rsquo;re facing in your engineering organization?</p>
+    <p>This is a 60-minute 1:1 session where we can discuss your specific situation, exchange ideas, and look for practical ways forward.</p>
+    <p>Bring a problem, a question, or simply something you&rsquo;ve been thinking about &mdash; no preparation required.</p>
+  </div>
+
+  <hr class="bk-divider">
+
+  <div id="bk-gate">
+    <p class="bk-gate-label">Enter your access code to continue.</p>
+    <div class="bk-form">
+      <input
+        type="password"
+        id="bk-code"
+        placeholder="Access code"
+        autocomplete="off"
+        class="bk-field"
+        aria-label="Access code"
+      >
+      <button onclick="checkCode()" class="bk-btn">Continue &rarr;</button>
+    </div>
+    <p id="bk-error" class="bk-error" style="display:none;">Invalid code. Check and try again.</p>
+  </div>
+
+  <div id="bk-content" style="display:none;">
+    <div class="bk-widget-label">SELECT A TIME</div>
+    <div class="bk-widget-card">
+      <div id="calendly-embed"></div>
+    </div>
+  </div>
+
+</div>
+
+<style>
+  .bk {
+    font-family: 'IBM Plex Sans', sans-serif;
+    padding: 52px 0;
+    color: var(--text-color);
+  }
+
+  .bk-eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--link-color);
+    margin-bottom: 24px;
+  }
+
+  .bk-h1 {
+    font-family: 'IBM Plex Serif', serif !important;
+    font-size: clamp(28px, 6vw, 38px) !important;
+    font-weight: 600 !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.02em !important;
+    color: var(--heading-color) !important;
+    margin: 0 0 14px !important;
+  }
+
+  .bk-desc {
+    max-width: 58ch;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 20px;
+  }
+
+  .bk-desc-lead {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1.55;
+    color: var(--heading-color);
+    margin: 0;
+  }
+
+  .bk-desc p {
+    font-size: 15px;
+    line-height: 1.68;
+    color: var(--text-muted-color);
+    margin: 0;
+  }
+
+  .bk-divider {
+    border: none;
+    border-top: 1px solid var(--main-border-color);
+    margin: 36px 0;
+  }
+
+  .bk-gate-label {
+    font-size: 15px;
+    color: var(--text-color);
+    margin: 0 0 16px;
+  }
+
+  .bk-form {
+    display: flex;
+    gap: 8px;
+    max-width: 360px;
+  }
+
+  .bk-field {
+    flex: 1;
+    min-width: 0;
+    background: var(--main-bg);
+    border: 1px solid var(--main-border-color);
+    border-radius: 8px;
+    padding: 11px 14px;
+    color: var(--text-color);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1;
+    transition: border-color 150ms ease;
+    outline: none;
+  }
+
+  .bk-field::placeholder { color: var(--text-muted-color); }
+  .bk-field:focus { border-color: var(--link-color); }
+
+  .bk-btn {
+    flex-shrink: 0;
+    background: var(--link-color);
+    color: var(--main-bg);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 11px 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    line-height: 1;
+    transition: opacity 150ms ease;
+    white-space: nowrap;
+  }
+
+  .bk-btn:hover { opacity: 0.88; }
+
+  .bk-error {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    color: #dc3545;
+    margin: 10px 0 0;
+  }
+
+  #bk-content {
+    max-width: 560px;
+  }
+
+  .bk-widget-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-muted-color);
+    margin-bottom: 12px;
+  }
+
+  .bk-widget-card {
+    border: 1px solid var(--main-border-color);
+    border-top: 2px solid var(--link-color);
+    border-radius: 10px;
+    overflow: hidden;
+    background: #ffffff;
+  }
+
+  [data-mode="dark"] .bk-widget-card {
+    background: var(--main-bg);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :not([data-mode="light"]) .bk-widget-card {
+      background: var(--main-bg);
+    }
+  }
+
+  #calendly-embed {
+    display: block;
+    min-width: 280px;
+    width: 100%;
+  }
+
+  #calendly-embed iframe {
+    border: none !important;
+    display: block;
+  }
+</style>
+
+<script>
+  const ENCRYPTED_URLS = {{ site.data.booking.encrypted_urls | jsonify }};
+
+  function hexFromVar(name) {
+    const val = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+    if (val.startsWith('#')) {
+      const h = val.slice(1);
+      return h.length === 3 ? h.split('').map(c => c + c).join('') : h;
+    }
+    const m = val.match(/[\d.]+/g);
+    if (m && m.length >= 3) {
+      return m.slice(0, 3).map(n => Math.round(n).toString(16).padStart(2, '0')).join('');
+    }
+    return null;
+  }
+
+  function isDarkMode() {
+    const mode = document.documentElement.getAttribute('data-mode');
+    if (mode === 'dark') return true;
+    if (mode === 'light') return false;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+  }
+
+  function buildCalendlyUrl(base) {
+    const dark    = isDarkMode();
+    const bg      = hexFromVar('--main-bg')    || (dark ? '1b1b1e' : 'ffffff');
+    const text    = hexFromVar('--text-color') || (dark ? 'c9d1d9' : '1a1a1a');
+    const primary = hexFromVar('--link-color') || 'd2603a';
+    const sep     = base.includes('?') ? '&' : '?';
+    return `${base}${sep}background_color=${bg}&text_color=${text}&primary_color=${primary}&hide_gdpr_banner=1&hide_event_type_details=1`;
+  }
+
+  function setEmbedHeight() {
+    document.getElementById('calendly-embed').style.height = '550px';
+  }
+
+  async function checkCode() {
+    const input = document.getElementById('bk-code').value.trim();
+    if (!input) return;
+
+    const btn = document.querySelector('.bk-btn');
+    btn.disabled = true;
+    btn.textContent = 'Checking…';
+
+    try {
+      const encoder = new TextEncoder();
+      const keyBytes = await crypto.subtle.digest('SHA-256', encoder.encode(input));
+      const key = await crypto.subtle.importKey('raw', keyBytes, { name: 'AES-GCM' }, false, ['decrypt']);
+
+      let url = null;
+      for (const enc of ENCRYPTED_URLS) {
+        try {
+          const combined = Uint8Array.from(atob(enc), c => c.charCodeAt(0));
+          const plaintext = await crypto.subtle.decrypt(
+            { name: 'AES-GCM', iv: combined.slice(0, 12) }, key, combined.slice(12)
+          );
+          url = new TextDecoder().decode(plaintext);
+          break;
+        } catch { continue; }
+      }
+
+      if (!url) throw new Error();
+
+      document.getElementById('bk-gate').style.display    = 'none';
+      document.getElementById('bk-content').style.display = 'block';
+      setEmbedHeight();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      Calendly.initInlineWidget({
+        url: buildCalendlyUrl(url),
+        parentElement: document.getElementById('calendly-embed')
+      });
+    } catch {
+      document.getElementById('bk-error').style.display = 'block';
+      btn.disabled = false;
+      btn.textContent = 'Continue →';
+    }
+  }
+
+  document.getElementById('bk-code').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') checkCode();
+  });
+</script>

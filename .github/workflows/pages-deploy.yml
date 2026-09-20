@@ -45,6 +45,30 @@ jobs:
           ruby-version: 3.3
           bundler-cache: true
 
+      - name: Generate booking data
+        env:
+          BOOKING_CODES: ${{ secrets.BOOKING_CODES }}
+          CALENDLY_URL: ${{ secrets.CALENDLY_URL }}
+        run: |
+          cat > /tmp/gen_booking.mjs << 'EOF'
+          import { writeFileSync } from 'fs';
+          const codes = process.env.BOOKING_CODES.split(',').map(c => c.trim()).filter(Boolean);
+          const url   = process.env.CALENDLY_URL;
+          const enc   = new TextEncoder();
+          async function encrypt(code) {
+            const keyBytes = await crypto.subtle.digest('SHA-256', enc.encode(code));
+            const key = await crypto.subtle.importKey('raw', keyBytes, { name: 'AES-GCM' }, false, ['encrypt']);
+            const iv  = crypto.getRandomValues(new Uint8Array(12));
+            const ct  = await crypto.subtle.encrypt({ name: 'AES-GCM', iv }, key, enc.encode(url));
+            const out = new Uint8Array(12 + ct.byteLength);
+            out.set(iv); out.set(new Uint8Array(ct), 12);
+            return Buffer.from(out).toString('base64');
+          }
+          const blobs = await Promise.all(codes.map(encrypt));
+          writeFileSync('_data/booking.yml', 'encrypted_urls:\n' + blobs.map(b => `  - ${b}`).join('\n') + '\n');
+          EOF
+          node /tmp/gen_booking.mjs
+
       - name: Build site
         run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
         env:
