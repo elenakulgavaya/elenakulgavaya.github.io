@@ -207,39 +207,52 @@
 
 .topbar-logo {
   display: none;
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center 15%;
-  vertical-align: middle;
-  margin-right: 8px;
+  flex-shrink: 0;
   border: 1px solid rgba(255,255,255,0.15);
 }
 
 @media (max-width: 991.98px) {
+  #topbar-title {
+    display: flex !important;
+    align-items: center;
+    gap: 9px;
+    font-size: inherit !important;
+    line-height: 1 !important;
+  }
+
   .topbar-logo {
-    display: inline-block;
+    display: block;
   }
 
   .topbar-title-wrap {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
-    line-height: 1.15;
-    vertical-align: middle;
+    gap: 3px;
   }
 
   .topbar-title-main {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
     font-size: 13px;
     font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--heading-color);
+    white-space: nowrap;
+    line-height: 1;
   }
 
   .topbar-title-by {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 9px;
-    letter-spacing: 0.06em;
+    font-size: 8.5px;
+    letter-spacing: 0.13em;
     text-transform: uppercase;
-    opacity: 0.6;
+    color: var(--link-color);
+    white-space: nowrap;
+    line-height: 1;
   }
 }
 
