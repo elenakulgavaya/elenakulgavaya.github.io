@@ -48,14 +48,18 @@ jobs:
       - name: Generate booking data
         env:
           BOOKING_CODES: ${{ secrets.BOOKING_CODES }}
-          CALENDLY_URL: ${{ secrets.CALENDLY_URL }}
+          BOOKING_URLS: ${{ secrets.BOOKING_URLS }}
         run: |
           cat > /tmp/gen_booking.mjs << 'EOF'
           import { writeFileSync } from 'fs';
           const codes = process.env.BOOKING_CODES.split(',').map(c => c.trim()).filter(Boolean);
-          const url   = process.env.CALENDLY_URL;
-          const enc   = new TextEncoder();
-          async function encrypt(code) {
+          const urls  = process.env.BOOKING_URLS.split(',').map(u => u.trim()).filter(Boolean);
+          if (codes.length !== urls.length) {
+            console.error(`BOOKING_CODES has ${codes.length} entries but BOOKING_URLS has ${urls.length}`);
+            process.exit(1);
+          }
+          const enc = new TextEncoder();
+          async function encrypt(code, url) {
             const keyBytes = await crypto.subtle.digest('SHA-256', enc.encode(code));
             const key = await crypto.subtle.importKey('raw', keyBytes, { name: 'AES-GCM' }, false, ['encrypt']);
             const iv  = crypto.getRandomValues(new Uint8Array(12));
@@ -64,7 +68,7 @@ jobs:
             out.set(iv); out.set(new Uint8Array(ct), 12);
             return Buffer.from(out).toString('base64');
           }
-          const blobs = await Promise.all(codes.map(encrypt));
+          const blobs = await Promise.all(codes.map((code, i) => encrypt(code, urls[i])));
           writeFileSync('_data/booking.yml', 'encrypted_urls:\n' + blobs.map(b => `  - ${b}`).join('\n') + '\n');
           EOF
           node /tmp/gen_booking.mjs

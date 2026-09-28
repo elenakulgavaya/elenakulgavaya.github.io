@@ -203,6 +203,26 @@
   }
 }
 
+/* ── Mobile topbar logo ──────────────────────────────────── */
+
+.topbar-logo {
+  display: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 15%;
+  vertical-align: middle;
+  margin-right: 8px;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+@media (max-width: 991.98px) {
+  .topbar-logo {
+    display: inline-block;
+  }
+}
+
 /* ── Right panel (TOC on posts) ──────────────────────────── */
 
 #panel-wrapper {
