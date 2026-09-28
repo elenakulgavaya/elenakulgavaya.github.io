@@ -219,6 +219,8 @@
 }
 
 @media (max-width: 849.98px) {
+  #topbar-wrapper { height: 3.75rem !important; }
+
   #topbar-title {
     display: flex !important;
     align-items: center;
@@ -233,13 +235,15 @@
 
   .topbar-title-wrap {
     display: flex;
-    flex-direction: column;
-    gap: 3px;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 8px;
+    text-align: left;
   }
 
   .topbar-title-main {
     font-family: 'Space Grotesk', system-ui, sans-serif;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 600;
     letter-spacing: -0.01em;
     color: var(--heading-color);
@@ -249,7 +253,7 @@
 
   .topbar-title-by {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 8.5px;
+    font-size: 9px;
     letter-spacing: 0.13em;
     text-transform: uppercase;
     color: var(--link-color);
