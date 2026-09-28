@@ -221,6 +221,26 @@
   .topbar-logo {
     display: inline-block;
   }
+
+  .topbar-title-wrap {
+    display: inline-flex;
+    flex-direction: column;
+    line-height: 1.15;
+    vertical-align: middle;
+  }
+
+  .topbar-title-main {
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .topbar-title-by {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    opacity: 0.6;
+  }
 }
 
 /* ── Right panel (TOC on posts) ──────────────────────────── */
