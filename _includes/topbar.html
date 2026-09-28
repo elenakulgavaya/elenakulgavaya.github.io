@@ -47,7 +47,7 @@
     <div id="topbar-title">
       <img src="{{ site.avatar | relative_url }}" class="topbar-logo" alt="{{ site.title }}">
       <span class="topbar-title-wrap">
-        <span class="topbar-title-main">{% if page.layout == 'home' %}{{- site.data.locales[include.lang].title | default: site.title -}}{% elsif page.collection == 'tabs' or page.layout == 'page' %}{%- capture tab_key -%}{{ page.url | split: '/' }}{%- endcapture -%}{{- site.data.locales[include.lang].tabs[tab_key] | default: page.title -}}{% else %}{{- site.data.locales[include.lang].layout[page.layout] | default: page.layout | capitalize -}}{% endif %}</span>
+        <span class="topbar-title-main">{{- site.data.locales[include.lang].title | default: site.title -}}</span>
         <span class="topbar-title-by">by Elena Kulgavaya</span>
       </span>
     </div>
