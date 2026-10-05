@@ -199,38 +199,24 @@ layout: default
     border: none !important;
     display: block;
   }
+
+  [data-mode="dark"] #calendly-embed iframe {
+    filter: invert(1);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    html:not([data-mode]) #calendly-embed iframe {
+      filter: invert(1);
+    }
+  }
 </style>
 
 <script>
   const ENCRYPTED_URLS = {{ site.data.booking.encrypted_urls | jsonify }};
 
-  function hexFromVar(name) {
-    const val = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
-    if (val.startsWith('#')) {
-      const h = val.slice(1);
-      return h.length === 3 ? h.split('').map(c => c + c).join('') : h;
-    }
-    const m = val.match(/[\d.]+/g);
-    if (m && m.length >= 3) {
-      return m.slice(0, 3).map(n => Math.round(n).toString(16).padStart(2, '0')).join('');
-    }
-    return null;
-  }
-
-  function isDarkMode() {
-    const mode = document.documentElement.getAttribute('data-mode');
-    if (mode === 'dark') return true;
-    if (mode === 'light') return false;
-    return window.matchMedia('(prefers-color-scheme: dark)').matches;
-  }
-
   function buildCalendlyUrl(base) {
-    const dark    = isDarkMode();
-    const bg      = hexFromVar('--main-bg')    || (dark ? '1b1b1e' : 'ffffff');
-    const text    = hexFromVar('--text-color') || (dark ? 'c9d1d9' : '1a1a1a');
-    const primary = hexFromVar('--link-color') || 'd2603a';
-    const sep     = base.includes('?') ? '&' : '?';
-    return `${base}${sep}background_color=${bg}&text_color=${text}&primary_color=${primary}&hide_gdpr_banner=1&hide_event_type_details=1`;
+    const sep = base.includes('?') ? '&' : '?';
+    return `${base}${sep}hide_gdpr_banner=1&hide_event_type_details=1`;
   }
 
   function setEmbedHeight() {
