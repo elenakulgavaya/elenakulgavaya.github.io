@@ -3,10 +3,10 @@
   description: Design tests so every failure points directly to the fix — no re-running, no guessing.
   tags: "REPORTING · TEST-ARCHITECTURE"
 
-- url: /your-biggest-contract-is-hidden-inside-an-e2e-test/
-  title: The Contract Inside Your E2E Test
-  description: How to migrate from E2E tests to contract tests — step by step, without throwing away what you've built.
-  tags: "E2E · CONTRACT-TESTING"
+- url: /from-e2e-to-contract-tests-practical-migration-path/
+  title: From E2E to Contract Tests
+  description: A real migration from 20 Playwright tests to contract coverage — six pull requests, actual CI failures, and feedback that arrives before the merge.
+  tags: "E2E · CONTRACT-TESTING · GUIDE"
 
 - url: /heroic-bug-fix-process-failure/
   title: Every Heroic Bug Fix Is a Process Failure

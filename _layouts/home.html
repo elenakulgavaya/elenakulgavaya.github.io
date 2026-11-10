@@ -23,7 +23,7 @@ layout: default
     </a>
     <p class="hm-hero-lead">{{ latest.excerpt | default: latest.description | strip_html | truncatewords: 50 }}</p>
     <div class="hm-hero-actions">
-      <a href="{{ latest.url | relative_url }}" class="hm-hero-read">Read the essay <span class="hm-mono">→</span></a>
+      <a href="{{ latest.url | relative_url }}" class="hm-hero-read">Read it <span class="hm-mono">→</span></a>
       <span class="hm-hero-meta">{{ minutes }} min{%- if latest.categories.size > 0 %} · {{ latest.categories | join: ' · ' | upcase }}{% endif %}</span>
       <a href="/about/" class="hm-hero-author">QA Explained · by Elena Kulgavaya</a>
     </div>

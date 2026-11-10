@@ -34,4 +34,4 @@
   caption: "2 essays"
   posts:
     - contract-testing-journey-to-confidence
-    - your-biggest-contract-is-hidden-inside-an-e2e-test
+    - from-e2e-to-contract-tests-practical-migration-path
