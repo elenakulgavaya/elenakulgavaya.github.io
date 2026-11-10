@@ -30,6 +30,7 @@ image:
 ```
 
 **Eyebrow format:** capitalised categories joined by ` · `, then ` · N min read`
-(word count ÷ 200, minimum 1; use `wc -w` on the post file).
+(use the read time shown on the live post page — Jekyll's `number_of_words` on rendered content
+counts more than `wc -w` on raw markdown because it includes code blocks).
 
 **Title style:** append a trailing period to match the site's OG image convention.
