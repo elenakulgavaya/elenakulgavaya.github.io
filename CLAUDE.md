@@ -30,7 +30,7 @@ image:
 ```
 
 **Eyebrow format:** capitalised categories joined by ` · `, then ` · N min read`
-(use the read time shown on the live post page — Jekyll's `number_of_words` on rendered content
-counts more than `wc -w` on raw markdown because it includes code blocks).
+Read time comes from the post page (Chirpy theme: `strip_html | number_of_words: 'auto'` ÷ 180 wpm).
+Check the live post at http://127.0.0.1:4000/ after serving locally.
 
 **Title style:** append a trailing period to match the site's OG image convention.

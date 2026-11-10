@@ -181,7 +181,7 @@ def render_og(
 
 if __name__ == "__main__":
     posts = [
-        ("From E2E to Contract Tests: A Practical Migration Path.", "Testing · Strategy · 22 min read",
+        ("From E2E to Contract Tests: A Practical Migration Path.", "Testing · Strategy · 18 min read",
          "from-e2e-to-contract-tests-practical-migration-path"),
     ]
 
